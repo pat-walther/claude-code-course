@@ -47,6 +47,20 @@ Interactive lessons designed to be pasted into Claude Code. Each lesson guides y
 - `23-openclaw.md` — Your 24/7 AI chief of staff
 - `24-deploy-and-ship.md` — Tests, CI/CD, and deployment
 
+## Games
+
+Alternative entry points that teach Claude Code through gameplay. Use these instead of (or alongside) the standard lessons.
+
+| Game | Format | Players | Time | What You Learn |
+|------|--------|---------|------|----------------|
+| [Baby Claude](games/baby-claude.md) 🐣 | Terminal RPG | Solo | 10 min | The agent loop (think→tool→think) through 5 level-ups |
+| [Dungeon Crawler](games/dungeon-crawler.md) 🗡️ | Build-a-game | Solo | 15 min | File creation, execution, iteration, design polish |
+| [Escape Room](games/escape-room.md) 🔐 | Puzzle chain | Solo | 15 min | Decoding, data analysis, debugging, building, combining skills |
+| [Choose Your Prototype](games/choose-your-prototype.md) 🎮 | Branching narrative | Solo | 10 min | Prototyping under pressure with 3 different paths |
+| [Speed Run Relay](games/speed-run-relay.md) ⏱️ | Team relay race | 3-4 per team | 25 min | Full build pipeline: architecture → prototype → design → PM docs |
+
+**Baby Claude** is the recommended first experience — paste the entire file into Claude Code and type "Let's play."
+
 ## Course Design
 
 Every lesson follows the same structure:
@@ -63,4 +77,4 @@ Every lesson follows the same structure:
 
 ---
 
-Built by [Eric](https://x.com/exiao3) and [Aman](https://x.com/amanaiproduct).
+Built by [Eric](https://www.linkedin.com/in/ericxiao/) and [Aman](https://www.linkedin.com/in/amanberkeley/).
