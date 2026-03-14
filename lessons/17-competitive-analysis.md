@@ -1,118 +1,81 @@
 # 17. Research Competitors Systematically
 
-> **Magic Moment:** Claude analyzes a competitor's entire public presence — website, app store, reviews, docs — and produces a structured competitive brief that would take you hours to compile manually.
+> **Magic Moment:** Claude analyzes a competitor's entire public presence — website, app store, reviews, docs — and produces a structured competitive brief that would take hours to compile manually.
 
-## Why This Matters
+---
 
-You know you should be tracking competitors more closely. But competitive analysis always gets deprioritized because it's tedious: visit five websites, read their pricing pages, scan their changelogs, check their reviews, piece it all together. By the time you finish, it's already stale. Claude can do this research in minutes, and you can re-run it anytime the market shifts.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson on systematic competitive analysis. Follow these steps in order. Be conversational, encouraging, and concise. Do one step at a time and wait for the student to respond before moving on.
 
-- Claude Code open in your terminal
-- The name(s) of 3-5 competitors you want to analyze
-- 15 minutes
+### Setup Check
 
-## Do This Now
+Ask the student if they have Claude Code open and if they're ready to research some competitors. Don't proceed until confirmed.
 
-### Step 1: Identify your competitors
+### Step 1: Identify Their Product and Competitors
 
-**Paste this into Claude Code:**
-```
-I'm building [describe your product in one sentence].
+**What to do:** Ask about the student's product and who they compete with.
 
-Get my top 3-5 direct competitors. For each one, find:
-- Website URL
-- App store link (if applicable)
-- Public product documentation or help center
-- Release notes or changelog (if public)
-- Review sites (G2, Capterra, App Store reviews)
-- Any community forums or discussions
+**What to say:** Something like:
+> "Today we're going to run a systematic competitive analysis — the kind consultants charge thousands for — in about 15 minutes. No browser tabs, no copy-pasting from pricing pages. I'll do the research.
+>
+> First: what's your product? Give me a one-sentence description. And do you already know your top 3-5 competitors? If so, list them. If not, tell me what space you're in and I'll find them for you."
 
-List them in a table.
-```
+**Then:** Wait for their response.
+- If they list competitors, acknowledge and move to Step 2.
+- If they describe their space, research and identify 3-5 direct competitors. For each one, find: website URL, app store link (if applicable), public docs/help center, changelog/release notes (if public), review sites (G2, Capterra, App Store). Present them in a table and ask: "Does this look right? Anyone I'm missing?"
 
-**What you should see:** A clean table with your competitive landscape mapped out. Claude will use web search to find these — you'll likely discover competitors you weren't tracking.
+If they don't have a product at all, use a sample scenario: "Let's say you're building a project management tool for small teams — think Trello, Asana, Linear, Monday.com territory. We'll use that to learn the framework and you can re-run it on your own product later."
 
-💡 **Already know your competitors?** Skip this step and just list them directly in Step 2.
+### Step 2: Analyze Positioning
 
-### Step 2: Analyze their positioning
+**What to do:** Research the competitor websites and analyze their positioning. Produce visualizations.
 
-**Paste this into Claude Code:**
-```
-Visit these competitor sites and analyze their positioning:
-[list your competitor URLs]
+**What to say:** Something like:
+> "Let me visit these competitor sites and break down how they position themselves. This'll take a moment..."
 
-For each competitor, extract:
-- Value proposition (the one-sentence version: "[BRAND] is a [DIFFERENTIATOR] for [SEGMENT]")
+**Then:** For each competitor, extract:
+- Value proposition (one-sentence: "[BRAND] is a [DIFFERENTIATOR] for [SEGMENT]")
 - Target customer segment
 - Key features they emphasize
-- What pain points they lead with
+- Pain points they lead with
 - Pricing model (if public)
 
-Then visualize the competitive landscape using ASCII:
-- A 2x2 positioning matrix (you pick the best axes)
-- A feature comparison table
-- Where each competitor is strong vs. weak
+Produce ASCII visualizations:
+1. A 2x2 positioning matrix (choose the most insightful axes — e.g., price vs. feature breadth, or simplicity vs. power)
+2. A feature comparison table (✅/❌ format)
+3. Strengths/weaknesses summary
+
+After showing the output:
+> "That 2x2 matrix is the framework McKinsey would charge you for. 😄 Do you agree with where I placed everyone? Would you change the axes?"
+
+Wait for their response and adjust if needed.
+
+### Step 3: Analyze Competitor Reviews
+
+**What to do:** Find and analyze reviews for the student's scariest competitor. This is where you find gold — competitor weaknesses are their opportunity.
+
+**What to say:** Something like:
+> "Now for the really good stuff. Which competitor worries you the most? I'll dig into their reviews and find out what their own users are complaining about. Their pain is your opportunity."
+
+**Then:** Wait for them to pick a competitor. Search for reviews on App Store, G2, Capterra, or wherever available. Analyze and produce:
+- Top complaint themes (ASCII bar chart)
+- Top praise themes
+- Unmet needs in their user base
+- Highlight: complaints the student's product could solve better, praise the student should match or beat, gaps nobody is filling
+
+> "Their users are basically telling you where to attack. See those complaints? That's your roadmap. 🎯"
+
+### Step 4: Generate the Competitive Brief (The Magic Moment)
+
+**What to do:** Produce a complete, shareable competitive brief.
+
+**What to say:** Something like:
+> "Let me pull all of this together into a brief you could actually share with your leadership team."
+
+**Then:** Generate a structured document:
+
 ```
-
-**What you should see:** Something like this:
-
-```
-═══════════════════════════════════════════════
-         COMPETITIVE POSITIONING MAP
-═══════════════════════════════════════════════
-
-              HIGH PRICE
-                 │
-    Enterprise   │   Premium
-    Player       │   Specialist
-    (Comp C) ●   │        ● (Comp A)
-                 │
- ─────────────── ┼ ─────────────── BROAD
-  NARROW         │              FEATURES
-                 │
-           ●     │   ● (Comp B)
-     (You)       │
-    Focused &    │   Freemium
-    Affordable   │   Generalist
-                 │
-              LOW PRICE
-
-═══════════════════════════════════════════════
-         FEATURE COMPARISON MATRIX
-═══════════════════════════════════════════════
-Feature          You   A    B    C
-─────────────────────────────────────
-Core workflow     ✅   ✅   ✅   ✅
-AI features       ✅   ❌   ✅   ✅
-Mobile app        ✅   ✅   ❌   ✅
-API access        ❌   ✅   ✅   ✅
-SSO/Enterprise    ❌   ✅   ❌   ✅
-Free tier         ✅   ❌   ✅   ❌
-```
-
-### Step 3: Analyze competitor reviews
-
-This is where you find gold — what their customers complain about is your opportunity.
-
-**Paste this into Claude Code:**
-```
-Find and analyze reviews for [Competitor A] on the App Store, G2, or Capterra. What are their users complaining about most? What do they praise? What unmet needs can you identify?
-
-Visualize the key complaint themes using ASCII bar charts, and highlight:
-- Complaints we could solve better
-- Praise we should match or beat
-- Gaps in the market nobody is filling
-```
-
-**What you should see:** A breakdown of competitor weaknesses backed by their own users' words. This is ammunition for positioning, feature planning, and sales enablement.
-
-### Step 4: Generate the competitive brief
-
-**Paste this into Claude Code:**
-```
-Create a one-page competitive brief I can share with my team. Structure it as:
-
 ## Market Overview
 [2-3 sentences on the competitive landscape]
 
@@ -120,35 +83,40 @@ Create a one-page competitive brief I can share with my team. Structure it as:
 [One paragraph each — who they are, who they serve, what they're good at]
 
 ## Our Advantages
-[Where we win and why — be specific]
+[Where the student wins and why — be specific]
 
 ## Our Vulnerabilities
-[Where competitors beat us — be honest]
+[Where competitors beat them — be honest]
 
 ## Strategic Recommendations
 [3 concrete actions based on this analysis]
 
 ## Key Quotes from Competitor Reviews
-[Pull the most insightful competitor user quotes]
-
-Be direct. No marketing fluff — this is for internal strategy.
+[Most insightful competitor user quotes]
 ```
 
-**What you should see:** A structured competitive brief you'd actually share with your leadership team. The kind of document that usually takes a half-day of research compressed into a 15-minute conversation.
+Be direct. No marketing fluff — frame this as internal strategy.
 
-## 🎉 What Just Happened
+After showing it:
+> "That's a competitive brief that usually takes half a day of research, compressed into a 15-minute conversation. And here's the real power: you can re-run this quarterly. A 6-month-old competitive analysis is nearly useless. One you can regenerate in 15 minutes? That's a strategic advantage."
 
-You just ran a systematic competitive analysis without opening a single browser tab yourself. Claude searched the web, visited competitor sites, analyzed their positioning, and synthesized everything into a structured brief. The 2x2 matrix, feature comparison, and review analysis are the same frameworks consultants charge thousands to produce — you got them in minutes.
+### Wrap Up
 
-The real power: you can re-run this quarterly. Markets shift, competitors launch new features, reviews accumulate. A competitive analysis that's 6 months old is nearly useless. One you can regenerate in 15 minutes? That's a strategic advantage.
+**What to say:** Something like:
+> "Want to go deeper? I can:
+> - **Deep dive on one competitor** — analyze their last 6 months of changelog/release notes to see where they're heading
+> - **Pricing analysis** — map all competitor pricing tiers and find whitespace
+> - **Win/loss patterns** — if you paste notes from sales calls, I'll find patterns in why you win or lose
+> - **Porter's Five Forces** — the classic framework, but done in minutes instead of days
+>
+> **Share with the cohort:** Your 2x2 positioning map. Where did I place you vs. competitors — and do you agree with the axes I chose?"
 
-## Go Deeper
+---
 
-- **Deep dive on one competitor:** Pick your scariest competitor and ask Claude to analyze their last 6 months of changelog/release notes. What direction are they heading?
-- **Pricing analysis:** Ask Claude to map all competitor pricing tiers and identify where there's pricing power or whitespace
-- **Win/loss analysis:** Paste notes from recent sales calls and ask Claude to identify patterns in why you win or lose deals against specific competitors
-- **Porter's Five Forces:** Ask Claude to run a full Porter's analysis on your market — it's a classic framework that's tedious to do manually but perfect for AI
+## Reference Material
 
-## Share
-
-**Bring back:** Your 2x2 positioning map. Where did Claude place you vs. competitors — and do you agree with the axes it chose?
+- **Competitive analysis frameworks:** 2x2 positioning matrix, feature comparison matrix, Porter's Five Forces
+- **Review sources:** G2 (g2.com), Capterra (capterra.com), App Store reviews, Google Play reviews, Trustpilot
+- **Research approach:** Web search for competitor websites, pricing pages, changelogs, review aggregators
+- **Output formats:** Competitive brief (market overview, competitor profiles, advantages, vulnerabilities, recommendations, key quotes)
+- **Go deeper options:** Competitor changelog deep dives, pricing tier mapping, win/loss analysis from sales call notes, Porter's Five Forces analysis

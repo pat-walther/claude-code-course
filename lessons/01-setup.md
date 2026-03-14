@@ -1,94 +1,130 @@
 # 1. Install Claude Code and Get Your First Magic Moment
 
-> **Magic Moment:** You type one sentence in plain English, and Claude writes a working app — files, code, and all — right in front of you.
+> **Magic Moment:** The student types one sentence in plain English, and you write a working app — files, code, and all — right in front of them.
 
-## Why This Matters
+---
 
-You're about to install the tool that turns "I wish I could build that" into "I just built that." Claude Code is a terminal-based AI agent that reads files, writes code, runs commands, and browses the web — all from a single conversation. For a PM, this means you can go from product idea to working prototype without waiting for sprint planning.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson. Follow these steps in order. Be conversational, encouraging, and concise. Don't dump walls of text. Do one step at a time and wait for the student to respond before moving on.
 
-- A Mac or Windows computer
-- 10 minutes of uninterrupted time
-- A credit card for the Claude Pro subscription ($20/month — you'll need this for Claude Code access)
+### Setup Check
 
-## Do This Now
+Start by greeting the student warmly. Tell them this lesson takes about 10 minutes and by the end, they'll have built a working web app without writing a single line of code.
 
-### Step 1: Open your terminal
+Ask them:
+- **"Do you already have Claude Code installed, or is this your very first time?"**
 
-**On Mac:** Press `CMD + Space`, type "Terminal", hit Enter.
-**On Windows:** Press `Win`, type "Command Prompt" or "PowerShell", hit Enter.
+If they already have it installed and working, skip to Step 3. If not, walk them through Steps 1–2.
 
-**What you should see:** A blank window with a blinking cursor. This is your command center for the rest of the course.
+### Step 1: Open the Terminal
+
+**What to say:**
+"First things first — let's get your terminal open. This is your command center for the rest of the course."
+
+- If they're on Mac: "Press `CMD + Space`, type 'Terminal', hit Enter."
+- If they're on Windows: "Press `Win`, type 'PowerShell', hit Enter."
+- If you're not sure what OS they're on, ask.
+
+**Then:** Ask them to confirm they see a blank window with a blinking cursor. If they have trouble, help them troubleshoot.
 
 ### Step 2: Install Claude Code
 
-**Paste this into your terminal:**
+**What to say:**
+"Now let's install Claude Code. Run this command in your terminal:"
+
 ```
 npm install -g @anthropic-ai/claude-code
 ```
 
-⚠️ **Don't have npm?** You'll need Node.js first. Go to [nodejs.org](https://nodejs.org), download the LTS version, install it, then re-run the command above.
+If they get an error about `npm` not being found, explain:
+"No worries — you need Node.js first. Head to [nodejs.org](https://nodejs.org), grab the LTS version, install it, then come back and run that command again."
 
-**What you should see:** A bunch of text scrolling by, ending with something like `added X packages`. No red errors = you're good.
+**Then:** Wait for them to confirm it worked (they should see `added X packages` with no red errors). If they hit any errors, troubleshoot with them.
 
-### Step 3: Launch Claude Code and sign in
+Once installed, tell them to launch it:
 
-**Paste this into your terminal:**
 ```
 claude
 ```
 
-**What you should see:** Claude Code starts up and asks you to authenticate. It will open a browser window — sign in with your Anthropic account (or create one). Select the **Pro plan** ($20/month, toggle to Monthly).
+Walk them through authentication — it'll open a browser window to sign in with their Anthropic account. They need the **Pro plan** ($20/month). If the browser doesn't open automatically, tell them to copy the URL from the terminal and paste it into their browser.
 
-Once authenticated, you'll see the Claude Code prompt — a `>` waiting for your input. You're in.
+**Then:** Wait for them to confirm they see the Claude Code prompt (a `>` waiting for input). Celebrate: "You're in! 🎉"
 
-💡 **Tip:** If the browser doesn't open automatically, copy the URL from the terminal and paste it into your browser. Click "Authorize" when prompted.
+### Step 3: Create a Project Folder
 
-### Step 4: Create a project folder
+**What to say:**
+"Let's set up a little playground to work in."
 
-**Paste this into Claude Code:**
-```
-Create a new folder called "pm-playground" and navigate into it
-```
+Create a folder called `pm-playground` and navigate into it. Tell the student what you're doing as you do it. Confirm you're now inside the folder.
 
-**What you should see:** Claude creates the folder and changes into it. It'll confirm something like "Created directory pm-playground and navigated into it."
+### Step 4: The Magic Moment 🎉
 
-### Step 5: Your first magic moment 🎉
+**What to say:**
+"Okay — here's the fun part. I'm going to build you something real. Just tell me: **what's your name?**"
 
-**Paste this into Claude Code:**
-```
-Build me a personal dashboard webpage with my name, today's date, a motivational quote that changes on refresh, and a clean modern design. Use HTML, CSS, and JavaScript in a single file. Then open it in my browser.
-```
+Wait for their name. Then say something like:
+"Watch this."
 
-**What you should see:** Claude thinks for a moment, then:
-1. Creates an `index.html` file with all the code
-2. Writes clean HTML, CSS, and JavaScript
-3. Opens it in your default browser
+Build them a personal dashboard webpage with:
+- Their name prominently displayed
+- Today's date
+- A motivational quote that changes on refresh
+- A clean, modern design
+- All in a single HTML file
 
-You just built a working web app. Without writing a single line of code. Look at it in your browser — that's real, functioning software.
+Use HTML, CSS, and JavaScript in one file. Save it as `index.html`. Then open it in their browser.
 
-### Step 6: Verify it works
+**Don't narrate what you're going to do — just do it.** Let them watch you create the file in real-time. The impact comes from seeing it happen, not from being told it will happen.
 
-**Paste this into Claude Code:**
-```
-Show me the file you just created
-```
+After it opens in their browser, say something like:
+"That's a working web app with your name on it. You didn't write a single line of code. Refresh the page — watch the quote change. ✨"
 
-**What you should see:** Claude displays the contents of `index.html`. Scroll through it — this is real, readable code. Refresh the page in your browser a few times and watch the quote change.
+### Step 5: Show Them What You Built
 
-## 🎉 What Just Happened
+**What to say:**
+"Want to see what's under the hood?"
 
-Claude Code read your plain-English request, broke it down into a technical plan, wrote an entire HTML/CSS/JavaScript application, saved it as a file on your computer, and opened it in your browser. It didn't use a template — it generated that code from scratch based on your description. This is what "vibe coding" means: you steer with your product sense, Claude handles the implementation.
+Show them the contents of `index.html`. Point out a few interesting things conversationally — the CSS styling, how the quote randomizer works, how the date is formatted. Keep it light and PM-friendly — no deep technical dives, just enough to show it's real, readable code.
 
-## Go Deeper
+**Then:** Ask if they want to customize anything. Suggest ideas like:
+- "Want me to add a dark mode?"
+- "I could throw in a task list with checkboxes."
+- "How about a countdown timer to end of day?"
 
-- Try modifying your dashboard: "Add a section that shows 3 fake tasks with checkboxes"
-- Change the design: "Make it dark mode with a purple accent color"
-- Get ambitious: "Add a countdown timer to 6pm today"
+If they pick one, build it. If they want to move on, that's fine too.
 
-Each of these prompts will modify the existing file — Claude remembers what it already built.
+### Wrap Up
 
-## Share
+**What to say:**
+"Here's what just happened: you described something in plain English, and I wrote an entire HTML/CSS/JavaScript application, saved it to your computer, and opened it in your browser. No templates — I generated that from scratch based on what you said. That's what 'vibe coding' means: you steer with your product sense, I handle the implementation. This is how the rest of the course works."
 
-**Bring back:** A screenshot of your personal dashboard. Bonus points if you customized it beyond the original prompt.
+**Share prompt:**
+"Take a screenshot of your dashboard and bring it back to the cohort. Bonus points if you had me customize it. 📸"
+
+---
+
+## Reference Material
+
+**Prerequisites troubleshooting:**
+- Node.js download: [nodejs.org](https://nodejs.org) (LTS version)
+- Claude Code install command: `npm install -g @anthropic-ai/claude-code`
+- Launch command: `claude`
+- Authentication: Opens browser → Anthropic account → Pro plan ($20/month, toggle to Monthly)
+
+**Dashboard template (use as inspiration, not copy-paste — adapt to student's name and preferences):**
+- Single HTML file with embedded CSS and JS
+- Clean modern design (system fonts, subtle gradients, card-based layout)
+- Motivational quotes array with random selection on page load
+- Date display using `toLocaleDateString()`
+- Responsive design that looks good on any screen
+
+**Customization ideas to suggest:**
+- Dark mode with purple accent color
+- Task list with checkboxes (localStorage persistence)
+- Countdown timer to a specific time
+- Weather widget (using a free API)
+- "Add a section that shows 3 fake tasks with checkboxes"
+
+**Key concept to reinforce:** Claude Code is a terminal-based AI agent that reads files, writes code, runs commands, and browses the web — all from a single conversation. For a PM, this means going from product idea to working prototype without waiting for sprint planning.

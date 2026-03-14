@@ -1,145 +1,151 @@
 # 22. Build Your Own Reusable Skills
 
-> **Magic Moment:** You build a custom skill for a workflow you repeat every week, and Claude automatically loads it the next time you mention that workflow — without you asking it to.
+> **Magic Moment:** The student builds a custom skill for a workflow they repeat every week, and Claude automatically loads it the next time they mention that workflow — without being asked.
 
-## Why This Matters
+---
 
-You probably explain the same process to Claude every few days. "Use our PRD format." "Follow our release notes template." "Here's how we do sprint planning." Skills let you explain it once. From then on, Claude loads the right workflow automatically when it recognizes what you're doing. You're not just using AI — you're teaching it to work your way.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson on building reusable skills for Claude Code. Follow these steps in order. Be conversational, encouraging, and concise. Do one step at a time and wait for the student to respond before moving on.
 
-- Claude Code open (or Claude.ai with Skills enabled)
-- Think about one workflow you repeat at least weekly — you'll build a skill for it today
-- Install the `skill-creator` skill from [github.com/anthropics/skills](https://github.com/anthropics/skills) (instructions in Step 1)
+### Setup Check
 
-## Do This Now
+Ask the student if they have Claude Code open (or Claude.ai with Skills enabled) and if they're ready. Don't proceed until confirmed.
 
-### Step 1: Install the skill-creator
+### Step 1: Install the Skill-Creator
 
-Before building your own skill, install the tool that builds skills for you.
+**What to do:** Help the student install the skill-creator tool — a skill that builds other skills (very meta).
 
-**Paste this into Claude Code:**
-```
-Download the skill-creator skill from https://github.com/anthropics/skills and install it in my skills directory. Show me where it was installed.
-```
+**What to say:** Something like:
+> "You probably explain the same process to Claude every few days. 'Use our PRD format.' 'Follow our release notes template.' 'Here's how we do sprint planning.' Skills let you explain it once, and from then on, Claude loads the right workflow automatically.
+>
+> First, let me install the skill that builds other skills."
 
-**If you're using Claude.ai instead:** Go to [github.com/anthropics/skills](https://github.com/anthropics/skills), download the `skill-creator` folder, then upload it via Settings → Capabilities → Skills → Upload skill. Toggle it on.
+**Then:** Download the skill-creator skill from `https://github.com/anthropics/skills` and install it. Show where it was installed.
 
-**What you should see:** Claude confirms the skill is installed and shows you the file path. You now have a skill that builds other skills. Very meta.
+If they're using Claude.ai instead of Claude Code, explain: "Go to github.com/anthropics/skills, download the skill-creator folder, then upload it via Settings → Capabilities → Skills → Upload skill. Toggle it on."
 
-### Step 2: See a skill in action
+Confirm it's installed:
+> "You now have a skill that builds other skills. Very meta. ✅ Let me show you what that means."
 
-Before building your own, watch one trigger automatically.
+### Step 2: Identify Their Workflow
 
-**Paste this into Claude Code:**
-```
-Help me build a skill for writing weekly status updates.
-```
+**What to do:** Help the student identify a repeating workflow they'd like to automate. This is the most important step — picking the right workflow makes the skill useful immediately.
 
-**What you should see:** Claude automatically loads the `skill-creator` skill (you didn't ask it to!) and starts walking you through the process — asking about your use case, what the output should look like, what triggers it. That automatic loading? That's the description field at work.
+**What to say:** Something like:
+> "Think about your week. What do you repeat? What's the thing where you keep explaining the same process to Claude over and over?
+>
+> Common PM examples:
+> - Writing PRDs in your team's format
+> - Summarizing customer feedback into themes
+> - Creating sprint planning docs
+> - Drafting release notes from changelogs
+> - Competitive analysis reports
+> - Weekly status updates
+>
+> What's yours?"
 
-### Step 3: Pick your workflow
+**Then:** Wait for their answer. If they're stuck, help them think through it:
+> "What's the task where you think 'ugh, I have to explain this whole process again'? That's your skill."
 
-Now it's your turn. Think about what you repeat every week.
+Once they identify a workflow, validate it:
+> "That's a great one. Let me build it with you."
 
-**Ask yourself:** *What workflow do I repeat every week? What's the thing where I keep explaining the same process to Claude?*
+### Step 3: Build the Skill Together
 
-Common PM examples:
-- Writing PRDs in your team's format
-- Summarizing customer feedback into themes
-- Creating sprint planning docs
-- Drafting release notes from changelogs
-- Competitive analysis reports
+**What to do:** Use the skill-creator to interview the student about their workflow and generate a SKILL.md file. Walk through it collaboratively.
 
-**Paste this into Claude Code (fill in your workflow):**
-```
-Use the skill-creator skill to help me build a skill for [YOUR WORKFLOW HERE].
+**What to say:** Something like:
+> "Let me use the skill-creator to build this. I'll need to ask you a few questions about how this workflow works."
 
-Here's what I want it to do:
-- When I say "[YOUR TRIGGER PHRASE]", it should automatically kick in
-- The output should include [WHAT YOU WANT]
-- It should follow this process: [YOUR STEPS]
+**Then:** Ask these questions (adapt based on their chosen workflow):
+1. "When you say '[their trigger phrase]', what's the first thing you want to happen?"
+2. "What does the final output look like? Walk me through the ideal result."
+3. "Are there any rules or constraints? (e.g., specific formats, things to always include, things to never do)"
+4. "What would you say to trigger this naturally in conversation?"
 
-Ask me clarifying questions, then generate the SKILL.md file.
-```
-
-**What you should see:** Claude interviews you about your workflow, then generates a properly formatted SKILL.md file with YAML frontmatter, trigger phrases, step-by-step instructions, and examples.
-
-### Step 4: Understand the SKILL.md structure
-
-Here's what a good skill looks like under the hood:
+Based on their answers, generate a properly formatted SKILL.md file with:
 
 ```yaml
 ---
-name: your-skill-name
+name: [skill-name]
 description: [What it does]. Use when user [trigger phrases]. Use for [key tasks].
 ---
-
-# Your Skill Name
-
-## Quick Start
-[Most important thing Claude should do first]
-
-## Step 1: [First Major Step]
-[Clear explanation of what happens]
-
-## Step 2: [Second Major Step]
-[etc.]
-
-## Examples
-**Example 1: [common scenario]**
-User says: "[example request]"
-Actions: [what Claude does]
-Result: [what the user gets]
-
-## Troubleshooting
-**Error: [Common error]**
-Cause: [Why it happens]
-Solution: [How to fix]
 ```
 
-⚠️ **The description field is everything.** This is how Claude decides whether to load your skill. Structure it as: `[What it does] + [When to use it] + [Key capabilities]`. Include specific trigger phrases the user would naturally say.
+Then the full body with:
+- Quick Start section
+- Step-by-step instructions
+- Examples (at least one common scenario)
+- Troubleshooting tips
 
-### Step 5: Run the three-test validation
+Show the generated file and explain the key parts:
+> "The description field is everything — it's how Claude decides whether to load your skill. I structured it as: what it does + when to use it + key capabilities. The trigger phrases are crucial."
 
-Your skill isn't done until it passes three tests. Start a new session and run each one.
+Save the skill file and ask: "Want to adjust anything?"
 
-**Test 1 — Triggering:** Does it load when it should?
+### Step 4: Explain the SKILL.md Structure
 
-```
-[Say something that should naturally trigger your skill — don't mention the skill name]
-```
+**What to do:** Briefly explain what makes a good skill file, pointing to the one you just built together.
 
-If it doesn't load: your description is too vague. Add more trigger phrases.
+**What to say:** Something like:
+> "Let me break down why this skill is structured the way it is. Skills use a 3-level progressive loading system:
+>
+> 1. **At startup:** Claude only sees the skill name and description (~100 tokens each). Lightweight.
+> 2. **When triggered:** Claude recognizes your request matches the skill and loads the full instructions.
+> 3. **When running:** Claude follows the step-by-step workflow.
+>
+> This means you can install dozens of skills without bloating your context window — they're lightweight until needed. Your skill folder can also include `scripts/` (executable code), `references/` (docs and schemas), and `assets/` (templates)."
 
-**Test 2 — Functional:** Does it produce correct outputs?
+### Step 5: Test It — The Three-Test Validation
 
-Run the same request 3 times. Is the output structurally consistent? Do you need to redirect or clarify?
+**What to do:** Run three tests to validate the skill works properly. Walk the student through each one.
 
-**Test 3 — Performance:** Is it better than no skill?
+**What to say:** Something like:
+> "Your skill isn't done until it passes three tests. Let's run them."
 
-Ask Claude to do the same task with and without the skill enabled. Compare the quality, number of corrections needed, and how many follow-up messages you send.
+**Then:**
 
-**Debugging tip:** If your skill isn't triggering, ask Claude:
-```
-When would you use the [skill name] skill?
-```
-It will quote the description back to you — and you'll see exactly what's missing.
+**Test 1 — Triggering:**
+> "Say something that should naturally trigger your skill — but don't mention the skill by name. Let's see if it loads automatically."
 
-## 🎉 What Just Happened
+Help them craft a natural trigger phrase. If the skill doesn't load, explain that the description needs more trigger phrases and help them add some.
 
-You just taught Claude a new capability. Skills use a 3-level progressive loading system: at startup, Claude only sees the skill name and description (~100 tokens each). When it recognizes your request matches a skill, it loads the full instructions. This means you can install dozens of skills without bloating your context window — they're lightweight until needed. Your skill folder can also include `scripts/` (executable code), `references/` (docs and schemas), and `assets/` (templates).
+**Test 2 — Functional:**
+> "Now let's run it for real. Give me a real request that uses this workflow."
 
-## Go Deeper
+Run the skill on their actual request. Check that the output structure is consistent.
 
-- **Share with your team:** Skills are just folders. Drop them in a shared repo and your whole team gets the same quality.
-- **Iterate fast:** Most skills can be built and tested in 15-30 minutes using skill-creator
-- **Three categories for PMs:**
-  - **Document creation** — PRDs, release notes, status updates with consistent format
-  - **Workflow automation** — Sprint planning, feedback analysis, competitive reviews
-  - **MCP enhancement** — Add workflow guidance on top of tool access (e.g., teach Claude your Notion project setup process)
-- **Skill library:** Browse community skills at [github.com/anthropics/skills](https://github.com/anthropics/skills)
+**Test 3 — Quality comparison:**
+> "Last test — is it actually better? Think about the last time you did this task without the skill. Is this output better, faster, or more consistent?"
 
-## Share
+**Debugging tip if it's not triggering:**
+> "If your skill isn't loading, try asking me: 'When would you use the [skill name] skill?' I'll quote the description back to you — and you'll see exactly what's missing."
 
-Bring back: What's the one workflow you'd most want to automate? What's the trigger phrase you'd use?
+### Wrap Up
+
+**What to say:** Something like:
+> "🎉 You just taught Claude a new capability. That skill is just a folder — you can share it with your team by dropping it in a shared repo, and everyone gets the same quality. Most skills can be built and tested in 15-30 minutes.
+>
+> Three categories to think about for future skills:
+> - **Document creation** — PRDs, release notes, status updates with consistent format
+> - **Workflow automation** — sprint planning, feedback analysis, competitive reviews
+> - **MCP enhancement** — add workflow guidance on top of tool access
+>
+> Want to go deeper? Browse community skills at [github.com/anthropics/skills](https://github.com/anthropics/skills) or build another one right now.
+>
+> **Share with the cohort:** What workflow did you turn into a skill? What's the trigger phrase you used?"
+
+---
+
+## Reference Material
+
+- **Skill-creator source:** [github.com/anthropics/skills](https://github.com/anthropics/skills)
+- **SKILL.md structure:**
+  - YAML frontmatter: `name`, `description` (crucial for auto-loading)
+  - Body: Quick Start, step-by-step instructions, examples, troubleshooting
+  - Optional folders: `scripts/` (code), `references/` (docs), `assets/` (templates)
+- **Progressive loading system:** Name/description only at startup (~100 tokens), full content loaded only when triggered
+- **Description field best practice:** Structure as `[What it does] + [When to use it] + [Key capabilities]`. Include specific trigger phrases.
+- **Three-test validation:** 1) Triggering (does it auto-load?), 2) Functional (correct output?), 3) Quality (better than without?)
+- **Skill categories for PMs:** Document creation, workflow automation, MCP enhancement

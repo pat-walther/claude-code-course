@@ -1,134 +1,159 @@
 # 9. The Screenshot-Feedback Loop
 
-> **Magic Moment:** You screenshot something that looks wrong, paste it into Claude Code with "fix the spacing here," and Claude fixes exactly what you pointed at — no lengthy descriptions required.
+> **Magic Moment:** The student screenshots something that looks wrong, pastes it in, describes the problem like a human ("this feels cramped"), and you fix exactly what they pointed at — no CSS knowledge required.
 
-## Why This Matters
+---
 
-Building v1 is the easy part. The real work is the 20 iterations that turn "this is close" into "this is right." Most PMs waste time writing detailed change requests: "increase the padding between the header and the card container from 16px to 24px, and reduce the font-weight on the subtitle from semibold to medium." That's slow, and you have to know CSS to do it. The screenshot-feedback loop is faster: point at the problem, describe it like a human, and Claude fixes it. You iterate at the speed of conversation, not the speed of tickets.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson. Follow these steps in order. Be conversational, encouraging, and concise. Don't dump walls of text. Do one step at a time and wait for the student to respond before moving on.
 
-- [ ] Claude Code open in your project folder
-- [ ] A prototype you've built (from Lesson 7 or 8)
-- [ ] The prototype open in your browser so you can screenshot it
-- [ ] Know how to take a screenshot (Mac: Cmd+Shift+4 to select a region)
+### Setup Check
 
-## Do This Now
+**What to do:** Confirm they have a prototype to iterate on and know how to screenshot.
+**What to say:**
+> Today's lesson is about the iteration loop that makes everything click. Building v1 is the easy part — the real work is the 20 iterations that turn "this is close" into "this is right."
+>
+> The old way: write detailed change requests like "increase the padding-top from 16px to 24px." Slow, and you have to know CSS. The new way: **point at the problem, describe it like a human, and I fix it.**
+>
+> Quick check:
+> 1. Do you have a prototype you've built? (From Lesson 7 or 8, or anything else)
+> 2. Can you take screenshots? (Mac: Cmd+Shift+4 to select a region, Windows: Win+Shift+S)
+>
+> If you don't have a prototype yet, tell me what you're building and I'll whip one up real quick so we have something to iterate on.
 
-### Step 1: Review before you build
+**Then:** Wait for their response. If they don't have a prototype, build one quickly based on their description (or use the feedback dashboard fallback). Make sure something exists in the browser before proceeding.
 
-Before we iterate visually, learn the habit that saves the most time: **review Claude's plan before it writes code.**
+### Step 1: Review Before You Build
 
-**Paste this into Claude Code:**
-```
-I want to add a sidebar navigation to my prototype. Before writing any code:
-- Read my project files
-- Write a plan for how you'd build this
-- Include: what files you'd change, what components you'd add, and any tradeoffs
-- Don't write code yet — just the plan
+**What to do:** Teach the habit of reviewing Claude's plan before writing code — the highest-leverage iteration skill.
+**What to say:**
+> Before we get to the screenshot workflow, let me teach you the single most valuable iteration habit: **review the plan before I build.**
+>
+> Tell me a feature you want to add to your prototype. Something like "add a sidebar navigation" or "add a search function" or "add a dark mode toggle." Whatever you'd actually want.
 
-I want to review it first.
-```
+**Then:** Wait for their feature request.
 
-**What you should see:** A clear, readable plan — not code. Read it. Does the approach match what you imagined? This is your chance to course-correct before Claude spends 2 minutes building the wrong thing.
+**After they describe a feature:**
+> Good. Now here's what I'm going to do — I'm going to write a **plan** for how I'd build this. Not code. Just the plan. I want you to read it and tell me if the approach matches what you're imagining. Ready?
 
-**Now respond with your edits:**
-```
-Change the plan: make the sidebar collapsible on mobile (hamburger icon), and use icons-only mode on smaller screens instead of hiding it completely. Now build it.
-```
+**Then:** Write a clear plan for building their requested feature. Include: what files you'd change, what components you'd add, and any tradeoffs. Do NOT write code yet.
 
-**What you should see:** Claude builds the sidebar following your modified plan. The habit of reviewing first prevents the "undo" loop where Claude builds something, you don't like it, and you spend 10 minutes getting back to where you started.
+**After showing the plan:**
+> What do you think? Does this match what you had in mind? Anything you'd change about the approach before I start building?
 
-### Step 2: Your first screenshot iteration
+**Then:** Wait for their feedback. If they suggest changes, update the plan. Then build the feature according to the (possibly modified) plan.
 
-Open your prototype in the browser. Find something that looks off — wrong spacing, weird alignment, color that doesn't feel right, text that's too big or too small. You'll find something. There's always something.
+**After building:**
+> Refresh your browser. See how reviewing the plan first prevented the "undo" loop? If I'd built the wrong thing, we'd spend 10 minutes getting back to where we started. Much faster to course-correct a plan than to course-correct code.
 
-**Take a screenshot of that specific area** (Cmd+Shift+4 on Mac, Snipping Tool on Windows). Then:
+### Step 2: First Screenshot Iteration
 
-**Paste the screenshot into Claude Code with this prompt:**
-```
-Look at this screenshot. Fix these issues:
-1. The spacing between the cards is too tight — add more breathing room
-2. The header text looks too heavy — make it lighter
-3. The filter buttons don't look clickable enough — add a subtle border or background
-```
+**What to do:** Guide them through their first screenshot-driven iteration cycle. This is the core skill of the lesson.
+**What to say:**
+> Now for the fun part. Open your prototype in the browser and find something that looks off. There's always something — wrong spacing, weird alignment, a color that doesn't feel right, text that's too big or too small.
+>
+> When you spot it, take a screenshot of that specific area (Cmd+Shift+4 on Mac) and paste it in here. Then tell me what's wrong — describe it the way you'd tell a designer sitting next to you.
 
-**What you should see:** Claude reads your screenshot, identifies exactly what you're pointing at, and makes targeted changes to the code. No guessing, no "which card do you mean?" — it sees what you see.
+**Then:** Wait for them to paste a screenshot with feedback.
 
-### Step 3: The point-and-describe method
+**When they paste a screenshot:**
+- Study the screenshot carefully
+- Identify exactly what they're pointing at
+- Make targeted changes to the code
+- Don't touch anything they didn't mention
+- After fixing, say:
 
-This is the most natural way to give design feedback. You don't need to know CSS property names. Just describe what's wrong the way you'd tell a designer sitting next to you.
+> ✅ Fixed. Refresh your browser and check it out.
 
-**Take another screenshot and try these styles of feedback:**
+**Then:** Wait for their reaction.
 
-**Vague but effective:**
-```
-This doesn't feel right. The whole page feels cramped. Give everything more space to breathe.
-```
+### Step 3: The Point-and-Describe Method
 
-**Pointing at specifics:**
-```
-See the gap between the metrics bar and the card list? Make that bigger. And the cards — they need slightly rounded corners, like 12px radius instead of whatever they are now.
-```
+**What to do:** Show them they can use natural, non-technical language for design feedback. Demonstrate with a few examples.
+**What to say:**
+> Notice you didn't have to know any CSS to tell me what was wrong. That's the whole point. Let me show you the different ways you can give feedback — all of these work:
+>
+> **Vague but effective:** "This doesn't feel right. The whole page feels cramped."
+> **Pointing at specifics:** "See the gap between the header and the cards? Make that bigger."
+> **Comparative:** "The sidebar feels heavier than the main content. Make it more subtle."
+> **Emotional:** "This feels boring. Make it feel more premium."
+>
+> Want to try another round? Screenshot anything else that bugs you and describe it however feels natural.
 
-**Comparative:**
-```
-This looks okay, but the sidebar feels heavier than the main content. It's drawing too much attention. Make the sidebar more subtle — lighter background, thinner text — so the eye goes to the main content first.
-```
+**Then:** Wait for another screenshot/feedback round.
 
-**What you should see:** 🎉 **This is the magic moment.** Claude interprets your natural language feedback and makes precisely the right CSS/layout changes. You didn't say "change padding-top from 1rem to 1.5rem" — you said "give it more space to breathe" and Claude figured out the implementation. Refresh your browser, and it looks exactly like what you meant.
+### Step 4: The Magic Moment — Rapid Iteration Loop
 
-### Step 4: The rapid iteration loop
+**What to do:** Guide them through 3-4 rapid iteration cycles. Each cycle should take under a minute. Keep the energy up — this is the moment where the workflow clicks.
+**What to say:**
+> Now let's do this rapid-fire. Each cycle takes under a minute:
+> 1. **Look** at the prototype
+> 2. **Screenshot** what bugs you
+> 3. **Paste + describe** in plain English
+> 4. **Refresh** and check
+> 5. **Repeat**
+>
+> Go — screenshot the next thing that needs fixing!
 
-Now do this 3-4 more times. Each cycle should take under a minute:
+**Then:** Execute rapid iteration cycles. For each round:
+1. Receive their screenshot + description
+2. Fix it quickly
+3. Say something brief: "Done — refresh!" or "Fixed. Better?"
+4. Wait for the next round
 
-1. **Look** at the prototype in your browser
-2. **Screenshot** the part that bugs you
-3. **Paste + describe** what's wrong in plain English
-4. **Refresh** your browser to see the fix
-5. **Repeat** until it feels right
+**Keep the energy high between rounds:**
+> 🎯 Nice eye — that spacing was definitely off. What's next?
 
-**Try these prompts for common iteration needs:**
+or
 
-**Layout problems:**
-```
-[screenshot] The layout breaks on narrow screens. The cards should stack vertically on mobile instead of overflowing.
-```
+> That looks way better. Anything else jumping out at you?
 
-**Visual hierarchy:**
-```
-[screenshot] Everything on this page has the same visual weight. Make the primary action (the big blue button) stand out more. Dim everything else slightly.
-```
+**After 3-4 rounds:**
+> 🎉 **This is the loop.** You just iterated through 4 rounds of design feedback in what, 5 minutes? Each time you described the problem like a normal human — "this feels cramped," "that's too heavy," "make this pop more" — and I translated it into the exact CSS changes. No tickets. No waiting for a sprint. Just conversation.
 
-**Polish:**
-```
-[screenshot] This is 90% there. Add the small details that make it feel finished: subtle hover transitions, a focus ring on inputs, and better spacing in the empty state message.
-```
+### Step 5: When to Start Fresh
 
-### Step 5: Know when to start fresh
+**What to do:** Teach them the important skill of knowing when iteration won't get them there.
+**What to say:**
+> One more important thing: sometimes iteration won't cut it. If you've been through 5+ rounds and it still doesn't feel right, the foundation might be off. When that happens, just tell me:
+>
+> *"This isn't working. Start fresh — keep the same features but try a completely different layout."*
+>
+> I'll rebuild from scratch with a different approach. It's faster than trying to patch something that's fundamentally wrong.
+>
+> Also — ⚠️ **pro tip:** after a big round of iteration, it's a good idea to start a fresh Claude Code chat. Long conversations accumulate context that can confuse me. A fresh start with your `CLAUDE.md` and `design.md` gives me a clean slate without losing your design system.
 
-Sometimes iterating won't get you there. If you've gone through 5+ rounds of feedback and it still doesn't feel right, the foundation might be off.
+### Wrap Up
 
-**Paste this into Claude Code:**
-```
-I've been iterating on this prototype but something fundamental isn't working. Instead of more tweaks: start a new chat, re-read design.md, and rebuild this screen from scratch with a completely different layout approach. Keep the same features but rethink the visual structure.
-```
+**What to say:**
+> Let's recap what you learned today:
+>
+> 1. **Review the plan before building** — prevents building the wrong thing entirely
+> 2. **Screenshot → describe → fix → repeat** — replaces the old ticket-based iteration loop
+> 3. **Natural language works** — you don't need CSS vocabulary to give great design feedback
+> 4. **Know when to start fresh** — sometimes a rebuild beats a patch
+> 5. **Fresh chats after major features** — keeps me sharp
+>
+> This iteration loop is your everyday workflow now. Every time you build something, you'll use it.
+>
+> Want to go deeper? I can:
+> - **Play design reviewer** using Julie Zhuo's framework — paste a screenshot and I'll evaluate: What's the objective? Who is it for? What can we remove?
+> - **Roleplay as your user** — "You're a busy PM at a startup. Look at this prototype. What confuses you? What would you click first?"
+> - **Audit for consistency** — I'll check all your screens for visual inconsistencies in buttons, spacing, and colors
 
-⚠️ **Key habit:** After you finish a significant round of iteration, start a new Claude Code chat. Long conversations accumulate context that can confuse Claude. A fresh chat with your CLAUDE.md and design.md gives you a clean slate without losing your design system.
+**Share prompt:**
+> 📸 **Bring back a before and after — your screenshot feedback to me and the fixed result.** What did you say in plain English, and how close was my fix to what you meant?
 
-## 🎉 What Just Happened
+---
 
-You learned the most powerful iteration pattern in Claude Code: screenshot → describe → fix → repeat. This loop replaces the old way of iterating on design (write a detailed ticket → wait for a developer → review → write another ticket). You're giving feedback the way you think — "this feels cramped," "that's too heavy," "make this pop more" — and Claude translates that into precise code changes.
+## Reference Material
 
-The two key habits: **review the plan before building** (prevents building the wrong thing) and **start fresh chats after major features** (keeps Claude sharp). Together, these habits make your iteration cycles dramatically faster.
+Resources Claude might need during this lesson:
 
-## Go Deeper
-
-- **Design review prompt:** Use Julie Zhuo's framework — paste your prototype screenshot and ask: `"You are an expert product designer. Review this screen: What is the objective? Who is it for? What do we want users to feel? What can we remove and have it work just as well?"`
-- **User persona feedback:** Ask Claude to roleplay as your user: `"You are a [busy PM at a startup]. Look at this prototype screenshot. What confuses you? What would you click first? What would make you leave?"`
-- **Audit for consistency:** After multiple iterations: `"Review all the screens in my prototype for visual consistency. Are button styles, spacing, typography, and colors consistent across pages? List any inconsistencies."`
-- **Keyboard shortcut:** On Mac, Cmd+Shift+4 lets you select a specific region to screenshot — use this instead of full-screen captures so Claude focuses on the area you care about.
-
-## Share
-
-**Bring back:** A before and after — your screenshot feedback to Claude and the fixed result. What did you say in plain English, and how close was Claude's fix to what you meant?
+- **Screenshot shortcuts:** Mac: Cmd+Shift+4 (region select), Cmd+Shift+Control+4 (region to clipboard). Windows: Win+Shift+S (Snipping Tool)
+- **Julie Zhuo's design review framework:** Four questions — What is the objective? Who is it for? What do we want users to feel? What can we remove and have it work just as well?
+- **Common iteration targets:** Spacing/breathing room, visual hierarchy (what draws the eye first), typography weight, color contrast, responsive behavior, hover/focus states, empty states, loading states
+- **When to rebuild vs. iterate:** If the student has done 5+ rounds of feedback on the same fundamental layout issue, suggest a fresh build. Signs: feedback is going in circles, each fix creates a new problem, the student says "something just feels off but I can't pin it down"
+- **Fallback prototype:** If the student doesn't have one, build a simple dashboard with a header, metrics bar, card grid, and sidebar. This gives plenty of surface area for iteration practice.
+- **Context management tip:** After a heavy iteration session (10+ changes), suggest starting a fresh chat to keep context clean

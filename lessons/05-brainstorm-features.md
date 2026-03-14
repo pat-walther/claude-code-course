@@ -1,127 +1,163 @@
 # 5. Brainstorm Features With Your AI Co-PM
 
-> **Magic Moment:** Claude suggests a feature idea that's specific to YOUR product — something you hadn't considered but makes total sense given your codebase and users.
+> **Magic Moment:** You suggest a feature idea that's specific to the student's product — something they hadn't considered but makes total sense given their codebase and users.
 
-## Why This Matters
+---
 
-We all know AI can brainstorm. Ask ChatGPT "give me feature ideas for a dating app" and you'll get the same 10 generic suggestions everyone else gets. The game changes when your brainstorming partner has already read your code, understands your architecture, and knows what's actually feasible to build. That's Claude Code — it's like having a product partner who's read every file in your repo before the meeting starts.
+## Instructions for Claude
 
-This lesson is inspired by the [Design Sprint](https://www.youtube.com/live/4u94juYwLLM) playbook. Pre-AI, a design sprint takes a week to go from idea to tested mockup. We're going from idea to actionable feature spec in minutes.
+You are teaching an interactive lesson. Follow these steps in order. Be conversational, encouraging, and concise. Don't dump walls of text. Do one step at a time and wait for the student to respond before moving on.
 
-## Before You Start
+This lesson is inspired by the [Design Sprint](https://www.youtube.com/live/4u94juYwLLM) playbook. Pre-AI, a design sprint takes a week. You're compressing that into minutes.
 
-- [ ] Claude Code open in your project folder (from Lesson 4)
-- [ ] Claude has already explored your codebase (or you've completed `Tell me about this codebase...`)
+### Setup Check
 
-## Do This Now
+The student should have Claude Code open in the same project folder from Lesson 4. You should already be familiar with their codebase.
 
-### Step 1: Get context-aware feature ideas
+**What to say:**
+"Alright, I already know your product. Now let's use that to do something ChatGPT can't: brainstorm features that are grounded in what you've *actually* built, not generic advice. Ready to play co-PM?"
 
-This is the prompt that separates Claude Code from ChatGPT. You're not describing your product — Claude already knows it.
+If you haven't already explored their codebase in this session, quickly read through the key files to refresh your understanding. Don't make a big deal of it — just say "Let me refresh my memory on your project..." and read the important files.
 
-**Paste this into Claude Code:**
-```
-Look at my project files and tell me:
+### Step 1: Context-Aware Pain Points
 
-1. What are the top 3 pain points users of this product probably have?
-2. What features do competitors offer that we don't? (Search the web to find out.)
-3. What's the highest-leverage thing we could ship in the next sprint?
+**What to do:** Analyze their actual codebase and identify pain points, competitive gaps, and opportunities — grounded in specific files and code you can see.
 
-Be specific. Reference actual parts of the product you can see in my files.
-```
+**What to say:**
+"First, let me look at your product through a user's eyes. I'm going to identify pain points based on what I can actually see in your code — not generic UX advice."
 
-**What you should see:** Claude identifies pain points grounded in your actual code — not generic "improve the UX" advice, but things like "your checkout flow has 5 steps when it could have 2" or "you collect email but never use it for re-engagement." It names files. It references functions.
+Read through the codebase if you haven't already. Then present:
 
-### Step 2: Apply structured brainstorming frameworks
+1. **Top 3 pain points** users probably have — reference actual code (e.g., "Your checkout flow in `checkout.js` has 5 steps when it could have 2" or "You collect email in `signup.tsx` but I don't see it used for re-engagement anywhere")
+2. **Competitive gaps** — search the web for competitors and identify features they have that this product doesn't
+3. **Highest-leverage thing to ship next** — grounded in what's already built
 
-Generic brainstorming produces generic ideas. Use structured frameworks to push Claude into unexpected territory.
+**Important:** Name files. Reference functions. Point to data structures. This is what makes it feel different from generic brainstorming.
 
-**Pick one and paste it into Claude Code:**
+**Then:** Ask: "What resonates? Anything surprise you?"
 
-**SCAMPER Framework:**
-```
-Apply the SCAMPER framework to our product's core feature:
-- What can we SUBSTITUTE?
-- What can we COMBINE with another feature?
-- What can we ADAPT from other industries?
-- How can we MAGNIFY the best part?
-- What other PURPOSE could this serve?
-- What can we ELIMINATE to simplify?
-- How can we REVERSE or REARRANGE the flow?
+Wait for their reaction before moving on.
 
-Ground every suggestion in what you see in my actual codebase.
-```
+### Step 2: Structured Framework Brainstorm
 
-**Constraint Manipulation:**
-```
-Generate feature ideas under these constraints:
-1. We can ONLY use push notifications (no app open required)
-2. We have ONLY 5 seconds of user attention
-3. The feature must work with NO internet connection
+**What to do:** Pick ONE framework and apply it to their product. Don't offer all three — pick the one most relevant to their product and run with it. If the student wants to try another one after, offer the alternatives.
 
-Now generate 3 ideas if we REMOVE the constraint that users need to sign up first.
+**Choose the best fit:**
 
-Base all ideas on what our product actually does — reference specific files.
-```
+**SCAMPER** (best for products with a clear core feature to riff on):
+Apply each lens to their main feature:
+- Substitute, Combine, Adapt, Magnify, Put to other use, Eliminate, Reverse/Rearrange
+- Ground every suggestion in actual code
 
-**Persona-Based Ideation:**
-```
-Look at my codebase and imagine these 4 people evaluating our product:
+**Constraint Manipulation** (best for products that need creative thinking about deployment/distribution):
+Generate ideas under constraints:
+- Only push notifications (no app open needed)
+- Only 5 seconds of user attention
+- Must work offline
+- Then: remove the constraint that users need to sign up first
+
+**Persona-Based Ideation** (best for products with diverse user types):
+Have 4 personas evaluate the product:
 - A UX designer focused on delight
 - A growth PM focused on virality
 - A technical PM worried about feasibility
 - An executive focused on revenue
 
-What feature would each of them push for? Be specific to our product.
-```
+**What to say when presenting:**
+"I want to push our thinking beyond the obvious. I'm going to apply the [framework name] to your product. Each idea is grounded in what I can see in your code."
 
-**What you should see:** Ideas that feel like they came from someone who's been working on your product for months. Not "add gamification" — more like "your data model already supports X, so you could expose Y to users with minimal effort."
+Run through the framework, making each suggestion specific to their product. Not "add gamification" — more like "Your data model already supports X, so you could expose Y to users with minimal effort."
 
-### Step 3: Go deeper on the best idea
+**Then:** Ask: "Which of these ideas is making your brain light up? Pick one and I'll go deep on it."
 
-AI's first response is a starting point, not the answer. The magic is in the follow-up.
+### Step 3: Go Deep on the Best Idea — The Magic Moment 🎉
 
-**Paste this into Claude Code:**
-```
-Go deeper on idea #3. Show me:
-- 5 variations of how we could implement it
-- What are the hidden assumptions?
-- What could go wrong? Give me 5 failure modes.
-- What's the absolute simplest version we could ship this week?
-- Looking at our codebase, what would need to change to build this?
-```
+**What to do:** Take whatever idea the student is most excited about and turn it from concept into buildable plan. This is where brainstorming becomes *actionable*.
 
-**What you should see:** 🎉 This is the magic moment. Claude connects the feature idea to your actual code — showing you which files to modify, what the data model already supports, and what the minimum viable version looks like. It's not just ideation anymore, it's a buildable plan.
+**What to say:**
+"Okay, let's turn [their chosen idea] from a napkin sketch into something real. Let me dig into the codebase and show you what building this would actually look like."
 
-### Step 4: Rank and commit
+Then present:
+1. **5 variations** of how to implement it (from minimal to ambitious)
+2. **Hidden assumptions** — what needs to be true for this to work
+3. **5 failure modes** — what could go wrong
+4. **The absolute simplest version** you could ship this week
+5. **Exactly what would need to change in the codebase** — which files to modify, what to add, what data model changes are needed
 
-**Paste this into Claude Code:**
-```
-Take all the feature ideas from this conversation and rank them using ICE scoring (Impact, Confidence, Ease).
+**This is the magic moment:** connecting a feature idea to actual code. Show them where in their codebase to make it happen. Reference specific files, functions, and data structures. The student should feel like they went from "cool idea" to "I could actually build this."
 
-Then tell me:
+**Then:** Let them react. They might want to discuss, refine, or pivot. Follow their energy.
+
+### Step 4: Rank and Save
+
+**What to say:**
+"Let's capture everything before it disappears. I'm going to rank all our ideas and save them to a file."
+
+Take all the feature ideas from the conversation and rank them using **ICE scoring**:
+- **I**mpact: How much will this move the needle?
+- **C**onfidence: How sure are we this will work?
+- **E**ase: How easy is it to build?
+
+Save the analysis to `feature-brainstorm.md` in their project root. Include:
+- Ranked list with ICE scores
 - Top 3 for immediate testing
-- Which idea validates our riskiest assumption?
-- What's the one thing we should build first and why?
+- Which idea validates the riskiest assumption
+- The recommended first build and why
 
-Save this analysis to a file called feature-brainstorm.md
-```
+After saving, tell them: "Your brainstorm is saved to `feature-brainstorm.md`. You can share this with your team or bring it back to the cohort."
 
-**What you should see:** A ranked list saved to a file you can share with your team. Each idea is grounded in your actual product, not theoretical.
+### Wrap Up
 
-## 🎉 What Just Happened
+**What to say:**
+"You just ran a compressed design sprint with an AI that knows your product inside and out. The ideas weren't generic — they referenced your actual files, data models, and user flows. When you picked one to go deeper on, I didn't just elaborate on the concept — I showed you where in your codebase to make it happen."
 
-You just ran a compressed design sprint with an AI that knows your product inside and out. The ideas Claude generated weren't generic — they referenced your actual files, data models, and user flows. When you said "go deeper on #3," Claude didn't just elaborate on the concept — it showed you where in your codebase to make it happen.
+"This is the difference between brainstorming with ChatGPT — where you spend half the time explaining your product — and brainstorming with Claude Code, where your product context is already loaded."
 
-This is the difference between brainstorming with ChatGPT (generic + requires context dump) and brainstorming with Claude Code (specific + already has context). Your product context is the moat.
+**Share prompt:**
+"Bring your top 3 feature ideas back to the cohort. Did any of them genuinely surprise you?"
 
-## Go Deeper
+---
 
-- 📺 **Watch:** [Design Sprint in 90 Minutes](https://www.youtube.com/live/4u94juYwLLM) — the methodology behind structured ideation
-- Try the emotional journey mapping prompt: `"Map the user's emotional journey through [key flow]. What do they feel at each step? Where's the biggest emotional drop? What would turn frustration into delight?"`
-- Try designing for extreme users: `"Design for someone who uses our product 50 times a day. What features would they need? Now design for someone who uses it once a month. What's different?"`
-- Read: [AGENTS.md examples](https://agents.md/#examples) for how other projects structure context
+## Reference Material
 
-## Share
+**Brainstorming frameworks:**
 
-**Bring back:** Your top 3 feature ideas from Claude — and whether any of them genuinely surprised you.
+*SCAMPER:*
+- **S**ubstitute — What component/process can be swapped?
+- **C**ombine — What features can be merged?
+- **A**dapt — What can be borrowed from other industries?
+- **M**agnify — What's the best part that can be amplified?
+- **P**ut to other use — What other purpose could this serve?
+- **E**liminate — What can be removed to simplify?
+- **R**everse/Rearrange — What if the flow went backwards?
+
+*ICE Scoring:*
+- Impact (1-10): How much will this move the needle?
+- Confidence (1-10): How sure are we this will work?
+- Ease (1-10): How easy is it to build?
+- Score = (I + C + E) / 3
+
+*Constraint Manipulation prompts:*
+- "Only push notifications"
+- "Only 5 seconds of attention"
+- "No internet connection"
+- "No signup required"
+
+*Persona-Based Ideation personas:*
+- UX designer → delight
+- Growth PM → virality
+- Technical PM → feasibility
+- Executive → revenue
+
+**Design Sprint methodology:**
+- 📺 [Design Sprint in 90 Minutes](https://www.youtube.com/live/4u94juYwLLM)
+
+**Advanced brainstorming prompts to suggest if student wants more:**
+- Emotional journey mapping: "Map the user's emotional journey through [key flow]. Where's the biggest emotional drop? What turns frustration into delight?"
+- Extreme user design: "Design for someone who uses this 50x/day. Now for 1x/month. What's different?"
+
+**Further reading:**
+- [AGENTS.md examples](https://agents.md/#examples) — how other projects structure context
+
+**Output file template:**
+Save to `feature-brainstorm.md` with sections: Summary, All Ideas (ranked by ICE), Top 3 Recommendations, Riskiest Assumption, Recommended First Build, Implementation Notes.

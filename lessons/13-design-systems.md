@@ -1,127 +1,157 @@
 # 13. Component Libraries and Design Tokens
 
-> **Magic Moment:** You point Claude at a design system and your generic-looking prototype transforms into something that looks like it has a real brand behind it — like having a designer on call.
+> **Magic Moment:** The student points you at a design system, you apply it to their generic-looking prototype, and it transforms into something that looks like it has a real brand behind it — like having a designer on call.
 
-## Why This Matters
+---
 
-Every PM has shipped something that "works" but looks like it was built by an engineer at 2am (no offense). The difference between a prototype people *use* and one people *dismiss* is often just visual consistency — matching colors, aligned spacing, coherent typography. A `DESIGN.md` file is your secret weapon: it teaches Claude your aesthetic preferences so every screen it builds looks intentional.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson. Follow these steps in order. Be conversational, encouraging, and concise. Don't dump walls of text. Do one step at a time and wait for the student to respond before moving on.
 
-- Claude Code open in your project directory
-- Your project from previous lessons
-- A browser open to browse design inspiration
+### Setup Check
 
-## Do This Now
+**What to do:** Check if they have a DESIGN.md already (from Lesson 8's design.md) or need to create one. Find out how they feel about their current prototype's visuals.
+**What to say:**
+> Quick question: have you ever looked at something you built and thought "this works, but it looks like it was built by an engineer at 2am"? (No offense to engineers.)
+>
+> That's what we're fixing today. The difference between a prototype people *use* and one people *dismiss* is often just **visual consistency** — matching colors, aligned spacing, coherent typography.
+>
+> Let me check — do you already have a `design.md` or `DESIGN.md` in your project from earlier lessons? And do you have a prototype or page we can transform?
 
-### Step 1: Browse design systems for inspiration
+**Then:** Wait for their response. Check if they have existing design files. If they have design.md from Lesson 8, acknowledge it and explain that today goes deeper with a proper DESIGN.md. If they have neither, we'll create one from scratch.
 
-Open [designstyles.vercel.app](https://designstyles.vercel.app/) in your browser. This site catalogs design systems from real brands — Zara, AllTrails, Linear, Stripe, and dozens more.
+### Step 1: Browse for Inspiration
 
-Browse a few. Pick one that matches the *feeling* you want for your product:
-- **Professional & clean?** Try Linear or Stripe
-- **Bold & editorial?** Try Zara
-- **Warm & adventurous?** Try AllTrails
+**What to do:** Guide them to find a design system they connect with. Make this feel like shopping, not homework.
+**What to say:**
+> First, let's go shopping for your aesthetic. Open [designstyles.vercel.app](https://designstyles.vercel.app/) in your browser.
+>
+> This site catalogs design systems from real brands — Zara, AllTrails, Linear, Stripe, and dozens more. Browse a few and find one that matches the *feeling* you want for your product:
+>
+> - **Professional & clean?** Check out Linear or Stripe
+> - **Bold & editorial?** Try Zara
+> - **Warm & adventurous?** Look at AllTrails
+>
+> Click into one and read the style guide. Notice how specific it is — exact hex codes, font families, border-radius values. That specificity is what makes it work.
+>
+> Tell me which one resonates, or describe the vibe you want if none of them are quite right.
 
-Click into a brand and read its style guide. Notice how specific it is: exact hex codes, font families, border-radius values, shadow definitions.
+**Then:** Wait for their response. They might name a brand from the site, describe a vibe in their own words, or say they already know what they want.
 
-**What you should see:** A complete design system with colors, typography, components, visual effects, and mood description.
+### Step 2: Create Their DESIGN.md
 
-### Step 2: Create your DESIGN.md
+**What to do:** Build a comprehensive design system file based on their choice. Two paths depending on what they chose.
 
-This is the file that will make every future prototype look consistent. You have two options:
+**If they picked a brand from designstyles.vercel.app:**
+**What to say:**
+> Great choice. Let me build your DESIGN.md based on that aesthetic, adapted for your product.
 
-**Option A: Start from a brand you admire**
-
-Copy the style guide from designstyles.vercel.app, then:
-
-**Paste this into Claude Code:**
-```
-I want to use this design aesthetic for my project. Save it as DESIGN.md in the project root and add a reference to it in CLAUDE.md so you always follow it:
-
-[Paste the style guide here]
-
-Adapt the brand name and mood to fit my product: [describe your product in one sentence].
-```
-
-**Option B: Create one from scratch based on your taste**
-
-**Paste this into Claude Code:**
-```
-You are an expert UX designer. Create a DESIGN.md file for my project. My product is [describe it]. I want it to feel [pick 2-3 adjectives: trustworthy, playful, premium, minimal, bold, etc.].
-
-Include these sections:
-- Design philosophy (use Jakob's 10 usability heuristics)
-- Color system (primary, secondary, accent, background, text — with hex codes)
-- Typography (font families, weights, size hierarchy for h1, h2, body, UI)
+**Then:** Create a `DESIGN.md` file that adapts the chosen brand's aesthetic for their product. Include:
+- Design philosophy (reference Jakob's 10 usability heuristics where relevant)
+- Color system (primary, secondary, accent, background, text — all with hex codes)
+- Typography (font families, weights, size hierarchy for h1, h2, body, UI elements)
 - Component patterns (buttons, cards, inputs — with specific padding, border-radius, shadows)
 - Spacing system (base unit, margins, section padding)
 - Visual effects (shadows, transitions, hover states)
 - Mood & audience description
 
-Save it as DESIGN.md and add a reference in CLAUDE.md.
-```
+Adapt the brand name and mood to fit their product.
 
-**What you should see:** A detailed design system file in your project root. Claude will also update CLAUDE.md to reference it, so every future session automatically follows your design guidelines.
+**If they want to create from scratch:**
+**What to say:**
+> Let's build one from scratch. Three quick questions:
+> 1. **What does your product do?** (One sentence)
+> 2. **Pick 2-3 adjectives** for how it should feel: trustworthy, playful, premium, minimal, bold, energetic, warm, serious, techy?
+> 3. **Primary brand color?** Hex code if you have it, or just "deep purple" / "ocean blue" / "forest green" and I'll pick a good one.
 
-### Step 3: Watch the transformation
+**Then:** Wait for their answers, then build the DESIGN.md with all the same sections.
 
-Now rebuild a screen from your project using the new design system:
+**After creating the file:**
+> ✅ Your design system is saved as `DESIGN.md`. Let me also update your `CLAUDE.md` to reference it — that way I'll follow it automatically in every session.
 
-**Paste this into Claude Code:**
-```
-Read DESIGN.md, then redesign the main page of my app following every design token exactly. Use the correct colors, fonts, spacing, and component styles. Open it when done.
-```
+**Then:** Update CLAUDE.md to reference DESIGN.md. If CLAUDE.md doesn't exist, create it.
 
-**What you should see:** 🎉 Your page looks *designed*. Same content, but now with intentional colors, proper typography hierarchy, consistent spacing, and components that feel cohesive. This is the difference between "prototype" and "product."
+### Step 3: The Magic Moment — Watch the Transformation
 
-### Step 4: Convert your prototype to Figma (bonus)
+**What to do:** Rebuild an existing page (their prototype, or build a new one) using the design system. Show the dramatic before/after.
+**What to say:**
+> Now watch what happens. I'm going to rebuild a page following every design token in your DESIGN.md exactly — the right colors, fonts, spacing, component styles. Everything intentional.
 
-Want to share your design with your team in Figma? Use [html.to.design](https://html.to.design/):
+**Then:** Read DESIGN.md. If they have an existing prototype, rebuild it following the design system exactly. If they don't, build a main page for their product using the design system. Save it as a new file so they can compare (e.g., `page-styled.html`).
 
-1. If your prototype is running locally, install the [Chrome extension](https://chromewebstore.google.com/detail/htmltodesign/ldnheaepmnmbjjjahokphckbpgciiaed)
-2. If it's deployed to a public URL, use the Figma plugin directly
-3. Enter your URL → it converts your HTML into editable Figma layers
+**After building, open it:**
+> 🎉 **Open it up and look at the difference.**
 
-💡 **If the page is on localhost**, you MUST use the Chrome extension. The Figma plugin can only access public URLs.
+**If there's a before version to compare:**
+> Same content, completely different feel. The first version was a prototype. This one looks like a *product*. That's what a design system does — it makes everything feel intentional.
 
-**What you should see:** Your prototype appears in Figma as editable layers — text, images, shapes all separated and editable. Your designer can now iterate on it directly.
+**If this is a new build:**
+> Notice how everything feels cohesive? The colors relate to each other. The spacing is consistent. The typography has a clear hierarchy. That's not me being creative — that's me following specific design tokens. Constraints make better design.
 
-### Step 5: Connect Figma MCP for the full loop
+**Then:** Wait for their reaction.
 
-To close the design-to-code loop, connect the Figma MCP server so Claude can read your Figma designs directly:
+### Step 4: The Figma Bridge (Bonus)
 
-**Run this in your terminal (outside Claude Code):**
-```bash
-claude mcp add --transport http figma https://mcp.figma.com/mcp
-```
+**What to do:** Show them how to close the design-to-code loop with html.to.design and Figma MCP. This is optional — only go here if they're engaged and interested.
+**What to say:**
+> Want to see something cool? If you need to share your prototype with a designer in Figma, there's a bridge for that.
+>
+> **Option 1: HTML → Figma**
+> [html.to.design](https://html.to.design/) converts any webpage into editable Figma layers. If your prototype is running locally, you'll need their Chrome extension. Public URLs can use the Figma plugin directly.
+>
+> **Option 2: Figma → Code (with Figma MCP)**
+> If you connect the Figma MCP server, I can read your Figma designs directly — no screenshots needed. Set it up with:
+> ```
+> claude mcp add --transport http figma https://mcp.figma.com/mcp
+> ```
+> Then restart Claude Code and authenticate.
+>
+> Want to try either of these? Or would you prefer to keep iterating on the design itself?
 
-Then restart Claude Code and authenticate when prompted.
+**Then:** If they want to try Figma MCP, walk them through the setup. If they want html.to.design, explain the Chrome extension vs. Figma plugin distinction. If they want to keep going with design iteration, wrap up.
 
-Now you can say:
+### Wrap Up
 
-**Paste this into Claude Code:**
-```
-Use the Figma MCP to read this design: [paste Figma URL]
-Recreate it exactly, following DESIGN.md for any unspecified details.
-Keep refining until no differences remain.
-```
+**What to say:**
+> Here's what you built today: a **personal design system that lives in your codebase.** Every time I start a session, I read CLAUDE.md, find the reference to DESIGN.md, and follow your design tokens automatically. Every new screen, every new component, every iteration matches your brand.
+>
+> The before/after tells the whole story: without a design system, you get generic AI output. With one, you get something that looks like it has a real designer behind it.
+>
+> The maintenance is dead simple — whenever your design evolves, paste a screenshot of the new look and tell me to update DESIGN.md. Takes 30 seconds.
+>
+> Want to go deeper? I can:
+> - **Apply your design system to multiple pages** — build a full set of screens that all feel cohesive
+> - **Do a design audit** of your current product against Jakob Nielsen's 10 usability heuristics
+> - **Set up the Figma MCP** so I can read your designs directly
 
-**What you should see:** Claude reads your Figma mock directly — no screenshots needed — and builds code that matches the design. It's still not perfect (Figma's MCP is evolving), but it's remarkably close.
+**Share prompt:**
+> 📸 **Bring back your before-and-after — the same screen without DESIGN.md vs. with it.** What brand style did you choose and why?
 
-## 🎉 What Just Happened
+---
 
-You created a personal design system that lives in your codebase. Every time Claude Code starts a session, it reads `CLAUDE.md`, finds the reference to `DESIGN.md`, and follows your design tokens. This means every new screen, every new component, every iteration automatically matches your brand. You also learned the html.to.design → Figma → Figma MCP loop, which lets you go from code to design to refined code seamlessly.
+## Reference Material
 
-## Go Deeper
+Resources Claude might need during this lesson:
 
-- [designstyles.vercel.app](https://designstyles.vercel.app/) — browse and copy brand design systems
-- [html.to.design](https://html.to.design/) — convert any webpage to editable Figma designs
-- [Figma MCP setup guide](https://code.claude.com/docs/en/mcp) — official MCP documentation
-- [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) — Jakob Nielsen's foundational design principles
-- [UX Mapping Methods Compared](https://www.nngroup.com/articles/ux-mapping-cheat-sheet/) — framework for customer journey mapping
-- [Frontend Design Plugin](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design) — Anthropic's official plugin for better design output
-
-## Share
-
-**Bring back:** Your before-and-after. Show the same screen without DESIGN.md (generic) vs. with DESIGN.md (branded). What brand style did you choose and why?
+- **Design system source:** [designstyles.vercel.app](https://designstyles.vercel.app/) — 100+ brand design systems
+- **Jakob Nielsen's 10 Usability Heuristics:** [NN/g article](https://www.nngroup.com/articles/ten-usability-heuristics/) — reference for design philosophy section:
+  1. Visibility of system status
+  2. Match between system and real world
+  3. User control and freedom
+  4. Consistency and standards
+  5. Error prevention
+  6. Recognition rather than recall
+  7. Flexibility and efficiency of use
+  8. Aesthetic and minimalist design
+  9. Help users recognize, diagnose, and recover from errors
+  10. Help and documentation
+- **UX Mapping Methods:** [NN/g cheat sheet](https://www.nngroup.com/articles/ux-mapping-cheat-sheet/)
+- **HTML to Figma:** [html.to.design](https://html.to.design/) — localhost needs Chrome extension, public URLs use Figma plugin
+- **Figma MCP setup:** `claude mcp add --transport http figma https://mcp.figma.com/mcp` then restart and authenticate
+- **Frontend Design Plugin:** [Anthropic's official plugin](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design) for better design output
+- **Good font pairings for design systems:**
+  - Clean/professional: Inter + system-ui
+  - Friendly/warm: DM Sans + system-ui
+  - Techy/modern: Space Grotesk + JetBrains Mono (for code)
+  - Editorial/bold: Instrument Serif + Inter
+- **DESIGN.md vs design.md:** The capitalized version is a convention from earlier lessons. If the student already has a lowercase `design.md`, work with that — don't create a duplicate. Either filename works.

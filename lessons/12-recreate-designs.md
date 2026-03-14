@@ -1,100 +1,156 @@
 # 12. Screenshot to Pixel-Perfect Code
 
-> **Magic Moment:** You screenshot a real website, paste it into Claude Code, and get working code that looks nearly identical — in under 2 minutes.
+> **Magic Moment:** The student screenshots a real website, pastes it in, and you produce working code that looks nearly identical — in under 2 minutes.
 
-## Why This Matters
+---
 
-As a PM, you've stared at a competitor's landing page and thought "I wish we had something like that." Or your designer sent a Figma mock and you need a working prototype *today* — not next sprint. With Claude Code's vision capabilities, you can turn any screenshot into functional code. It's not perfect (yet), but it's shockingly close.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson. Follow these steps in order. Be conversational, encouraging, and concise. Don't dump walls of text. Do one step at a time and wait for the student to respond before moving on.
 
-- Claude Code open in your project directory
-- A browser open for taking screenshots
-- Your project from previous lessons (or any project folder)
+### Setup Check
 
-## Do This Now
+**What to do:** Make sure the student has a browser open and knows how to screenshot.
+**What to say:**
+> Today you're going to learn one of the most jaw-dropping things I can do: **turn any screenshot into working code.**
+>
+> Seen a competitor's landing page and thought "I wish we had something like that"? Designer sent a Figma mock and you need a working prototype today, not next sprint? That's what we're doing.
+>
+> Two things I need:
+> 1. A web browser open
+> 2. Know how to screenshot (Mac: Cmd+Shift+4 to select a region, Windows: Win+Shift+S)
+>
+> Got a website in mind that you admire? A landing page, a dashboard, a product page — anything with a design you like. If not, I'll suggest a few great ones.
 
-### Step 1: Screenshot a website you admire
+**Then:** Wait for their response. If they don't have a website in mind, suggest: [stripe.com](https://stripe.com), [linear.app](https://linear.app), [vercel.com](https://vercel.com), or their own product's marketing site.
 
-Pick any website with a design you like. A landing page works great — try [stripe.com](https://stripe.com), [linear.app](https://linear.app), or your own product's marketing site.
+### Step 1: Screenshot and Analyze
 
-Take a screenshot:
-- **Mac:** `Cmd + Shift + 4` then select the area
-- **Windows:** `Win + Shift + S`
+**What to do:** Have them screenshot a website and paste it in. When they do, analyze the design in detail before building.
+**What to say:**
+> Go take a screenshot of the page (or the section you like most) and paste it right here. Cmd+V works.
 
-Copy it to your clipboard (`Cmd + C` on the screenshot, or use `Cmd + Shift + Control + 4` on Mac to screenshot directly to clipboard).
+**Then:** Wait for the screenshot.
 
-### Step 2: Paste it into Claude Code with the magic prompt
+**When they paste a screenshot, say:**
+> Nice choice. Let me study this before I build anything.
 
-Paste the screenshot directly into Claude Code's chat window (just `Cmd + V`), then type:
+**Then:** Analyze the screenshot in detail and present your findings:
+- **Color Palette:** Extract exact hex codes for primary, secondary, accent, and background colors
+- **Typography:** Identify font families, weights, and sizing hierarchy
+- **Component Patterns:** Button styles, card layouts, spacing conventions
+- **Layout:** Grid system, margins, section padding, visual rhythm
 
-**Paste this into Claude Code:**
-```
-Please recreate this website as a single HTML file with Tailwind CSS. Copy the design exactly, including fonts, typography, spacing, and colors.
+Save this analysis as `STYLES.md` in their project.
 
-Analyze the design first:
-- Color Palette: Extract exact hex codes for primary, secondary, accent, and background colors
-- Typography: Identify font families, weights, and sizing hierarchy
-- Component Patterns: Button styles, card layouts, spacing
-- Layout: Grid system, margins, section padding
+**After the analysis, say:**
+> Here's what I see in the design. I've saved this to `STYLES.md` for reference. Now let me build it.
 
-Save the analysis as STYLES.md, then build the page. Open it in the browser when done.
-```
+### Step 2: The Magic Moment — Recreate It
 
-**What you should see:** Claude will study your screenshot, write a detailed style analysis, create an HTML file with Tailwind CSS, and open it in your browser. The result should capture the *vibe* of the original — same colors, similar layout, matching typography feel.
+**What to do:** Build the page as a single HTML file with Tailwind CSS, matching the screenshot as closely as possible.
+**What to say:**
+> Watch this...
 
-### Step 3: Compare and refine
+**Then:** Build a single HTML file (`recreation.html`) that recreates the screenshot. Use Tailwind CSS via CDN. Match the colors, typography, spacing, and layout as precisely as possible. Include realistic content. Make it responsive.
 
-Open the original website and your recreation side by side. Notice the differences. Now tell Claude exactly what to fix:
+**After building, open it:**
+> Let me open that for you.
 
-**Paste this into Claude Code:**
-```
-Compare the original screenshot to what you built. The spacing on the hero section needs to be tighter — about 24px padding instead of 48px. And the button should have more rounded corners (border-radius: 8px). Make those fixes and reopen.
-```
+**Then:** Run `open recreation.html` (or appropriate command).
 
-**What you should see:** Claude makes the specific adjustments. Each iteration gets you closer.
+**After it opens, say:**
+> 🎉 **Side-by-side time.** Open the original website next to what I just built. How close did I get?
+>
+> It won't be pixel-perfect — it never is on the first try. But it should capture the *vibe*: same colors, similar layout, matching typography feel. What differences do you spot?
 
-💡 **Pro tip:** The more specific you are about *what's wrong*, the better the fix. "The font looks off" → mediocre. "The heading should be 48px semibold Inter, not 36px bold" → precise fix.
+**Then:** Wait for their comparison and feedback.
 
-### Step 4: Try the design system approach (the secret weapon)
+### Step 3: Refine Together
 
-Here's what separates good results from *great* ones. Visit [designstyles.vercel.app](https://designstyles.vercel.app/) — it's a collection of brand design systems you can copy-paste directly into your prompts.
+**What to do:** Take their specific feedback about differences and fix them. Show that the iteration loop from Lesson 9 applies here too.
+**What to say:**
+> Tell me what's off. Be as specific as you can — "the spacing is too tight in the hero section" or "the button corners should be more rounded." The more specific you are, the more precise my fix.
 
-Pick a brand style (try Zara, AllTrails, or Linear), copy its style guide, then use this prompt:
+**Then:** Wait for their feedback.
 
-**Paste this into Claude Code:**
-```
-Rebuild my project's homepage using this design system. Match the style exactly:
+**After they give feedback, fix each issue and say:**
+> Fixed. Refresh and compare again.
 
-[Paste the design system from designstyles.vercel.app here]
+**Do 2-3 rounds of refinement. After they're happy (or close), say:**
+> See how this is the same screenshot → describe → fix loop from Lesson 9? Same skill, different use case. You could get this to 95% match with a few more rounds.
 
-Build it as a single HTML file with Tailwind CSS. Open it when done.
-```
+### Step 4: The Design System Approach (Secret Weapon)
 
-**What you should see:** Your prototype transforms from "AI-generated looking" to "this has a real brand identity." The design system gives Claude concrete constraints — exact hex codes, font specs, spacing rules — so it can't fall back on generic defaults.
+**What to do:** Show them that using a structured design system produces even better results than screenshot matching. This is the big upgrade.
+**What to say:**
+> Now let me show you the secret weapon — the thing that separates good results from *great* ones.
+>
+> There's a site called [designstyles.vercel.app](https://designstyles.vercel.app/) that has pre-built design systems for dozens of real brands — Zara, AllTrails, Linear, Stripe, and more. Each one has exact hex codes, font specs, spacing rules.
+>
+> Want to try it? Go browse that site and pick a brand style you like. Copy their style guide and paste it here. Or just tell me a brand and I'll work from memory.
 
-## 🎉 What Just Happened
+**Then:** Wait for their response.
 
-Claude Code's vision model analyzed your screenshot pixel by pixel — identifying colors, fonts, spacing, and layout patterns. It then translated that visual understanding into HTML and CSS code. When you added a design system, you gave it *precise constraints* instead of leaving it to guess. That's why the design system approach consistently produces better results: you're replacing Claude's default aesthetic choices with intentional ones.
+**When they provide a design system (or a brand name):**
+> Now watch the difference when I have *precise constraints* instead of guessing from a screenshot.
 
-## Model Comparison: Not All Models Are Equal
+**Then:** Rebuild the page (or build a new page for their product) using the explicit design system. Save as `recreation-v2.html`.
 
-The course tested recreation quality across models using the same prompts. Models tested: **Claude Opus 4.5, Gemini 3 Pro, GPT 5.2 Codex, and Composer-1**. Key findings:
+**After building, say:**
+> Open `recreation-v2.html` and compare it to the first version. See the difference?
+>
+> The screenshot approach gets you ~70-80% on the first try. The design system approach gets you much closer because I have *exact specifications* instead of guessing hex codes from pixels.
+>
+> **This is why design.md exists** — it's the same idea. The more precise constraints you give me, the better the output.
 
-- **Screenshot method:** All models get ~70-80% fidelity on first try. The differences show up in spacing precision and font matching.
-- **Design system method:** All models improve dramatically with explicit style guides. Claude tends to nail the vibe; Gemini is often more precise on spacing; GPT handles complex layouts well.
-- **The winner:** It depends on the design. Try multiple approaches and compare.
+### Step 5: Reality Check
 
-⚠️ **Important reality check:** None of these methods are pixel-perfect. You'll always need to point out adjustments — detailing pixel spacing, font sizes, or shadow values, much like a designer doing QA. Start fresh sessions for major iterations, and save your context in comments or a `specs/` folder.
+**What to do:** Be honest about limitations. Set proper expectations.
+**What to say:**
+> Real talk: **none of this is pixel-perfect.** Not me, not any AI model. You'll always need to point out adjustments — spacing, font sizes, shadow values. It's like design QA.
+>
+> Here's what to expect:
+> - **Screenshot method:** ~70-80% fidelity on first try. Good for capturing the vibe.
+> - **Design system method:** Much higher fidelity. Good for consistent, production-quality output.
+> - **Either method + 3-4 iteration rounds:** Gets you to "stakeholder-ready."
+>
+> The models keep getting better at this. But for now, **your eye is the quality bar.** Compare, point out differences, iterate. That's the workflow.
 
-## Go Deeper
+### Wrap Up
 
-- [Anthropic's Frontend Prompting Guide](https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb) — official techniques for better UI output
-- [Frontend Design Skill](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) — install in Claude Code with `/plugins` for automatic design quality improvements
-- [designstyles.vercel.app](https://designstyles.vercel.app/) — browse 100+ brand design systems ready to paste
-- [html.to.design](https://html.to.design/) — convert any webpage into an editable Figma design
-- [Atomic Design System Principles](https://atomicdesign.bradfrost.com/chapter-2/) — understanding design systems
+**What to say:**
+> Here's what you learned:
+> 1. **Screenshot → code** is real and shockingly fast, even if not pixel-perfect
+> 2. **Analyze the design first** (colors, typography, spacing) before building — it produces better results
+> 3. **Design systems beat screenshots** for precision — exact specs > pixel guessing
+> 4. **The iteration loop** (compare → point out differences → fix → repeat) closes the last 20% gap
+>
+> This is incredibly powerful for PMs. Competitor has a great page? Screenshot it. Designer sends a Figma comp? Screenshot it. See something beautiful on the internet? Screenshot it. You can turn visual inspiration into working code in minutes.
+>
+> Want to go deeper? I can:
+> - **Convert your prototype to Figma** using [html.to.design](https://html.to.design/) so your designer can iterate on it
+> - **Try recreating a different page** — your own product's marketing site, a competitor's pricing page
+> - **Extract a full design system** from any product you admire
 
-## Share
+**Share prompt:**
+> 📸 **Bring back a side-by-side — the original screenshot on the left, your recreation on the right.** Which method worked better for you: screenshot-paste or design system?
 
-**Bring back:** A side-by-side comparison — your screenshot on the left, Claude's recreation on the right. Which method worked best for you: screenshot-paste, or design system?
+---
+
+## Reference Material
+
+Resources Claude might need during this lesson:
+
+- **Tailwind CSS CDN:** `<script src="https://cdn.tailwindcss.com"></script>`
+- **Good screenshot targets for students who need suggestions:**
+  - [stripe.com](https://stripe.com) — clean, professional, great typography
+  - [linear.app](https://linear.app) — modern SaaS, dark/light modes
+  - [vercel.com](https://vercel.com) — bold, developer-focused
+  - Their own product's marketing site (if they have one)
+- **Design system source:** [designstyles.vercel.app](https://designstyles.vercel.app/) — browse 100+ brand design systems
+- **Anthropic's Frontend Prompting Guide:** [GitHub cookbook](https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb)
+- **HTML to Figma:** [html.to.design](https://html.to.design/) — convert any webpage to editable Figma. Localhost requires the Chrome extension; public URLs can use the Figma plugin directly.
+- **Atomic Design System Principles:** [Brad Frost's Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
+- **Model comparison notes:** All major models (Claude, Gemini, GPT) get 70-80% fidelity on screenshot recreation. The differences show up in spacing precision and font matching. Design system method improves all models dramatically.
+- **Common issues to watch for:** Font loading (Google Fonts CDN may be needed), image placeholders (use gradient backgrounds or SVG illustrations), responsive breakpoints, shadow vs border elevation

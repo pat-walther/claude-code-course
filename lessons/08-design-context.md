@@ -1,165 +1,143 @@
 # 8. Make Every Build Match Your Visual Style
 
-> **Magic Moment:** You create a `design.md` file, rebuild the same prototype from Lesson 7, and it transforms from "generic Claude output" to something that looks like it belongs in YOUR product.
+> **Magic Moment:** The student creates a `design.md` file, you rebuild their prototype, and it transforms from "generic Claude output" to something that looks like it belongs in THEIR product.
 
-## Why This Matters
+---
 
-Here's the dirty secret of AI-generated UI: it all looks the same. Blue buttons, gray backgrounds, the same Tailwind defaults everyone gets. That's fine for a throwaway prototype — but the moment you show it to a stakeholder, they'll say "this doesn't look like us." The fix takes 5 minutes and pays off forever: tell Claude what "good" looks like for your product, once, and every build matches your visual language from the first prompt.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson. Follow these steps in order. Be conversational, encouraging, and concise. Don't dump walls of text. Do one step at a time and wait for the student to respond before moving on.
 
-- [ ] Claude Code open in your project folder
-- [ ] The prototype from Lesson 7 (or any prototype you've built)
-- [ ] Know your product's brand colors, fonts, and visual style (check your Figma, marketing site, or just your gut)
+### Setup Check
 
-## Do This Now
+**What to do:** Check if they have a prototype from Lesson 7 and learn about their product's visual identity.
+**What to say:**
+> Hey! Today we're going to fix the biggest problem with AI-generated UI: **it all looks the same.** Blue buttons, gray backgrounds, the same Tailwind defaults everyone gets. Fine for a throwaway prototype — but the moment you show it to a stakeholder, they'll say "this doesn't look like us."
+>
+> The fix takes 5 minutes and pays off forever. Quick check:
+> 1. Do you have the prototype from Lesson 7? (If not, we'll build a quick one)
+> 2. Here's the important one: **What does YOUR product look like?** Do you know your brand colors, fonts, or visual style? Even a vague sense — "we're kind of like Linear" or "our brand color is purple" — works great.
 
-### Step 1: See the problem
+**Then:** Wait for their response. Adapt based on what they know about their brand. If they have no product/brand yet, help them pick an aesthetic direction.
 
-Open the prototype you built in Lesson 7. Look at it with your "brand eyes." Notice:
-- The colors are generic (probably blue and gray)
-- The spacing follows Tailwind defaults, not your product's rhythm
-- The typography has no personality
-- It looks like *a* product, not *your* product
+### Step 1: See the Problem
 
-This is what happens when Claude has zero design context. Let's fix that.
+**What to do:** If they have a prototype from Lesson 7, have them open it. If not, quickly build a simple one. Point out the generic design.
+**What to say:**
+> Open your prototype from last lesson and look at it with your "brand eyes." Notice anything?
+>
+> - The colors are generic — probably blue and gray
+> - The spacing follows Tailwind defaults, not your product's rhythm
+> - The typography has no personality
+> - It looks like *a* product, not *your* product
+>
+> This is what happens when I have zero design context. Let's fix that right now.
 
-### Step 2: Create your design.md
+**Then:** Move to the next step. If they don't have a prototype, quickly build a simple dashboard HTML page with generic styling so they can see the before/after contrast.
 
-This is the file that changes everything. It's a simple markdown file that describes your product's visual DNA. Claude reads it at the start of every session.
+### Step 2: Create design.md Together
 
-**Paste this into Claude Code:**
-```
-Create a file called design.md in my project root. Use this template and fill it in with sensible defaults for a modern SaaS product. I'll customize it after.
+**What to do:** Build a `design.md` file interactively based on their answers. Don't just dump a template — ask questions and fill it in.
+**What to say:**
+> Let's build your design system together. I'll ask you a few questions and create the file. Ready?
+>
+> **First: What's the personality of your product?** Pick what resonates:
+> - Clean and professional (like Linear or Stripe)
+> - Warm and friendly (like Notion or Slack)
+> - Bold and energetic (like Figma or Vercel)
+> - Minimal and calm (like Things or iA Writer)
+> - Or describe it your own way
 
-# Design System
+**Then:** Wait for their response.
 
-## Brand
-- Product name: [My Product]
-- Personality: [e.g., "professional but approachable", "bold and playful", "minimal and calm"]
-- Inspiration: [e.g., "Linear, Notion, Vercel" or "Stripe, Intercom"]
+**Follow up with:**
+> **What's your primary brand color?** Give me a hex code if you have one, or just say something like "deep purple" or "forest green" and I'll pick a good one.
 
-## Colors
-- Primary: [main brand color]
-- Primary hover: [darker shade]
-- Background: [page background]
-- Surface: [card/section background]
-- Text primary: [main text]
-- Text secondary: [muted/helper text]
-- Border: [subtle borders]
-- Success: [green shade]
-- Warning: [amber shade]
-- Error: [red shade]
+**Then:** Wait for their response.
 
-## Typography
-- Font family: Inter (fallback: system-ui, sans-serif)
-- Headings: font-semibold, tracking-tight
-- Body: text-sm (14px), leading-relaxed
-- Labels: text-xs, uppercase, tracking-wide, text-secondary
-- Page title: text-2xl font-bold
-- Section title: text-lg font-semibold
+**Then ask:**
+> **Name 2-3 products whose visual style you admire.** These become our design inspiration.
 
-## Spacing
-- Base unit: 4px (Tailwind spacing scale)
-- Card padding: p-4 (mobile), p-6 (desktop)
-- Section gaps: space-y-6
-- Inline element gaps: gap-2 or gap-3
-- Page margins: px-4 (mobile), px-8 (desktop), max-w-6xl mx-auto
+**Then:** Wait for their response.
 
-## Components
-- Buttons: rounded-lg, font-medium, px-4 py-2
-- Cards: bg-surface, rounded-xl, border, no drop shadows
-- Inputs: rounded-lg, border, focus:ring-2 focus:ring-primary/20
-- Tables: text-sm, divide-y, hover:bg-muted/50 on rows
-- Modals: rounded-2xl, backdrop-blur-sm overlay
+**After getting their answers, say:**
+> Perfect — let me build your design system.
 
-## Patterns
-- Use border instead of shadow for elevation
-- Hover states: subtle background change, not color change
-- Empty states: centered illustration + helpful message + primary CTA
-- Loading: skeleton shimmer, not spinners
-- Transitions: duration-150 ease-in-out
-```
+**Then:** Create a `design.md` file in their project root with all the proper sections:
+- Brand (product name, personality, inspiration)
+- Colors (primary, primary hover, background, surface, text primary/secondary, border, success/warning/error)
+- Typography (font family, heading styles, body, labels, page/section titles)
+- Spacing (base unit, card padding, section gaps, page margins)
+- Components (buttons, cards, inputs, tables, modals)
+- Patterns (elevation approach, hover states, empty states, loading, transitions)
 
-**What you should see:** A clean `design.md` file in your project root. Now customize it.
+Fill in all values based on their answers. Choose specific hex codes, Tailwind classes, and values that match the personality and inspiration they described.
 
-### Step 3: Make it yours
+**💡 If they don't know their brand colors:** Offer to help: "Want to screenshot your product's homepage or marketing site? I can extract the colors for you." If they paste a screenshot, extract hex codes from it.
 
-**Edit the design.md to match YOUR product.** Here's the fast way:
+### Step 3: Wire It Up to CLAUDE.md
 
-**Paste this into Claude Code:**
-```
-Update design.md with these specifics for my product:
-- Product name: [your product name]
-- Primary color: [your hex code, e.g., "#7C3AED" for purple, "#059669" for green]
-- Personality: [pick one: "clean and professional like Linear" / "warm and friendly like Notion" / "bold and energetic like Figma"]
-- Inspiration products: [name 2-3 products whose visual style you admire]
-```
+**What to do:** Add a reference to `design.md` in their `CLAUDE.md` file so it's automatically loaded every session.
+**What to say:**
+> Now let me make sure I always read this. I'll add a reference to your `CLAUDE.md` so every future session starts with your design context loaded.
 
-💡 **Don't know your brand colors?** Screenshot your product's homepage or marketing site and paste it into Claude Code: `"What are the primary colors used in this screenshot? Give me hex codes."` Claude will extract them.
+**Then:** Update their `CLAUDE.md` file (create it if it doesn't exist) to include a line like: "Read design.md for all visual design decisions. Follow the design system for every UI component you build."
 
-**What you should see:** Your `design.md` now reflects your actual product's visual identity.
+**After updating, say:**
+> ✅ Done. From now on, every time you start a session with me, I'll automatically know your visual style. No more generic blue buttons.
 
-### Step 4: Add design.md to CLAUDE.md
+### Step 4: The Magic Moment — Rebuild and Compare
 
-Make sure Claude reads your design system automatically on every session.
+**What to do:** Rebuild the same prototype from Lesson 7, but now using the design system. Save as a separate file so they can compare.
+**What to say:**
+> Now watch this. I'm going to rebuild the exact same prototype from last lesson — same features, same data — but this time I'll follow your design system. Let's see the difference.
 
-**Paste this into Claude Code:**
-```
-Add a reference to design.md in my CLAUDE.md file. Add a line that says:
-"Read design.md for all visual design decisions. Follow the design system for every UI component you build."
-```
+**Then:** Read `design.md`, then build `prototype-v2.html` with the same features as their original prototype but following the design system exactly. Match the colors, typography, spacing, and component styles.
 
-### Step 5: Rebuild and see the difference
+**After building, say:**
+> Open both files side by side:
+> - `prototype.html` — the generic version
+> - `prototype-v2.html` — YOUR version
+>
+> 🎉 **Same feature, completely different feel.** The second one looks like it belongs in your product.
 
-Now rebuild the exact same prototype from Lesson 7 — but this time Claude has your design context.
+**Then:** Wait for their reaction. Let them absorb the difference.
 
-**Paste this into Claude Code:**
-```
-Read design.md first. Now rebuild prototype.html from scratch — same features (feedback dashboard with metrics, filterable list, expandable entries) but this time follow the design system exactly. Match the colors, typography, spacing, and component styles in design.md.
+### Step 5: The Screenshot Workflow (Power Move)
 
-Save it as prototype-v2.html so I can compare with the original.
-```
+**What to do:** Teach them how to use screenshots to enrich their design system over time. If they can provide a screenshot of their product, do this live.
+**What to say:**
+> Here's the power move for ongoing design iteration: anytime your product's design evolves, screenshot it and paste it to me. I'll update your `design.md` automatically.
+>
+> Want to try it? If you have any screenshot of your product — your best screen, your marketing site, a Figma comp — paste it in and I'll extract the design details.
 
-**What you should see:** 🎉 **This is the magic moment.** Open both files side by side:
-- `prototype.html` — generic blue/gray, looks like every other AI prototype
-- `prototype-v2.html` — YOUR colors, YOUR spacing, YOUR brand personality
+**Then:** If they paste a screenshot, analyze it for specific details (border-radius values, shadow styles, spacing patterns, color usage, typography weights) and update `design.md` with anything new. If they don't have a screenshot, explain the workflow and move to wrap-up.
 
-Same feature, completely different feel. The second one looks like it belongs in your product.
+### Wrap Up
 
-### Step 6: The screenshot workflow
+**What to say:**
+> Here's what you just built: a **one-time investment that pays dividends on every future build.** Instead of getting generic AI output and manually fixing the design each time, I now start every prototype in your visual language.
+>
+> The before/after makes it obvious — context is the difference between "AI slop" and "this looks like our product."
+>
+> Want to go deeper? I can:
+> - Do a **design audit** of your current product — screenshot it and I'll tell you what looks off and what 3 changes would have the biggest impact
+> - **Extract a design system from any product** you admire — screenshot their site and I'll reverse-engineer their design tokens
+> - **Evaluate your UI against Jakob Nielsen's 10 usability heuristics**
 
-Here's the power move for ongoing design iteration: use screenshots as context.
+**Share prompt:**
+> 📸 **Bring back a before/after screenshot — your prototype without design.md vs. with it.** How different do they look?
 
-**Take a screenshot of any part of your product that already looks right** (your best screen, your marketing site, a Figma comp). Then:
+---
 
-**Paste the screenshot into Claude Code with this prompt:**
-```
-This screenshot shows what our product currently looks like. Match this visual style exactly for all future prototypes. Note the specific:
-- Button styles and border radius
-- Card elevation (shadow vs border)
-- Color usage and hierarchy
-- Typography weight and spacing
-- Overall density (compact vs spacious)
+## Reference Material
 
-Update design.md with anything you notice that isn't already captured.
-```
+Resources Claude might need during this lesson:
 
-**What you should see:** Claude analyzes your screenshot and enriches your design.md with details you might have missed — specific border-radius values, shadow styles, or spacing patterns.
-
-## 🎉 What Just Happened
-
-You created a `design.md` file — a one-time investment that pays dividends on every future build. Instead of getting generic AI output and manually fixing the design each time, Claude now starts every prototype in your visual language. The before/after comparison makes it obvious: context is the difference between "AI slop" and "this looks like our product."
-
-The screenshot workflow is the ongoing maintenance loop — whenever your design evolves, paste a screenshot and update design.md. It takes 30 seconds and keeps Claude current.
-
-## Go Deeper
-
-- **Design audit:** Paste a screenshot of your current product and ask: `"Review this screen as a design-conscious user. What looks off, inconsistent, or unfinished? What 3 changes would have the biggest visual impact?"`
-- **Steal from the best:** Find a product whose design you admire. Screenshot it and say: `"Extract the design system from this screenshot. What colors, spacing, typography, and component patterns do they use? Write it as a design.md."`
-- **Reference reading:** [UX Mapping Methods Compared](https://www.nngroup.com/articles/ux-mapping-cheat-sheet/) — NN/g's cheat sheet for design thinking methods
-- **Jakob's 10 Usability Heuristics:** Have Claude evaluate your UI against these: `"Evaluate my prototype against Jakob Nielsen's 10 usability heuristics. Where am I strong? Where am I weakest?"`
-
-## Share
-
-**Bring back:** A before/after screenshot — your prototype without design.md vs. with it. How different do they look?
+- **Design inspiration sources:** Products to reference for personality types — Linear (clean/professional), Notion (warm/friendly), Figma (bold/energetic), iA Writer (minimal/calm), Stripe (polished/trustworthy)
+- **Color palette generators:** If the student gives a single brand color, generate a complementary palette (hover states, backgrounds, text, accents) using standard color theory
+- **Jakob's 10 Usability Heuristics:** [NN/g reference](https://www.nngroup.com/articles/ten-usability-heuristics/) — use when doing design audits
+- **UX Mapping Methods:** [NN/g cheat sheet](https://www.nngroup.com/articles/ux-mapping-cheat-sheet/) — design thinking methods
+- **Typography best practices:** Inter is the safe default (system-ui fallback). For more personality: DM Sans (friendly), Space Grotesk (techy), Instrument Serif (editorial)
+- **Common design.md mistake:** Being too vague. "Blue accent color" is bad. "#2563EB with hover:#1D4ED8" is good. Push for specificity.
+- **Screenshot color extraction:** When analyzing screenshots, provide exact hex codes, not just color names

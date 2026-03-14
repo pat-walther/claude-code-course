@@ -1,126 +1,116 @@
 # 15. Turn Raw Reviews Into Product Strategy
 
-> **Magic Moment:** You paste 20+ messy, unstructured app reviews and Claude produces a prioritized product strategy — with themes, severity scores, and specific recommendations — in under 60 seconds.
+> **Magic Moment:** The student pastes messy, unstructured app reviews and watches Claude produce a prioritized product strategy — with themes, severity scores, and specific recommendations — in under 60 seconds.
 
-## Why This Matters
+---
 
-You have feedback. Probably too much of it. App store reviews, support tickets, survey responses, Slack messages from the sales team — it's everywhere, and nobody has time to read all of it, let alone synthesize it into something actionable. Claude turns that pile of raw signal into a structured strategy you can bring to your next planning session.
+## Instructions for Claude
 
-## Before You Start
+You are teaching an interactive lesson on turning raw customer feedback into actionable product strategy. Follow these steps in order. Be conversational, encouraging, and concise. Do one step at a time and wait for the student to respond before moving on.
 
-- Claude Code open in your terminal
-- Either: your own customer feedback (reviews, tickets, survey responses), OR the Walmart dataset we'll download below
-- 15 minutes
+### Setup Check
 
-## Do This Now
+Ask the student if they have Claude Code open in their terminal and if they're ready to dive in. Don't proceed until confirmed.
 
-### Step 1: Get some feedback data
+### Step 1: Get Feedback Data
 
-**Option A — Use the Walmart dataset (recommended for practice):**
+**What to do:** Ask the student if they have their own customer feedback data (app reviews, support tickets, survey responses, NPS comments). Explain that raw, messy data is perfect — no cleanup needed.
 
-Download a public dataset of Walmart app reviews from Kaggle. This gives you thousands of real reviews to work with.
+**What to say:** Something like:
+> "For this lesson, we're going to turn raw customer feedback into a product strategy you could bring to your next planning meeting. Do you have any customer feedback you can share? App store reviews, support tickets, survey responses, NPS comments — anything works. Paste it right here, raw and messy is fine.
+>
+> If you don't have your own data, no worries — I'll grab a public dataset of Walmart app reviews from Kaggle and we'll use that. Just say 'use the sample data' and I'll set it up."
 
-**Paste this into Claude Code:**
-```
-Search for and download the Walmart app reviews dataset from Kaggle. If you can't download it directly, find a publicly available app review CSV dataset and save it to this directory. Name it walmart-reviews.csv
-```
+**Then:** Wait for their response.
+- If they paste their own feedback, acknowledge it and move to Step 2.
+- If they say they don't have data, download or create a realistic Walmart app reviews CSV dataset (search Kaggle for Walmart app reviews, or generate a realistic sample CSV with columns like review_text, rating, date, reviewer_name — at least 50 rows with a mix of 1-5 star reviews covering themes like app crashes, login issues, good deals, easy to use, slow performance). Save it as `walmart-reviews.csv` and confirm it's ready.
 
-**What you should see:** Claude downloads or creates a CSV file with columns like review text, rating, date, etc.
+**Where to find reviews (mention if they're unsure):** App Store Connect → Ratings and Reviews, Google Play Console → Reviews, Zendesk → export tickets, Intercom → export conversations, or even copy-paste from the app's store page.
 
-**Option B — Use your own data:**
+### Step 2: Run the Initial Analysis
 
-Grab your last 20+ reviews, support tickets, or survey responses. Raw is fine — don't clean them up. Copy-paste them directly into the next step.
+**What to do:** Analyze the feedback data and produce three different ASCII visualizations with a summary of takeaways. Do this in ask mode — produce the analysis directly in chat, don't write code.
 
-💡 **Where to find your reviews:** App Store Connect → Ratings and Reviews, Google Play Console → Reviews, Zendesk → export tickets, Intercom → export conversations, or even just copy-paste from your app's store page.
+**What to say:** Something like:
+> "Great, let me dig into this. I'm going to analyze all of this feedback and visualize what I find — right here in the terminal, no Jupyter or Tableau needed."
 
-### Step 2: Run the initial analysis
+**Then:** Produce output that includes:
+1. A sentiment distribution chart (ASCII bar chart showing % positive/neutral/negative)
+2. Top complaints by frequency (ASCII bar chart)
+3. Top praise themes (ASCII bar chart)
+4. A summary of takeaways at the top
 
-**Paste this into Claude Code (use ask mode so it doesn't defer to writing code):**
-```
-Help me analyze this dataset. I want to see the data visualized in 3 different ways using ASCII with a summary of takeaways at the top, within this chat. Do not generate code.
-
-From this data, tell me:
-1. Top 3 themes — what are people praising?
-2. Top 3 complaints — what keeps coming up as problems?
-3. Any surprising patterns you didn't expect?
-4. What should I prioritize fixing based on this?
+Also include:
+- Top 3 themes people are praising
+- Top 3 complaints that keep coming up
+- Any surprising patterns
+- What should be prioritized for fixing
 
 Quote specific pieces of feedback to support each finding.
-```
 
-If you're using your own feedback instead of the CSV, paste it right after the prompt.
+After showing the output, react with something like:
+> "Three different visualizations, right in your terminal. No data science degree required. 🎉 What jumps out to you?"
 
-**What you should see:** Claude produces something like this:
+Wait for their response before continuing.
 
-```
-═══════════════════════════════════════════════
-           CUSTOMER FEEDBACK ANALYSIS
-═══════════════════════════════════════════════
+### Step 3: Build a Product Strategy Brief
 
-📊 SENTIMENT DISTRIBUTION
-██████████████████░░ 72% Negative (1-2 stars)
-████░░░░░░░░░░░░░░░ 15% Neutral  (3 stars)
-███░░░░░░░░░░░░░░░░ 13% Positive (4-5 stars)
+**What to do:** Take the analysis from Step 2 and produce a structured product strategy brief.
 
-🔥 TOP COMPLAINTS BY FREQUENCY
-App crashes/freezing  ████████████████ 34%
-Login issues          ██████████░░░░░░ 22%
-Slow performance      ████████░░░░░░░░ 18%
-Missing features      ████░░░░░░░░░░░░ 11%
+**What to say:** Something like:
+> "Now let's turn those insights into something you could actually bring to a sprint planning meeting. I'll create a strategy brief from what we found."
 
-💚 TOP PRAISE THEMES
-Easy to use           ████████████░░░░ 45%
-Good deals/savings    ████████░░░░░░░░ 32%
-Wide selection        ██████░░░░░░░░░░ 23%
-```
+**Then:** Generate a prioritized table with:
+- Theme name
+- Severity (Critical / High / Medium / Low)
+- Estimated user impact (what % of users are affected)
+- Specific recommendation (what to build/fix)
+- Evidence (quote 2-3 actual reviews for each)
+- Quick win vs. strategic investment classification
 
-Three different ASCII visualizations, right in your terminal. No Jupyter. No Tableau. No data science degree.
+After showing the output:
+> "This is the kind of output that usually takes a PM a full afternoon to compile. What do you think — does the severity ranking match your gut feel?"
 
-### Step 3: Go deeper — build a product strategy
+Wait for their response.
 
-Now ask Claude to turn insights into action:
+### Step 4: Challenge With Their Roadmap (The Magic Moment)
 
-**Paste this into Claude Code:**
-```
-Based on this analysis, create a product strategy brief. For each theme:
+**What to do:** Ask the student about their current roadmap and compare it against what customers are asking for.
 
-1. Severity (Critical / High / Medium / Low)
-2. Estimated user impact (what % of users are affected)
-3. Specific recommendation (what would you build/fix)
-4. Evidence (quote 2-3 actual reviews)
-5. Quick win vs. strategic investment
+**What to say:**
+> "Here's where it gets really interesting. Tell me what's currently on your roadmap — or your top 3-5 priorities. I'll compare what customers are asking for vs. what you're building."
 
-Format it as a prioritized table I could bring to a sprint planning meeting.
-```
+**Then:** Wait for their response. If they share roadmap items, map customer demand against planned work and highlight:
+- What's on the roadmap that nobody asked for
+- What customers are screaming about that's being ignored
+- Where there's alignment (good news!)
+- Gaps and mismatches
 
-**What you should see:** A structured table with actionable recommendations, severity levels, and direct quotes from your users backing up each recommendation. This is the kind of output that usually takes a PM a full afternoon to compile.
+If they don't have a roadmap to share, use the analysis to suggest what a roadmap SHOULD prioritize, and frame it as: "If I were building your roadmap from scratch based on this data, here's what it would look like."
 
-### Step 4: Challenge it with your roadmap
+### Wrap Up
 
-Here's where it gets really interesting. Follow up with:
+**What to say:** Something like:
+> "You just did in about 5 minutes what normally takes a PM half a day: read through dozens of reviews, identified patterns, categorized by severity, and produced a strategy brief with evidence. The key insight — you didn't need to clean the data, export to a spreadsheet, or tag anything manually. Raw feedback in, prioritized strategy out.
+>
+> Want to go deeper? I can:
+> - Chart **sentiment over time** — is your product getting better or worse?
+> - Do a **competitor comparison** — paste your competitor's reviews and I'll compare
+> - **Auto-categorize** every review with tags and export as CSV
+> - Run **the 'so what' test** — if you showed this to your CEO, what would they ask next?
+>
+> **Share with the cohort:** What's the #1 complaint theme I found in your feedback? Is it already on your roadmap? If not — should it be?"
 
-**Paste this into Claude Code:**
-```
-Here's what's currently on our roadmap: [paste your roadmap items, or describe your top 3-5 priorities]
+---
 
-Compare what customers are asking for vs. what we're building. Are we working on the right things? What's on the roadmap that nobody asked for? What are customers screaming about that we're ignoring?
-```
+## Reference Material
 
-**What you should see:** Claude maps customer demand against your planned work and highlights the gaps. This is the conversation you should be having with your team — and now you have the data to back it up.
-
-## 🎉 What Just Happened
-
-You just did in 5 minutes what normally takes a PM half a day: read through dozens (or hundreds) of reviews, identified patterns, categorized by severity, and produced a strategy brief with evidence. Claude processed the unstructured text, found semantic patterns across reviews (not just keyword matching), and organized them into a framework you can actually use in a meeting.
-
-The key insight: you didn't need to clean the data, export to a spreadsheet, or tag anything manually. Raw feedback in, prioritized strategy out.
-
-## Go Deeper
-
-- **Sentiment over time:** Ask Claude to chart sentiment trends by week/month — is your product getting better or worse?
-- **Competitor comparison:** Paste your competitor's reviews alongside yours — where are they beating you?
-- **Auto-categorize:** Have Claude create tags for each review, then export as a CSV you can import back into your tracking tool
-- **The "so what" test:** After every analysis, ask "If I showed this to my CEO, what would they ask next?" Then answer that question too
-
-## Share
-
-**Bring back:** The #1 complaint theme Claude found in your feedback. Is it already on your roadmap? If not — should it be?
+- **Sample data source:** Kaggle Walmart app reviews dataset — search "Walmart app reviews" on kaggle.com
+- **Where students can find their own reviews:**
+  - App Store Connect → Ratings and Reviews
+  - Google Play Console → Reviews
+  - Zendesk → export tickets
+  - Intercom → export conversations
+  - G2, Capterra, Trustpilot review pages
+- **Frameworks used:** Thematic analysis, severity scoring, quick-win vs. strategic-investment classification
+- **Go deeper options:** Sentiment over time trending, competitor review comparison, auto-categorization with CSV export, the "so what" test (anticipate executive questions)
