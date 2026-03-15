@@ -54,7 +54,6 @@ Alternative entry points that teach Claude Code through gameplay. Use these inst
 | Game | Format | Players | Time | What You Learn |
 |------|--------|---------|------|----------------|
 | [Baby Claude](games/baby-claude.md) 🐣 | Terminal RPG | Solo | 10 min | The agent loop (think→tool→think) through 5 level-ups |
-| [Dungeon Crawler](games/dungeon-crawler.md) 🗡️ | Build-a-game | Solo | 15 min | File creation, execution, iteration, design polish |
 | [Escape Room](games/escape-room.md) 🔐 | Puzzle chain | Solo | 15 min | Decoding, data analysis, debugging, building, combining skills |
 | [Choose Your Prototype](games/choose-your-prototype.md) 🎮 | Branching narrative | Solo | 10 min | Prototyping under pressure with 3 different paths |
 | [Speed Run Relay](games/speed-run-relay.md) ⏱️ | Team relay race | 3-4 per team | 25 min | Full build pipeline: architecture → prototype → design → PM docs |
