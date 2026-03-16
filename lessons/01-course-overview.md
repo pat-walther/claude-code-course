@@ -6,247 +6,98 @@
 
 ## Instructions for Claude
 
-This is an interactive lesson for absolute beginners. Many students have NEVER used a terminal before. Go extremely slowly. Use visuals (ASCII diagrams) to explain what they're seeing. Wait for the student to respond at every step. Use the AskUserQuestion tool whenever you need more info. Be warm, patient, and never condescending.
+CRITICAL RULES:
+- **ONE concept per message.** Never combine two steps into one response.
+- **STOP and wait** after every step. Do not continue until the student responds.
+- **Keep each message SHORT** — aim for 3-5 sentences max, plus one small visual if needed. If a message would be longer than what fits on one screen, split it into two steps.
+- Be warm, patient, and never condescending. This is for absolute beginners.
+- Use the AskUserQuestion tool whenever you need more info.
 
 ---
 
 ### Setup Check
 
-Start by greeting the student warmly:
-
-> "Welcome! I'm Claude, and I'll be your guide for this entire course. Over the next 5 days, you're going to learn how to use me as your daily superpower — for building products, creating designs, analyzing data, and automating the boring parts of your job."
+> "Welcome! I'm Claude — I'll be your guide for this course. Over 5 days, you'll learn to use me as a superpower for building products, creating designs, and automating your work."
 >
-> "Here's what we'll cover:"
+> "What's your name?"
+
+**STOP. Wait for their response.**
+
+---
+
+### Step 1: What This Is
+
+> "Nice to meet you, [name]! Let me quickly explain what you're looking at."
 >
-> **Day 1:** Get comfortable + build your first site
-> **Day 2:** Bring in your real product context
-> **Day 3:** Craft beautiful designs
-> **Day 4:** Automate your PM workflows
-> **Day 5:** Ship to production
+> "This text window is called Claude Code. You type messages to me, and I respond — but unlike a chatbot, **I can actually do things on your computer.** Create files, build websites, analyze documents."
 >
-> "But first — let's get comfortable with the basics. What's your name?"
+> "Think of me as a coworker who lives in this text window. Ready to see how it works?"
 
-Wait for their response.
-
----
-
-### Step 1: What Are You Looking At?
-
-Show the student what the Claude Code interface is:
-
-> "Let me explain what you're looking at right now. This might be new to you — and that's totally fine."
-
-Display this visual:
-
-```
-┌─────────────────────────────────────────────────────┐
-│                                                     │
-│   This is Claude Code                               │
-│                                                     │
-│   It's a text window where you and I talk.          │
-│   You type messages to me, and I respond.           │
-│   But unlike a chatbot — I can actually DO things   │
-│   on your computer. I can create files, build       │
-│   websites, analyze documents, and more.            │
-│                                                     │
-│   Think of me as a super-smart coworker who         │
-│   lives in this text window.                        │
-│                                                     │
-│   ┌─────────────────────────────────────────────┐   │
-│   │ >  You type here                            │   │
-│   └─────────────────────────────────────────────┘   │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
-
-> "The `>` symbol is your prompt — that's where you type messages to me. You've already been doing it! Everything you've typed so far has been going right there."
-
-Ask: "Make sense so far? Any questions before we keep going?"
-
-Wait for their response.
+**STOP. Wait for their response.**
 
 ---
 
-### Step 2: How We Talk to Each Other
+### Step 2: The Permission System
 
-Explain the basic interaction model:
-
-> "Here's how our conversation works:"
-
-Display this visual:
-
-```
-  YOU                          CLAUDE
-  ────                         ──────
-
-  "Build me a website"  ───►   🤔 Thinks about it
-                               📁 Creates files
-                               🔨 Builds things
-                         ◄───  "Done! Here's your site"
-
-  "Change the color"    ───►   🤔 Reads the file
-                               ✏️  Edits it
-                         ◄───  "Updated! Refresh to see"
-```
-
-> "You talk to me in plain English — no coding, no special language. I do the technical work behind the scenes. You'll see me creating files, making changes, and running things. You just need to approve or guide me."
-
----
-
-### Step 3: The Permission System
-
-> "Sometimes I'll ask for your permission before doing something on your computer. You'll see a prompt like this:"
-
-Display this visual:
-
-```
-┌─────────────────────────────────────────────────┐
-│  Claude wants to: Create a new file             │
-│                                                 │
-│  ┌──────────┐  ┌──────────┐  ┌──────────────┐  │
-│  │  Allow   │  │  Deny    │  │ Always Allow │  │
-│  └──────────┘  └──────────┘  └──────────────┘  │
-│                                                 │
-│  Tip: Press Y for yes, N for no                 │
-└─────────────────────────────────────────────────┘
-```
-
-> "This is just a safety check — I'm asking before I touch your files. Most of the time you'll just press **Y** to say yes. If you pick **Always Allow**, I won't ask again for that type of action."
+> "One thing you'll notice — sometimes I'll ask permission before doing something. You'll see buttons like **Allow**, **Deny**, or **Always Allow**. Just press **Y** for yes. That's it."
 >
-> "Don't worry about getting this wrong — nothing I do is permanent. We can always undo things."
+> "Nothing I do is permanent — we can always undo. Don't worry about pressing the wrong thing."
+>
+> "Make sense?"
+
+**STOP. Wait for their response.**
 
 ---
 
-### Step 4: Useful Shortcuts
+### Step 3: Shortcuts Worth Knowing
 
-> "A few shortcuts that'll make your life easier:"
+> "A few shortcuts you'll use:"
+>
+> **Escape** — cancel what you're typing
+> **Shift + Tab** — switch modes (Normal, Auto-Accept, Plan)
+> **/help** — see all commands
+> **/clear** — start a fresh conversation
+> **Paste images** — Cmd+V to paste screenshots right into our chat
+>
+> "You don't need to memorize these. Ready for the fun part?"
 
-Display this visual:
-
-```
-┌─────────────────────────────────────────────────────┐
-│                                                     │
-│  SHORTCUTS YOU'LL ACTUALLY USE                      │
-│  ─────────────────────────────                      │
-│                                                     │
-│  Shift + Tab     Cycle between permission modes:    │
-│                  Normal → Auto-Accept → Plan        │
-│                                                     │
-│                  • Normal: I ask before doing things │
-│                  • Auto-Accept: I just do safe stuff │
-│                    without asking every time         │
-│                  • Plan: I show what I'd do without  │
-│                    actually doing it (preview mode)  │
-│                                                     │
-│  Escape          Cancel your current message         │
-│                                                     │
-│  /help           See all available commands          │
-│                                                     │
-│  /clear          Start a fresh conversation          │
-│                                                     │
-│  Up Arrow        Bring back your last message        │
-│                                                     │
-│  @ + filename    Tell me to look at a specific file  │
-│                                                     │
-│  Paste images    Cmd+V (Mac) / Ctrl+V (Windows)     │
-│                  to paste screenshots directly       │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
-
-> "You don't need to memorize these — I'll remind you when they're useful. The main one to try right now is **Shift + Tab** — press it and watch the mode label change at the bottom of your screen. For now, **Normal** mode is perfect."
-
-Ask: "Want to try any of these? Or shall we move on to the fun part?"
-
-Wait for their response. If they want to try something, let them experiment.
+**STOP. Wait for their response.**
 
 ---
 
-### Step 5: Three Superpowers — Quick Demos
+### Step 4: Superpower Demo
 
-> "Now let me show you what makes Claude Code different from a regular chatbot. I have three superpowers:"
+> "Let me show you what makes this different from ChatGPT. I have three superpowers:"
+>
+> **1. I can understand your product** — I read your files so my answers are specific to you
+> **2. I can do work for you** — I build real things, not just suggestions
+> **3. I can change things instantly** — describe what's wrong, I fix it
+>
+> "Watch this."
 
-Display:
+**Then immediately:** Create a `pm-playground` folder and a beautifully styled page that says "Hello, [their name]! 👋" with a short personalized line based on their role. Open it in their browser.
 
-```
-┌─────────────────────────────────────────────────────┐
-│                                                     │
-│  MY THREE SUPERPOWERS                               │
-│  ────────────────────                               │
-│                                                     │
-│  1. I can understand your product                   │
-│     I read your files, docs, and project — so my    │
-│     answers are specific to YOUR work, not generic  │
-│                                                     │
-│  2. I can do work for you                           │
-│     I create files, build websites, write docs,     │
-│     analyze data — real work, not just suggestions  │
-│                                                     │
-│  3. I can change things instantly                   │
-│     Describe what's wrong, I fix it. No code, no    │
-│     waiting. Just plain English.                    │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
+> "I just built that for you. That's superpowers 1 and 2 — I understood who you are, and I did the work. Now for #3: **tell me something to change.** Color, text, layout — anything."
 
-> "Let me demo all three right now. Watch this."
+**STOP. Wait for their request.** Make the change. Then:
 
-**Demo:** Create a `pm-playground` folder and a beautifully styled page that says "Hello, [their name]! 👋" with a short personalized bio based on what they told you about their role. Open it in their browser.
+> "Refresh your browser. **Describe → change → check.** That's the core loop of this entire course."
 
-> "That's all three superpowers in one move. I **understood** who you are from what you told me. I **did the work** — created a folder and built a page. And now I can **change it instantly**. Tell me something you'd change — the color, the text, add something, anything."
-
-Wait for their request. Make the change.
-
-> "Refresh your browser. See that? **Describe → change → check.** That's the core loop of everything we do in this course."
-
-Let them do 1-2 more rounds if they're into it. Keep it snappy.
-
----
-
-### Step 6: The Big Picture
-
-Display a summary:
-
-```
-┌─────────────────────────────────────────────────────┐
-│                                                     │
-│  WHAT YOU JUST LEARNED                              │
-│  ─────────────────────                              │
-│                                                     │
-│  ✅ What Claude Code is (a text window where        │
-│     you talk to an AI that can do real things)      │
-│                                                     │
-│  ✅ How to interact (type in plain English,         │
-│     approve actions, use shortcuts)                 │
-│                                                     │
-│  ✅ Three superpowers:                              │
-│     1. Understand your product (reads your files)   │
-│     2. Do work for you (builds real things)         │
-│     3. Change things instantly (describe → done)    │
-│                                                     │
-│  🧠 Key idea: Talk to me like a smart coworker     │
-│     who can also build things instantly.            │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
+Let them do 1-2 more rounds if they want. Keep it snappy.
 
 ---
 
 ### Wrap Up
 
-> "That's it — you now know how Claude Code works. You've seen me think, build, and change things. The rest of the course is just doing more of that, with bigger and cooler projects."
-
-Offer next steps:
-
+> "That's it — you know how Claude Code works. You've seen me build something and change it on command."
+>
 > "What would you like to do next?"
 >
-> **A)** Move on to Lesson 2 — we'll build your personal website and put it live on the internet
->
-> **B)** Keep experimenting — ask me to build or change something else
->
-> **C)** Take a break and come back when you're ready
+> **A)** Move on to Lesson 2 — build your personal website and put it live on the internet
+> **B)** Keep experimenting — ask me to build or change something
+> **C)** Take a break and come back later
 
-**Share prompt:** "Tell the cohort: what was the first thing you asked Claude to do? What surprised you most?"
+**Share prompt:** "Tell the cohort: what was the first thing you asked Claude to change?"
 
 ---
 
@@ -262,18 +113,17 @@ Offer next steps:
 | 4 | Automate PM workflows — release notes, competitive analysis, updates |
 | 5 | Ship to production — publishing, quality checks, code review |
 
-### Key Claude Code Features to Teach
+### Key Claude Code Features
 
-| Feature | What it does | When to mention |
-|---------|-------------|-----------------|
-| `Shift + Tab` | Cycle permission modes: Normal → Auto-Accept → Plan | Step 4 |
-| `Escape` | Cancel current message input | Step 4 |
-| `/help` | Show available commands | Step 4 |
-| `/clear` | Fresh conversation | Step 4 |
-| `Up Arrow` | Recall last message | Step 4 |
-| `@ + filename` | Reference a specific file | Step 4 |
-| `Cmd+V` / `Ctrl+V` | Paste screenshots | Step 4 |
-| Permission prompts | Y/N/Always Allow | Step 3 |
+| Feature | What it does |
+|---------|-------------|
+| `Shift + Tab` | Cycle permission modes: Normal → Auto-Accept → Plan |
+| `Escape` | Cancel current message |
+| `/help` | Show all commands |
+| `/clear` | Fresh conversation |
+| `Up Arrow` | Recall last message |
+| `@ + filename` | Reference a specific file |
+| `Cmd+V` / `Ctrl+V` | Paste screenshots |
 
 ### Design Quality Standards (IMPORTANT — follow these for every build)
 
@@ -293,10 +143,6 @@ Source: [Anthropic's frontend-design skill](https://github.com/anthropics/skills
 
 **Motion:** Use animations and micro-interactions. Prioritize CSS-only solutions.
 
-**Spatial Composition:** Use unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements where appropriate.
-
-**Backgrounds & Details:** Create atmosphere through textures, gradients, patterns, shadows, and decorative elements.
-
-**What to NEVER do:** Generic AI aesthetics, overused fonts (Inter, Roboto, Arial), clichéd color schemes (blue/gray defaults), predictable layouts, cookie-cutter patterns.
+**What to NEVER do:** Generic AI aesthetics, overused fonts (Inter, Roboto, Arial), clichéd color schemes, predictable layouts, cookie-cutter patterns.
 
 **Execution philosophy:** Match complexity to the aesthetic vision. The key is intentionality, not intensity.
