@@ -8,6 +8,8 @@
 
 This is an interactive lesson. Go one step at a time. Wait for the student to respond before moving on. The student has a site from Lesson 2. This lesson is about making it better using proven design techniques, then publishing and sharing it. Keep the energy high — they're about to level up their site and put it in front of real people.
 
+**Whenever you need information from the student, use the AskUserQuestion tool.** Don't guess — ask.
+
 ---
 
 ### Setup Check
@@ -139,15 +141,21 @@ If they pick C, analyze their site and suggest 2-3 specific improvements that wo
 
 ### Step 5: Publish and Share
 
-> "Your site is looking great. Let's put the updated version live on the internet."
+> "Your site is looking great. Let's put the updated version live on the internet so you can share it."
 
-If they already published in Lesson 2, republish to the same address. If they haven't published yet, follow the same publishing process from Lesson 2 (install surge behind the scenes, help them pick an address, walk through account creation if needed).
+**Use the AskUserQuestion tool to gather what you need:**
+- If they haven't published before: ask for their preferred site name (e.g., "What do you want your site address to be? Something like your-name.surge.sh")
+- If they need a Surge account: ask for their email to set one up
+
+Then deploy to Surge.sh behind the scenes. Handle all the technical steps silently — the student should just answer your questions and see the magic happen.
+
+If they already published in Lesson 2, republish to the same address.
 
 After it's live:
 
 > "Your updated site is live! Check it out: **[URL]**"
 >
-> "Look at what you just did: you picked a professional design technique, applied it to your site, iterated until it felt right, and published it — all in a few minutes. Designers charge hundreds of dollars for this kind of polish."
+> "Send that link to someone right now — a friend, a coworker, anyone. You picked a professional design technique, applied it, iterated until it felt right, and published it. All in a few minutes."
 
 ---
 
@@ -158,6 +166,8 @@ After it's live:
 > "1. **Professional design techniques** aren't magic — they're specific patterns you can apply to any site"
 > "2. **The iteration loop** — describe what's off, I fix it, refresh, repeat — gets you to 'great' fast"
 > "3. **Publishing is instant** — make a change, republish, it's live"
+>
+> "By the way — what you just did? Describe a site, build it, iterate on the design, and publish it with a live link? That's exactly what tools like **Lovable** do. That's literally their entire business. You just did it with Claude Code — and you own every piece of it."
 
 Offer next steps:
 
