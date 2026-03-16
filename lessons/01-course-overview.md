@@ -129,10 +129,16 @@ Display this visual:
 │  SHORTCUTS YOU'LL ACTUALLY USE                      │
 │  ─────────────────────────────                      │
 │                                                     │
-│  Shift + Tab     Switch between chat and command    │
-│                  mode (you'll mostly stay in chat)  │
+│  Shift + Tab     Cycle between permission modes:    │
+│                  Normal → Auto-Accept → Plan        │
 │                                                     │
-│  Escape          Cancel what I'm doing              │
+│                  • Normal: I ask before doing things │
+│                  • Auto-Accept: I just do safe stuff │
+│                    without asking every time         │
+│                  • Plan: I show what I'd do without  │
+│                    actually doing it (preview mode)  │
+│                                                     │
+│  Escape          Cancel your current message         │
 │                                                     │
 │  /help           See all available commands          │
 │                                                     │
@@ -148,7 +154,7 @@ Display this visual:
 └─────────────────────────────────────────────────────┘
 ```
 
-> "You don't need to memorize these — I'll remind you when they're useful. The main one to remember is **Escape** if you ever want me to stop what I'm doing."
+> "You don't need to memorize these — I'll remind you when they're useful. The main one to try right now is **Shift + Tab** — press it and watch the mode label change at the bottom of your screen. For now, **Normal** mode is perfect."
 
 Ask: "Want to try any of these? Or shall we move on to the fun part?"
 
@@ -296,8 +302,8 @@ Offer next steps:
 
 | Feature | What it does | When to mention |
 |---------|-------------|-----------------|
-| `Shift + Tab` | Switch between chat and command mode | Step 4 |
-| `Escape` | Cancel current action | Step 4 |
+| `Shift + Tab` | Cycle permission modes: Normal → Auto-Accept → Plan | Step 4 |
+| `Escape` | Cancel current message input | Step 4 |
 | `/help` | Show available commands | Step 4 |
 | `/clear` | Fresh conversation | Step 4 |
 | `Up Arrow` | Recall last message | Step 4 |
