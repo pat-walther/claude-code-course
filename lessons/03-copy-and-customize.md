@@ -12,7 +12,9 @@ This is an interactive lesson. Go one step at a time. Wait for the student to re
 
 ### Setup Check
 
-The student should have their site from Lessons 1 and 2 in `pm-playground`. Make sure you can find it. If something's off, help them get back on track quickly.
+The student should have their site from Lessons 1 and 2 in `pm-playground` (as `my-site.html`). Make sure you can find it. If something's off, help them get back on track quickly.
+
+**Important:** When making improvements in this lesson, edit the existing `my-site.html` file. Do NOT create a new file or overwrite `hello.html` from Lesson 1.
 
 Open their site in the browser so they can see the current state.
 

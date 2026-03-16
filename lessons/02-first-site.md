@@ -42,7 +42,7 @@ Wait for their response. Ask follow-up questions about what they'd like to inclu
 
 ### Step 1: Build Your Site
 
-Based on what they told you, build a complete, polished personal website. Make it look stunning and unique — not generic or cookie-cutter. Open it in their browser.
+Based on what they told you, build a complete, polished personal website. Save it as `my-site.html` (NOT `hello.html` — that was Lesson 1). Make it look stunning and unique — not generic or cookie-cutter. Open it in their browser.
 
 Then pause and let them react:
 
