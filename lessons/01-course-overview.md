@@ -162,84 +162,48 @@ Wait for their response. If they want to try something, let them experiment.
 
 ---
 
-### Step 5: Superpower #1 — I Can Think With You
+### Step 5: Three Superpowers — Quick Demos
 
-> "Let me show you what I can actually do. I have three superpowers. Here's the first one:"
-
-Display:
-
-```
-┌─────────────────────────────────────────┐
-│  SUPERPOWER #1: I can think with you    │
-│                                         │
-│  Ask me any question. I'll reason       │
-│  through it and give you a thoughtful   │
-│  answer — not a generic one.            │
-└─────────────────────────────────────────┘
-```
-
-> "Tell me about a decision you're mulling over at work — could be about a feature, a prioritization question, a naming decision, anything. Let me show you how I think through problems."
-
-Wait for their question. When they share something:
-- Ask 1-2 clarifying questions
-- Think through tradeoffs
-- Give a structured perspective
-
-After the exchange:
-
-> "See that? I didn't just give you a generic answer. I asked questions, thought about your specific situation, and gave you something tailored. That's different from just googling it."
-
----
-
-### Step 6: Superpower #2 — I Can Build Things
-
-> "Now for the flashy one:"
+> "Now let me show you what makes Claude Code different from a regular chatbot. I have three superpowers:"
 
 Display:
 
 ```
-┌─────────────────────────────────────────┐
-│  SUPERPOWER #2: I can build things      │
-│                                         │
-│  I can create files, websites, docs,    │
-│  and tools — right here on your         │
-│  computer. Watch this.                  │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│  MY THREE SUPERPOWERS                               │
+│  ────────────────────                               │
+│                                                     │
+│  1. I can understand your product                   │
+│     I read your files, docs, and project — so my    │
+│     answers are specific to YOUR work, not generic  │
+│                                                     │
+│  2. I can do work for you                           │
+│     I create files, build websites, write docs,     │
+│     analyze data — real work, not just suggestions  │
+│                                                     │
+│  3. I can change things instantly                   │
+│     Describe what's wrong, I fix it. No code, no    │
+│     waiting. Just plain English.                    │
+│                                                     │
+└─────────────────────────────────────────────────────┘
 ```
 
-Create a `pm-playground` folder and a simple, beautifully styled page that says "Hello, [their name]! 👋 You just watched Claude create this." Open it in their browser.
+> "Let me demo all three right now. Watch this."
 
-> "I just created a file on your computer and opened it in your browser. You didn't write anything — I did it all. That's what we'll be doing throughout this course."
+**Demo:** Create a `pm-playground` folder and a beautifully styled page that says "Hello, [their name]! 👋" with a short personalized bio based on what they told you about their role. Open it in their browser.
 
----
-
-### Step 7: Superpower #3 — I Can Change Things
-
-> "And the last one — this is the one you'll use the most:"
-
-Display:
-
-```
-┌─────────────────────────────────────────┐
-│  SUPERPOWER #3: I can change things     │
-│                                         │
-│  Tell me what to change, and I'll       │
-│  edit it instantly. No code needed.     │
-│  Just plain English.                    │
-└─────────────────────────────────────────┘
-```
-
-> "That page I just made — tell me something you'd change about it. The color, the text, add something, remove something. Anything."
+> "That's all three superpowers in one move. I **understood** who you are from what you told me. I **did the work** — created a folder and built a page. And now I can **change it instantly**. Tell me something you'd change — the color, the text, add something, anything."
 
 Wait for their request. Make the change.
 
-> "Refresh your browser. See that? You described what you wanted, I changed it. That loop — **describe → change → check** — is the core of everything we do in this course."
+> "Refresh your browser. See that? **Describe → change → check.** That's the core loop of everything we do in this course."
 
-Ask if they want to make another change. Let them do 1-2 more rounds if they're into it.
+Let them do 1-2 more rounds if they're into it. Keep it snappy.
 
 ---
 
-### Step 8: The Big Picture
+### Step 6: The Big Picture
 
 Display a summary:
 
@@ -256,9 +220,9 @@ Display a summary:
 │     approve actions, use shortcuts)                 │
 │                                                     │
 │  ✅ Three superpowers:                              │
-│     1. Think with you (ask me anything)             │
-│     2. Build things (I create files & sites)        │
-│     3. Change things (describe → edit → check)      │
+│     1. Understand your product (reads your files)   │
+│     2. Do work for you (builds real things)         │
+│     3. Change things instantly (describe → done)    │
 │                                                     │
 │  🧠 Key idea: Talk to me like a smart coworker     │
 │     who can also build things instantly.            │
