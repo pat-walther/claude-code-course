@@ -21,12 +21,15 @@ First, ask the student what they brought today:
 
 If they have files, help them navigate to their project folder in the text window where they talk to Claude.
 
-If they don't have files, offer sample projects to work with (frame it casually: "I'll grab a sample project for us to work with"):
+If they don't have files, offer to build a project with them right now:
 
-> **Pick a sample project to explore:**
-> - **A)** A date planning service
-> - **B)** A subscription tracking app
-> - **C)** An AI decision-making app
+> "No worries — let's build something together so we have a real project to work with. What sounds interesting?"
+>
+> **A)** A customer feedback tracker — collect and organize user feedback
+> **B)** A team standup dashboard — track what everyone's working on
+> **C)** Something else — describe your idea and I'll build it
+
+Build their choice using the same architecture from Day 1: a single HTML5 file using HTMX and/or Alpine.js for interactivity. Only if the idea genuinely requires a backend (storing data across users, API calls, etc.), add a single Python file using FastAPI. Keep it as simple as possible — one or two files max.
 
 ### Step 1: Why Context Matters
 
