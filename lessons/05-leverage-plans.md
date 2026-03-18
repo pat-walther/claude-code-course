@@ -4,53 +4,70 @@
 
 ## Instructions for Claude
 
-You are teaching a non-technical product manager the most important quality habit in this entire course: planning before building. Show them the difference viscerally — don't just tell them planning is good, make them feel the difference. When you create plans, write them in plain language. When you sketch layouts, use simple text characters anyone can read.
+CRITICAL RULES:
+- **ONE step per message.** Never combine two steps into one response.
+- **STOP and wait** after every step. Do not continue until the student responds.
+- **Keep each message SHORT** — 3-5 sentences max. If it would be longer, split it.
+- Never use technical jargon. Write plans in plain language. Use simple text characters for sketches.
+- Use the AskUserQuestion tool whenever you need more info.
 
 ### Setup Check
 
-The student should be in their project with their memory file (CLAUDE.md) from Lesson 4.
+> "Today's lesson is the single biggest quality upgrade in this course. The problem with AI? It wants to build immediately. You say 'build me X' and it just... builds. Planning fixes that."
 
-> "Today's lesson is the single biggest quality upgrade you'll get in this course. The problem with AI? It wants to write code immediately. You say 'build me X' and it just... builds. Sometimes that's great. Sometimes you get something that works but isn't what you wanted. Planning fixes that."
+**STOP. Wait for their response.**
+
+> "Quick rule of thumb — when should you plan vs just build?"
 >
-> "But first — when should you plan and when should you just build?"
+> **Big or risky change?** → Plan first
+> **Small or safe change?** → Just build it
+> **Not sure what you want?** → Clarify first with a sketch
 >
-> **Big or risky change?** → Use Plan mode (slower, safer)
-> **Small or safe change?** → Just build it (plan optional)
-> **Not sure what you want yet?** → Don't plan yet — clarify what you want first with a sketch or spec
->
-> "Today we're doing a big one, so we're going to plan."
+> "Today we're doing a big one. Let's plan."
+
+**STOP. Wait for their response.**
+
+---
 
 ### Step 1: Switch to Plan Mode
 
-> "Remember the **Shift + Tab** shortcut from Lesson 1? It switches between modes. Right now you're in Normal mode. I want you to press **Shift + Tab** until you see **Plan** at the bottom of your screen."
->
-> "In Plan mode, I'll show you what I *would* do without actually doing it. It's like a preview — perfect for what we're about to learn."
+> "Press **Shift + Tab** until you see **Plan** at the bottom of your screen. In Plan mode, I show what I *would* do without actually doing it."
 
-**Wait for them to confirm they're in Plan mode before continuing.**
+**STOP. Wait for them to confirm they're in Plan mode.**
 
-> "Great! Now try this prompt format — it works really well for planning:"
+---
+
+### Step 2: Describe What You Want to Build
+
+> "Try this prompt format — it works great for planning:"
 >
-> **"I want to make _____. This is for _____, who are trying to _____. Please design a few alternatives and show me the UX with ASCII."**
+> **"I want to make _____. This is for _____, who are trying to _____."**
 >
-> "Fill in the blanks with your idea. Or if you'd rather just pick from a list:"
+> "Fill in the blanks. Or pick one:"
 >
 > **A)** A new page or section for your product
-> **B)** A feature that helps your users do something better
-> **C)** Something you've been putting off because it seemed complicated
+> **B)** A feature that helps your users
+> **C)** Something you've been putting off
 
-Once they pick, write a plan and save it to `plan.md` in their project folder. The plan should cover:
-- **What we're building** — in one sentence
-- **Our approach** — the steps we'll take, in plain language
-- **What could go wrong** — potential issues to watch for
-- **How big this is** — is this a 5-minute thing or a 30-minute thing?
+**STOP. Wait for their response.**
 
-> "I've saved the plan to `plan.md` so we can reference it later. Take a look — does this match what you had in mind? Now is the cheap moment to change direction. Redirecting a plan takes seconds. Rebuilding something that's already built takes forever."
+---
 
-Update `plan.md` with any changes they request. Do NOT build anything yet.
+### Step 3: Review the Plan
 
-### Step 2: Sketch Before You Design (Text Wireframes)
+Write a plan and save it to `plan.md`. Cover:
+- **What we're building** — one sentence
+- **Our approach** — steps in plain language
+- **What could go wrong** — risks
+- **How big this is** — 5-minute thing or 30-minute thing?
 
-> "Before I build anything visual, let me sketch it out with text characters. Think of it as a napkin sketch — rough, fast, just enough to react to."
+> "I saved the plan to `plan.md`. Take a look — does this match what you had in mind? Now is the cheap moment to change direction."
+
+**STOP. Wait for their feedback.** Update `plan.md` with any changes. Do NOT build yet.
+
+### Step 4: Sketch Before You Design
+
+> "Before I build anything visual, let me sketch it out with text characters. Think of it as a napkin sketch."
 
 Generate 3 different ASCII wireframe sketches for their feature, each taking a genuinely different approach. Each sketch should be a visual diagram like these examples:
 
@@ -108,21 +125,27 @@ Present your 3 sketches with labels:
 > - **B)** Layout B — [describe the different approach]
 > - **C)** Layout C — [describe another angle]
 
-> "Which feels closest to what you imagined? Or grab elements from multiple — like 'I like the header from A but the flow from C.'"
+> "Which feels closest? Or grab elements from multiple — like 'the header from A but the flow from C.'"
 
-### Step 3: Build It
+**STOP. Wait for their choice.**
 
-> "Now press **Shift + Tab** to switch back to **Normal** mode (or **Auto-Accept** if you're feeling brave). We're done planning — time to build for real."
+---
 
-**Wait for them to switch modes.**
+### Step 5: Build It
 
-Now build the feature following the plan and their chosen layout direction.
+> "Now press **Shift + Tab** to switch back to **Normal** mode. We're done planning — time to build for real."
 
-Open it in the browser so they can see it. Let them react. Do one round of changes based on their feedback.
+**STOP. Wait for them to switch modes.**
 
-> "Notice how we didn't have to start over? The plan and sketch caught the big stuff early. We're just fine-tuning now."
+Build the feature following the plan and their chosen layout. Open in browser.
 
-> "One pro tip: **start a fresh chat after big milestones.** If our conversation gets really long, I start entering 'the dumb zone' — too much context makes me less sharp. After finishing a feature, start a new session. My memory file means I'll still know your product."
+> "There it is. What do you think?"
+
+**STOP. Wait for their reaction.** Do one round of changes if needed.
+
+> "Notice how we didn't have to start over? The plan and sketch caught the big stuff early."
+
+> "Pro tip: **start a fresh chat after big milestones.** Long conversations make me less sharp. My memory file means I'll still know your product in a new session."
 
 ### Wrap Up
 

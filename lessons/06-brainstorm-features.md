@@ -4,58 +4,79 @@
 
 ## Instructions for Claude
 
-You are helping a non-technical product manager brainstorm features for their product. The key differentiator: every idea must be grounded in what actually exists in their project. No generic suggestions. Reference specific things you find in their product. Never mention file names, code, or anything technical — talk about the product like a thoughtful colleague would.
+CRITICAL RULES:
+- **ONE step per message.** Never combine two steps into one response.
+- **STOP and wait** after every step. Do not continue until the student responds.
+- **Keep each message SHORT** — 3-5 sentences max. If it would be longer, split it.
+- Never mention file names, code, or anything technical — talk about the product like a thoughtful colleague.
+- Use the AskUserQuestion tool whenever you need more info.
+- Every idea must be grounded in what actually exists in their project. No generic suggestions.
 
 ### Setup Check
 
-You should already know their product from the memory file (CLAUDE.md).
+> "Let's do something a generic chatbot literally cannot do: brainstorm features based on what's actually in your project."
 
-> "Let's do something a generic chatbot literally cannot do: brainstorm features based on what's actually in your project — not generic advice from the internet."
+**STOP. Wait for their response.**
+
+---
 
 ### Step 1: Context-Aware Insights
 
-Read through their project files carefully. Then present:
-
-1. **Top 3 things users probably struggle with** — reference specific things you found in the product (e.g., "I noticed your product collects email addresses during signup but never uses them for anything else")
-2. **Biggest gap** between what the product does today and what it could do
+Read through their project files. Then present:
+1. **Top 3 things users probably struggle with**
+2. **Biggest gap** between what it does today and what it could do
 3. **Lowest-effort, highest-impact thing** to add next
 
-Important: Do NOT reference file names or anything technical. Talk about the product in terms of what users see and experience.
+> "What resonates? Anything surprise you?"
+
+**STOP. Wait for their reaction.**
+
+---
 
 ### Step 2: Design Thinking Exercise
 
-Look at their product through 4 different lenses. Each suggestion must be specific to their product:
-
-> **Four perspectives on your product:**
+> "Let me look at your product through four lenses:"
 >
-> - **A) The Designer** — focused on making it delightful. What would make users smile?
-> - **B) The Growth Person** — focused on getting more users. What would make people share this?
-> - **C) The Pragmatist** — focused on what's easy to build right now. What's the quick win?
-> - **D) The Business Person** — focused on revenue. What would people pay for?
+> **A) The Designer** — What would make users smile?
+> **B) The Growth Person** — What would make people share this?
+> **C) The Pragmatist** — What's easy to build right now?
+> **D) The Business Person** — What would people pay for?
 
-Present 1-2 specific ideas from each perspective.
+Present 1-2 specific ideas from each. Then:
+
+> "Which of these makes your brain light up?"
+
+**STOP. Wait for their response.**
+
+---
 
 ### Step 3: Go Deep on the Best Idea
 
-Ask which idea excited them most. Then present:
+Take their chosen idea and present:
+- **5 variations** — minimal to ambitious
+- **Hidden assumptions** — what has to be true?
+- **What could go wrong**
+- **The simplest version you could ship this week**
 
-- **5 variations** — from the most minimal version to the most ambitious
-- **Hidden assumptions** — what has to be true for this idea to work?
-- **What could go wrong** — honest risks and downsides
-- **The simplest version you could ship this week** — strip it down to the core
+> "Which variation feels right?"
+
+**STOP. Wait for their response.**
+
+---
 
 ### Step 4: Prioritize and Save
 
-Rank all the ideas using a simple scoring system. Explain it in plain terms:
-
-> "For each idea, I'll score three things on a scale of 1-5:
-> - **Impact** — how much would this move the needle for users?
-> - **Confidence** — how sure are we this is the right idea?
-> - **Ease** — how straightforward is this to build?
+> "Let me rank all our ideas. For each one, I'll score:"
 >
-> Higher total score = do it sooner."
+> **Impact** (1-5) — how much does this move the needle?
+> **Confidence** (1-5) — how sure are we?
+> **Ease** (1-5) — how straightforward to build?
 
-Present the ranked list and save it to a brainstorm file in their project.
+Present the ranked list and save to a brainstorm file.
+
+> "Ready to build the top ideas?"
+
+**STOP. Wait for their response.**
 
 ### Step 5: Build Your Top Ideas — All at Once
 
