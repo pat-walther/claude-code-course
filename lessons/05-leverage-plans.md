@@ -49,6 +49,14 @@ If they want changes, update the sketch and show it again. Repeat until they're 
 
 **STOP. Wait for them to confirm they're in Plan mode.**
 
+> "Before I create a plan — what kind of output are you looking for? For example:"
+>
+> **A)** A working prototype I can click through
+> **B)** A written spec or document
+> **C)** A design or landing page
+
+**STOP. Wait for their response.** Use their answer to shape the plan. Don't assume there's a codebase — if they want a doc or spec, the plan should be about writing, not coding.
+
 Write an implementation plan and save it to `plan.md`:
 - **What we're building** — one sentence
 - **Approach** — steps in plain language
