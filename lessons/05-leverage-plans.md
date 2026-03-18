@@ -15,11 +15,11 @@ CRITICAL RULES:
 
 ### Step 1: What Do You Want to Build?
 
-> "Today we're going to plan before we build. What feature or page do you want to add to your product?"
+> "Today we're going to plan before we build. What do you want to work on?"
 >
-> **A)** A new page or section
-> **B)** A feature that helps your users
-> **C)** Something you've been putting off
+> **A)** A new feature for your product
+> **B)** A spec or planning doc for something you're thinking about
+> **C)** A pricing page, positioning update, or landing page
 
 **STOP. Wait for their response.**
 
