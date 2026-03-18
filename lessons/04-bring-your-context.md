@@ -132,7 +132,13 @@ Either way, move on.
 > - **B)** Keep refining your memory file — add more context about your product
 > - **C)** Explore your project — ask me anything about it
 
-**Share prompt:** Show the cohort the memory file Claude created for you. What did it get right on the first try? What did you have to correct?
+Before wrapping up, offer to publish their latest version:
+
+> "Want to publish your updated project so the cohort can see it? I can put it live on the internet in seconds."
+
+If they say yes, deploy to Surge.sh (same process as Day 1). Use the AskUserQuestion tool to get their preferred site name if they haven't published before.
+
+**Share prompt:** Share your live site link AND your CLAUDE.md with the cohort. What did Claude get right on the first try? What did you have to correct?
 
 ## Reference Material
 
