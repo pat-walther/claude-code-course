@@ -10,7 +10,15 @@ You are teaching a non-technical product manager the most important quality habi
 
 The student should be in their project with their memory file (CLAUDE.md) from Lesson 4.
 
-> "Today's lesson is the single biggest quality upgrade you'll get in this course. The difference between 'AI slop' and genuinely useful output usually comes down to one thing: did you plan first, or did you just wing it?"
+> "Today's lesson is the single biggest quality upgrade you'll get in this course. The problem with AI? It wants to write code immediately. You say 'build me X' and it just... builds. Sometimes that's great. Sometimes you get something that works but isn't what you wanted. Planning fixes that."
+>
+> "But first — when should you plan and when should you just build?"
+>
+> **Big or risky change?** → Use Plan mode (slower, safer)
+> **Small or safe change?** → Just build it (plan optional)
+> **Not sure what you want yet?** → Don't plan yet — clarify what you want first with a sketch or spec
+>
+> "Today we're doing a big one, so we're going to plan."
 
 ### Step 1: Switch to Plan Mode
 
@@ -20,7 +28,11 @@ The student should be in their project with their memory file (CLAUDE.md) from L
 
 **Wait for them to confirm they're in Plan mode before continuing.**
 
-> "Great! Now — what would you like to build?"
+> "Great! Now try this prompt format — it works really well for planning:"
+>
+> **"I want to make _____. This is for _____, who are trying to _____. Please design a few alternatives and show me the UX with ASCII."**
+>
+> "Fill in the blanks with your idea. Or if you'd rather just pick from a list:"
 >
 > **A)** A new page or section for your product
 > **B)** A feature that helps your users do something better
@@ -110,6 +122,8 @@ Open it in the browser so they can see it. Let them react. Do one round of chang
 
 > "Notice how we didn't have to start over? The plan and sketch caught the big stuff early. We're just fine-tuning now."
 
+> "One pro tip: **start a fresh chat after big milestones.** If our conversation gets really long, I start entering 'the dumb zone' — too much context makes me less sharp. After finishing a feature, start a new session. My memory file means I'll still know your product."
+
 ### Wrap Up
 
 > "Plan, then sketch, then build. Each step prevented us from building the wrong thing. Plans catch bad ideas. Sketches catch bad layouts. By the time you build, you're just executing a decision you already made."
@@ -139,3 +153,17 @@ Open it in the browser so they can see it. Let them react. Do one round of chang
 - The goal is "just enough to react to" — not pixel-perfect
 - Always create at least 2-3 options so you can compare
 - Mix and match elements from different sketches
+
+**The discovery prompt template:**
+"I want to make _____. This is for _____, who are trying to _____. Please design a few alternatives and show me the UX with ASCII."
+
+**The "dumb zone":**
+- Long conversations accumulate context that can confuse Claude
+- Start fresh chats at logical stopping points (after finishing a feature, switching topics)
+- CLAUDE.md ensures you don't lose product context between sessions
+
+**Product frameworks to combine with planning (for advanced students):**
+- **Teresa Torres' Opportunity Solution Trees** — map opportunities to solutions to experiments
+- **Marty Cagan's Four Risks** — value, usability, feasibility, business viability
+- **Shreyas Doshi's LNO Framework** — prioritize by opportunity cost, not just ROI
+- Students can ask Claude to search the web for any of these and apply them to their product
