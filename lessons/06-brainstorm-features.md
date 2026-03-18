@@ -77,16 +77,49 @@ Present the ranked list and save it to a brainstorm file in their project.
 
 Ask them to pick 2-3 ideas from their brainstorm. Then build them in parallel using subagents — each as a separate file they can open and compare.
 
-> "Open all of them in your browser. Which one makes you think 'yes, that's the one'?"
+> "Open all of them in your browser. Don't think too hard — just notice your gut reaction."
 
-Let them react and compare.
+**STOP. Wait for their reaction.**
+
+---
+
+### Step 6: React and Combine
+
+Guide them through comparing:
+
+> "Which one pulled you in first? Was there a specific element that felt exactly right? Anything that felt wrong?"
+
+**STOP. Wait for their response.**
+
+> "Here's the fun part — you're not picking a winner. You're shopping for the best parts."
+
+Summarize what they liked from each version. Confirm. Then build a combined "best of" version that cherry-picks the strongest elements.
+
+> "Open the final version. This is what happens when you brainstorm with context, build in parallel, and combine the best parts. You couldn't have designed this from scratch — you had to see the options first."
+
+---
+
+### Step 7: External Inspiration (Optional)
+
+> **Want to explore further?**
+> - **A)** Screenshot a product that handles this well — I'll build a version inspired by it
+> - **B)** Try a completely different approach
+> - **C)** I'm happy — let's wrap up
+
+---
 
 ### Wrap Up
 
+> "You just ran a full product cycle: brainstorm → prioritize → prototype → compare → combine. That used to take weeks. You did it in one session."
+
 > **What would you like to do next?**
-> - **A)** Move on to Lesson 7 — combine the best parts of your prototypes into one
-> - **B)** Go deeper on another brainstorm idea
-> - **C)** Share your brainstorm and prototypes with a teammate for feedback
+> - **A)** Move on to Day 3 — make everything look beautiful and match your brand
+> - **B)** Build more prototypes or go deeper on an idea
+> - **C)** Publish your favorite version to the internet
+
+**Homework:** Tell us what you built and why you chose this feature. Share your brainstorm file and your favorite prototype.
+
+**Share prompt:** Bring your prototypes to the cohort — show the different versions and explain which direction you picked.
 
 ## Reference Material
 
@@ -111,6 +144,17 @@ Let them react and compare.
 - Always explore the minimal version first — what's the smallest thing that delivers value?
 - Hidden assumptions are the silent killers of good ideas
 - "What could go wrong" isn't pessimism — it's preparation
+
+**Why build multiple prototypes:**
+- Reacting to something real is faster and more accurate than imagining it
+- You discover preferences you didn't know you had
+- Side-by-side comparison reveals strengths invisible in isolation
+- The real skill is combining A + B + C into D
+
+**Prototyping mindset:**
+- Prototypes are disposable — their purpose is learning, not shipping
+- Speed matters more than polish at this stage
+- The goal is to make decisions faster by having real things to react to
 
 **Subagents for parallel prototyping:**
 - Subagents are fresh, isolated sessions that Claude spins up for focused tasks

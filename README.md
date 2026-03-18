@@ -19,8 +19,7 @@ Interactive lessons designed to be pasted into Claude Code. Each lesson guides y
 ### Day 2 — Bring In Your Context
 - `04-bring-your-context.md` — Feed Claude your product files, specs, and create your memory file
 - `05-leverage-plans.md` — Plan before you build for dramatically better results
-- `06-brainstorm-features.md` — Brainstorm features grounded in your actual product
-- `07-multiple-prototypes.md` — Build many prototypes at once and compare them
+- `06-brainstorm-features.md` — Brainstorm features, build prototypes in parallel, compare and combine
 
 ### Day 3 — Craft Beautiful Designs
 - `08-skills-overview.md` — Teach Claude your workflows with reusable skills
