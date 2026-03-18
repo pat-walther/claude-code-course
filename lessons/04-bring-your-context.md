@@ -59,22 +59,6 @@ Read through everything they've shared — files, docs, whatever context they br
 
 **STOP. Wait for their feedback.** Fix anything they correct.
 
-Then ask one question at a time to fill in what the files can't tell you:
-
-> "What's your vision for this product? Where is it headed?"
-
-**STOP. Wait.** Add to CLAUDE.md.
-
-> "What are your top priorities right now?"
-
-**STOP. Wait.** Add to CLAUDE.md.
-
-> "What have you explicitly decided NOT to build?"
-
-**STOP. Wait.** Add to CLAUDE.md.
-
-> "**Less is more** — the more specific and correct this file is, the better I perform."
-
 ---
 
 ### Step 4: Test It
