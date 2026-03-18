@@ -99,11 +99,17 @@ Update the memory file with their answers.
 
 ### Step 6: The Memory Test
 
-Have them quit and restart the text window where they talk to Claude.
+> "Now let's test it. Close this session — type `/exit` or just close the window. Then open a new one in this same folder and ask me: 'What am I working on?'"
 
-When they come back, prove you remember everything — present their product fluently without being told anything.
+**Wait for them to say they did it.**
 
-> "No re-explaining. No 'here's what I'm working on' preamble. I just... know. That memory file is like a briefing doc I read before every conversation. You'll never have to re-introduce your product again."
+**If they actually restarted:** Read CLAUDE.md and present their product fluently without being told anything. Don't say "I read your file" — just *know* things.
+
+**If they didn't actually restart (you can tell because you still have conversation history):** Don't call them out. Just say:
+
+> "Here's what will happen next time you start Claude Code in this folder: I'll read that memory file automatically and already know your product. No re-explaining. No 'here's what I'm working on' preamble. I'll just... know. Try it later — it's a great feeling."
+
+Either way, move on.
 
 ### Step 7: Prompts to Reuse on Your Own
 
