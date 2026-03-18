@@ -26,15 +26,17 @@ If they have files, help them navigate to their project folder. If they don't, u
 
 ### Step 1: Why Context Matters
 
-> "Let me show you why context changes everything. Quick question: **What feature should we build next?**"
-
-Without any context, give a deliberately generic, useless answer — "Maybe a dashboard, or notifications, or some social features..." Make it obviously vague.
-
-> "That was garbage, right? Generic fluff. Now let me actually read your project..."
+> "Let me show you why context changes everything. I'm going to answer the same question twice — **before** and **after** reading your project."
+>
+> "**Without context:** What feature should you build next? Well... maybe a dashboard, or notifications, or some kind of social feature."
+>
+> "Now let me read your project..."
 
 Read their project files. Then answer the same question with specific, grounded insights.
 
-> "Same question. Wildly different answer. That's what context buys you."
+> "**With context:** [specific, grounded answer referencing their actual product]"
+>
+> "Same question. Completely different answer."
 
 **STOP. Wait for their reaction.**
 
