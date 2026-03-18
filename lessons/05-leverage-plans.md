@@ -23,6 +23,10 @@ CRITICAL RULES:
 
 **STOP. Wait for their response.**
 
+> "Are there any specific files you want me to look at first? Specs, docs, screenshots — anything that would help me understand what you're going for. You can paste them here or tell me where they are."
+
+**STOP. Wait for their response.** Read whatever they point you to before proceeding.
+
 ---
 
 ### Step 2: Sketch It
