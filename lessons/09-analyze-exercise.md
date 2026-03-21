@@ -26,17 +26,27 @@ You are running an interactive exercise where a non-technical product manager di
 
 ### Step 1: Get Their Product
 
-> "Do you have your product live somewhere I can look at? Give me a URL and I'll open it in the browser and walk through it as a new user. A prototype from earlier lessons or project files work too."
+> "Do you have your product live somewhere I can look at? A URL, a prototype from earlier lessons, or project files all work."
 
 **STOP. Wait for their response.**
 
 ---
 
-### Step 2: Walk Through as a New User
+### Step 2: Choose Your Method
 
-**If they gave you a URL:** Open it in the browser and actually navigate through it visually, screen by screen. This is the impressive version. Take screenshots as you go.
+> "I can analyze your product two ways:"
+>
+> **A)** I open it in the browser and walk through it visually as a new user, screen by screen.
+>
+> **B)** I use the dogfood skill — a structured product audit that generates a shareable report.
 
-**If they gave you project files:** Read through the code and reconstruct the user experience from what you see.
+**STOP. Wait for their choice.**
+
+**If they pick A:** Open the URL in the browser and navigate through it visually, screen by screen. Take screenshots as you go.
+
+**If they pick B:** Install and run the dogfood skill from github.com/exiao/skills/blob/main/dogfood/SKILL.md. Follow its structured walkthrough.
+
+**If they only have project files (no URL):** Skip the choice, read through the code and reconstruct the user experience from what you see.
 
 Walk through it out loud, one screen at a time:
 
