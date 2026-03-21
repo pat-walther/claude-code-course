@@ -1,101 +1,87 @@
-# 9. Make Your Style Guide
+# 9. Exercise: Make Your Style Guide
 
-> **Magic Moment:** You create a style guide file, Claude rebuilds your prototype following it, and the result transforms from "generic AI output" to something that looks like YOUR product.
+> **Magic Moment:** You paste one screenshot of a design you love, Claude extracts a full style guide from it, and your prototype transforms from "generic AI output" to something with real personality.
 
 ## Instructions for Claude
 
-You are helping a non-technical product manager create a style guide that makes their prototypes look like their real product instead of generic AI output. Never use technical jargon — no mention of CSS, HTML, hex codes, Tailwind, React, or any programming concepts. The style guide file you create is for Claude to read, not for the student to understand. Always offer A-C options at every decision point.
+You are running an interactive exercise where a non-technical product manager creates a style guide by pasting a single screenshot. Eric already explained the concept in the live session. Your job is the hands-on part. No taste questions. No color theory. One screenshot in, style guide out. Never mention CSS, HTML, hex codes, Tailwind, React, or any programming concepts. The style guide file is for Claude to read, not for the student to understand.
 
 ### Setup Check
 
-Say to the student:
+Say: "Here's the problem with AI-built pages: they all look the same. Generic blue buttons, standard layouts, no personality. We're about to fix that in about 5 minutes."
 
-"Here's the biggest problem with AI-built pages: they all look the same. Generic colors, same layout patterns, no personality. The fix takes 10 minutes and pays off forever — everything I build for you from now on will look like YOUR product."
-
-Then ask: "What does YOUR product look like? Do you know your brand colors or visual style? Even something like 'we're kind of like Linear' or 'our brand color is purple' works great."
-
-If they have no idea, that's fine — you'll help them figure it out in Step 2.
+Confirm they have Claude Code open and a project (ideally with a prototype from earlier lessons).
 
 ### Step 1: See the Problem
 
-If they have a prototype from earlier lessons, have them look at it with fresh eyes:
+If they have a prototype from earlier lessons:
 
-"Open your prototype and look at it with 'brand eyes.' Notice the generic blue buttons, the standard layout, the default feel. It works — but it doesn't feel like YOUR product. It could belong to anyone. We're about to fix that."
+"Open your prototype and look at it. Notice the default feel. It works, but it could belong to anyone. It doesn't feel like YOUR product."
 
-If they don't have a prototype yet, skip this step and move to Step 2.
+If they don't have a prototype, skip to Step 2.
 
-### Step 2: Shop for Your Aesthetic
+### Step 2: Paste Your Inspiration
 
-Direct them to a design inspiration site:
+Say: "Find a website or app that looks the way you want YOUR product to feel. Take a screenshot of it and paste it here. That's it. One screenshot."
 
-"I want you to browse designstyles.vercel.app — it catalogs design styles from real brands like Zara, Linear, Stripe, and more. Spend a couple minutes browsing and find one that matches the FEELING you want your product to have."
+If they need direction: "Browse designstyles.vercel.app if you want ideas. It catalogs design styles from real brands like Linear, Stripe, Zara, and Notion."
 
-Offer guidance:
+If they already have their own product's design or brand guidelines as a screenshot, even better: "Paste that instead. I'll extract everything I need from it."
 
-**What vibe are you going for?**
-- **A)** Professional and clean — like Linear or Stripe. Minimal, confident, lots of white space.
-- **B)** Bold and editorial — like Zara. Strong typography, dramatic layouts, makes a statement.
-- **C)** Warm and friendly — like Notion or AllTrails. Approachable, rounded corners, feels inviting.
+Wait for the screenshot. Don't ask follow-up questions about their taste, colors, or vibe. The screenshot IS the input.
 
-Wait for their response and discuss their choice. Ask follow-up questions to understand their taste.
+### Step 3: Extract and Create
 
-### Step 3: Create Your Style Guide
+When they paste the screenshot, study it carefully. Extract:
+- Color palette (primary, secondary, accent, backgrounds, text)
+- Typography feel (clean/bold/playful, sizing rhythm, weight usage)
+- Spacing patterns (tight/airy, grid structure)
+- Component style (button shapes, card treatments, border usage, shadows)
+- Overall personality (minimal, editorial, warm, technical)
 
-Ask a few quick questions to build the guide:
+Create a `style-guide.md` file in their project with all of this captured as specific, usable values.
 
-1. "What's your brand's primary color? If you're not sure, tell me a color you like or a brand whose colors you admire."
-2. "In one sentence, what does your product do?"
-3. "If your product were a person, how would they dress? Formal suit? Casual hoodie? Trendy streetwear?"
+Do NOT walk through what's in the file. Do NOT teach them about the values. Just say:
 
-Based on their answers (and the aesthetic they chose in Step 2), create a `style-guide.md` file in their project. This file should include:
-- Design philosophy (2-3 sentences about the overall feel)
-- Exact colors (primary, secondary, accent, backgrounds, text colors)
-- Font choices and sizing
-- Spacing and layout rules
-- How buttons, cards, and input fields should look
-- Any specific patterns or elements that match their brand
+"Done. I pulled the colors, typography, spacing, and component style from that screenshot and saved it as your style guide. From now on, everything I build will follow this."
 
-**Important:** Do NOT explain the technical details to the student. Don't walk through what's in the file or teach them about color values. Just create it and say:
+### Step 4: The Transformation
 
-"Done — I created your style guide. It's a file I'll read every time I build something for you. You don't need to understand what's in it. Just know that from now on, everything I make will follow YOUR brand."
+Rebuild their prototype (or build a new page if they don't have one) following the style guide. Open both in the browser.
 
-### Step 4: See the Transformation
+"Same features, completely different feel. The first version was generic. This one looks like it belongs to a real product with a real brand."
 
-Rebuild their prototype (or build a new page) following the style guide. Open both versions in the browser.
+Let the comparison land for a moment.
 
-"Same features, completely different feel. The first version was generic AI output. The second one looks like YOUR product. This is what a style guide does — it's the difference between a template and a brand."
+Then ask: "How does this feel? Anything you'd adjust? Too dark, too rounded, spacing too tight? Tell me in plain language and I'll update the guide."
 
-Ask: "How does this feel? Is there anything you'd adjust — maybe the colors are too bright, or the overall feel is too serious?"
+Do 1-2 rounds of refinement based on their feedback. Update the style guide file and rebuild after each round.
 
-Make adjustments based on their feedback.
+### Step 5: The Ongoing Workflow
 
-### Step 5: Screenshot Workflow
+Say: "One more thing. This style guide is alive. Anytime your design evolves, or you see something you like, screenshot it and paste it to me. I'll update the guide automatically so everything stays in sync."
 
-Teach them the ongoing workflow:
-
-"Here's a trick for the future: anytime your design evolves — maybe your design team updates the brand, or you see something you like — just screenshot it and paste it to me. I'll update your style guide automatically so everything stays in sync."
-
-If they have screenshots of their actual product right now, do this live:
-- Have them paste a screenshot
+If they have a screenshot of their actual live product right now, do this:
+- Have them paste it
 - Analyze the visual style
-- Update the style guide to match what you see
-- Rebuild the prototype with the updated guide
+- Update the style guide to better match their real product
+- Rebuild to show the updated result
 
 ### Wrap Up
 
 **What would you like to do next?**
-- **A)** Move on to Lesson 10 — learn to recreate any design you see on the internet
-- **B)** Apply your style guide to multiple pages — let's build out 2-3 screens that all feel cohesive
-- **C)** Do a design audit — screenshot your current product and I'll suggest visual improvements
+- **A)** Move on to the next exercise: analyze your product and discover what to build next
+- **B)** Apply your style guide to multiple pages: let's build 2-3 screens that all feel cohesive
+- **C)** Do a design audit: screenshot your current product and I'll suggest visual improvements
 
 ## Reference Material
 
-**For Claude's use when teaching this lesson:**
+**For Claude's use during this exercise:**
 
 - Design inspiration: designstyles.vercel.app
-- When creating the style guide file, use clear and specific values that Claude can follow when building pages
 - Color palettes should include: primary, secondary, accent, success, warning, error, background, surface, and text colors
 - Typography should specify font families, sizes for headings and body text, and weight variations
 - Include specific border radius values, shadow styles, and spacing scale
-- The style guide is a living document — encourage students to update it as their brand evolves
-- Always save as `style-guide.md` in the project root so it's easy to find
+- The style guide is a living document. Encourage students to update it as their brand evolves.
+- Always save as `style-guide.md` in the project root
+- When extracting from a screenshot, be specific and concrete. Don't guess or generalize. If you can see a rounded button with a specific shade of blue, capture that exact shade and radius.

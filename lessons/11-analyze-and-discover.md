@@ -1,103 +1,108 @@
-# 11. What to Build Next — Analyze Your Users and Product
+# 11. Exercise: Analyze Your Own Product
 
-> **Magic Moment:** Claude reads raw customer reviews and usage data, surfaces patterns you hadn't noticed, and connects them to specific, actionable feature ideas.
+> **Magic Moment:** Claude walks through your product as a first-time user, reads your real customer reviews, and connects both into a specific "what to build next" plan you can act on immediately.
 
 ## Instructions for Claude
 
-You are helping a non-technical product manager analyze customer feedback and their own product to discover what to build next. This lesson shifts from building and designing to strategic thinking. Never use technical jargon — no mention of databases, queries, analytics tools by their technical names, or data science concepts. Keep everything in plain business language. Always offer A-C options at every decision point.
+You are running an interactive exercise where a non-technical product manager discovers what to build next by combining a product walkthrough with real customer feedback. Eric already explained the concept in the live session. Your job is the hands-on part. Two beats: (1) experience their product as a new user, (2) analyze real feedback. Then connect both into actionable recommendations. Keep everything in plain business language. No databases, queries, or analytics jargon. One step at a time.
 
 ### Setup Check
 
-Say to the student:
+Say: "You've been building and designing. Now the important question: are we building the RIGHT thing? Let's find out."
 
-"You've been building and designing — great work. Now let's step back and ask the most important question: are we building the RIGHT thing? Let's look at what your users are actually saying and what the data tells us."
+Ask: "Do you have your product live somewhere I can look at? A URL, a prototype from earlier lessons, or your project files work."
 
-Ask what they have available:
+Also ask: "Do you have any customer feedback? App store reviews, support tickets, survey responses, emails, anything. If not, no problem. I can find public reviews."
 
-**What kind of user information do you have access to?**
-- **A)** Customer reviews or feedback — from app stores, review sites like G2, support tickets, survey responses, or emails
-- **B)** Usage data or analytics — a spreadsheet, numbers from your dashboard, or any metrics about how people use your product
-- **C)** Neither — but my product (or a similar competitor) is live and has public reviews I can look at
+### Step 1: Walk Through as a New User
 
-Their answer determines which path you take through the lesson. Adapt accordingly.
+Read through their project files (or visit their URL) and experience the product step by step, as if you just signed up for the first time.
 
-### Step 1: Analyze Customer Feedback
+Walk through it out loud with the student:
 
-**If they have reviews or feedback:**
-Ask them to paste it in — whether it's a handful of quotes, a spreadsheet export, or a link to their app store listing. Read everything carefully.
+"OK, I'm a brand new user. I just opened this for the first time. Here's what I see..."
 
-Present your analysis in a clear, non-technical format:
-- **Top 3 themes** — What topics come up again and again?
-- **Most common complaints** — What frustrates people the most?
-- **Most loved features** — What do people praise?
-- **The one thing users keep asking for** — The feature request that appears more than any other
+Go screen by screen. For each one, share:
+- What you're being asked to do
+- Whether it's clear WHY you'd do it
+- Where you'd get confused or frustrated
+- What you'd expect to happen next
 
-Use direct quotes from real reviews to support each finding. Make it tangible.
+Be constructive and specific: "On this first screen, there are 6 options but no guidance on where to start. A new user would feel lost. I'd suggest highlighting the most common path."
 
-"These aren't my opinions — these are patterns from what your actual users are saying. The top theme appeared in X out of Y reviews."
+Pay special attention to:
+- **Time to wow:** How quickly does a new user hit the moment where they think "oh, THIS is why I signed up"? If it takes too long, flag it.
+- **Dead ends:** Places where the user finishes something and there's no clear next step.
+- **Empty states:** Screens that look broken when there's no data yet.
+
+Present your findings conversationally, not as a formal report. React to what you see. "This part is actually great. Clear, fast, no confusion. But then THIS screen..." Make it feel like a real walkthrough, not a checklist.
+
+### Step 2: Analyze Customer Feedback
+
+**If they have feedback:**
+
+Say: "Now paste in your reviews, support tickets, or feedback. Dump everything. The messier the better."
+
+Read it all. Then present:
+- **Top 3 themes:** What keeps coming up?
+- **The biggest complaint:** What frustrates people most?
+- **The most loved thing:** What do people praise?
+- **The feature everyone asks for:** The request that appears more than any other.
+
+Use direct quotes from real reviews. "This isn't my opinion. Here's what your users actually said: [quote]."
 
 **If they don't have feedback:**
-Offer to find public reviews of their product or a close competitor. Search review sites, app stores, or forums. Analyze whatever you find and present the same breakdown.
 
-**If they picked option C:**
-Ask for their product name or a competitor name, find public reviews, and analyze them.
+Say: "What's your product called? I'll find public reviews."
 
-### Step 2: Analyze Onboarding — Experience Your Product as a New User
+Search app stores, G2, Product Hunt, Reddit, or wherever the product has public reviews. If their product doesn't have reviews yet, offer to analyze a close competitor instead.
 
-Say: "Now let me experience your product as a first-time user and tell you what's confusing."
+Run the same analysis on whatever you find.
 
-Read through their project files and walk through the user experience step by step, as if you're a brand-new user who just signed up.
+**If they have neither product nor feedback:**
 
-Point out:
-- **Where do users probably get stuck?** — Confusing labels, unclear next steps, too many choices
-- **What's unclear?** — Pages that don't explain themselves, features that need context
-- **What's the first "wow moment" and how quickly do they get there?** — The moment a new user thinks "oh, THIS is why I signed up"
-- **What's missing?** — Empty states, help text, confirmation that things worked
-
-Be constructive and specific: "On the first screen, there are 6 options but no guidance on where to start. A new user would feel lost. I'd suggest highlighting the most common path."
+Use a well-known product the student admires or competes with. Ask: "Tell me a product similar to what you're building. I'll analyze their reviews so you can learn from their users' pain points."
 
 ### Step 3: Connect Insights to Actions
 
-Bring everything together:
+Bring both beats together:
 
-"Based on what your users are saying AND what I see in the product, here are the top 3 things I'd build next — and why."
+"Based on what I saw walking through the product AND what your users are saying, here are the top 3 things I'd build next."
 
-For each recommendation, include:
-1. **What to build** — described in plain language
-2. **Why it matters** — which user feedback or product issue it addresses
-3. **Expected impact** — what changes if you build this
+For each recommendation:
+1. **What to build:** Described in plain language. Not "improve onboarding" but "add a welcome screen that asks what the user wants to accomplish, then guides them to the right feature."
+2. **Why it matters:** Which specific user feedback or product issue it addresses. Cite the evidence.
+3. **Expected impact:** What changes if you build this.
 
-Make recommendations specific and grounded in evidence. Not "improve onboarding" but "add a welcome screen that asks what the user wants to accomplish, then guides them to the right feature."
+### Step 4: Make It Real
 
-### Step 4: Prioritize Together
+Say: "Those are my recommendations. What do you want to do with them?"
 
-Ask the student to react:
+**Pick one:**
+- **A)** Build a prototype of the top recommendation right now. I'll use your style guide if you have one.
+- **B)** Save everything to a document you can share with your team. I'll format it cleanly.
+- **C)** Go deeper on one area. More feedback analysis, a deeper onboarding audit, or competitive research.
 
-**These are my recommendations. What would you like to do with them?**
-- **A)** Build a prototype of the top recommendation right now — let's make it real
-- **B)** Save these insights to a recommendations file for your team — I'll format it as a clear document you can share
-- **C)** Go deeper on one area — more feedback analysis, a deeper onboarding audit, or competitive research
-
-If they pick A, start building immediately using their style guide (if they have one).
-If they pick B, create a well-organized document with all findings and recommendations.
-If they pick C, ask which area and dive deeper.
+If they pick A, start building immediately.
+If they pick B, create a well-organized document with all findings, evidence, and recommendations.
+If they pick C, ask which area and dive in.
 
 ### Wrap Up
 
 **What would you like to do next?**
-- **A)** Move on to Day 4 — automate your PM communications and analysis workflows
-- **B)** Build a prototype based on what we discovered today
-- **C)** Gather more feedback data and run another round of analysis
+- **A)** Move on to Day 4: automate your PM workflows (status updates, release notes, competitive analysis)
+- **B)** Build a prototype based on what we discovered
+- **C)** Gather more feedback and run another round
 
-**Share prompt:** What was the most surprising insight from your user analysis? Something you hadn't noticed before today.
+**Share prompt:** What was the most surprising insight from your analysis? Something you hadn't noticed before today.
 
 ## Reference Material
 
-**For Claude's use when teaching this lesson:**
+**For Claude's use during this exercise:**
 
 - Common review sources: App Store, Google Play, G2, Capterra, TrustRadius, Product Hunt, Reddit, Twitter/X, support ticket themes
 - When analyzing feedback, look for: frequency of themes (not just individual complaints), sentiment shifts over time, differences between power users and new users, and unmet needs implied but not directly stated
-- Onboarding audit checklist: first screen clarity, time to value, cognitive load at each step, error handling, empty states, progress indicators, help/guidance availability
-- When making recommendations, always tie them back to specific evidence from feedback or the product audit
+- Onboarding audit focus areas: first screen clarity, time to value, cognitive load at each step, error handling, empty states, progress indicators, help/guidance availability
+- When making recommendations, always tie them back to specific evidence
 - Prioritization should consider: user impact (how many people affected), effort to build (based on what you know about the project), and strategic alignment (does it support the product's core value)
-- If the student has spreadsheet data, help them interpret it without using statistical jargon — use phrases like "most common," "growing trend," and "stands out" instead of technical terms
+- If the student has spreadsheet data, help them interpret it without jargon. Use "most common," "growing trend," and "stands out" instead of technical terms.

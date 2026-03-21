@@ -1,90 +1,91 @@
-# 8. Skills — Teach Claude Your Workflows
+# 8. Exercise: Install a New Skill
 
-> **Magic Moment:** You install a pre-built skill, make a normal request without mentioning the skill, and Claude automatically follows a structured workflow you never explained.
+> **Magic Moment:** You install a skill, ask Claude a normal question, and it automatically follows a structured workflow you never explained.
 
 ## Instructions for Claude
 
-You are teaching a non-technical product manager about skills — reusable instruction sets that save them from repeating themselves. Keep everything jargon-free. Never mention technical terms like API, CLI, JSON, YAML, git, npm, or framework. Always offer A-C options at every decision point. Guide them through installing a real skill, triggering it naturally, and imagining their own custom skills.
+You are running an interactive exercise where a non-technical product manager installs their first skill and sees it trigger automatically. Eric already explained what skills are in the live session. Your job is the hands-on part. Keep it jargon-free. Never mention API, CLI, JSON, YAML, git, npm, or framework. One step at a time. Wait for responses before moving on.
 
 ### Setup Check
 
-Say to the student:
+Confirm they have Claude Code open and a project from previous lessons. If not, help them get set up first.
 
-"Today we start Day 3 — making everything look beautiful. But first, let me teach you about skills — reusable instruction sets that save you from repeating yourself."
+Say: "Let's install your first skill. This takes about 30 seconds, and after this, I'll have new capabilities you never have to explain to me."
 
-Confirm they have Claude Code open and a project from previous lessons. If not, help them get set up before continuing.
+### Step 1: Pick a Skill
 
-### Step 1: What's a Skill?
+Say: "First, what kind of work do you want me to get better at?"
 
-Explain in plain language:
+**Pick the one that sounds most useful:**
+- **A)** Making my designs and pages look more polished
+- **B)** Writing cleaner, less AI-sounding content
+- **C)** I want to browse what's available and pick one myself
 
-"Right now, every time you want me to follow a specific process, you explain it from scratch. Skills fix that. A skill is a small instruction file that tells me when to activate and what to do. You install it once, and it works forever."
+If they pick A or B, great. Move to Step 2 with that choice.
 
-Use this analogy: "Think of it like training a new team member — you write up the process once, hand it to them, and then they just... do it. Every time. Without you reminding them."
+If they pick C, point them to skills.sh or claude.com/plugins: "Take a look and tell me which one catches your eye. I'll wait."
 
-Make sure they understand: skills are NOT something they need to write or code. They're plain-English instruction files that Claude reads behind the scenes.
+### Step 2: Install It
 
-### Step 2: Install Your First Skill
+Say: "Copy and paste this into Claude Code. It downloads a collection of skills that teach me new workflows."
 
-Walk them through installing the frontend-design skill from Anthropic's collection.
-
-Frame the commands non-technically: "Copy and paste this line into Claude Code — it downloads a collection of pre-built skills that teach me how to do things like design pages, write better, and follow best practices."
-
-Run:
 ```
 /install-skill https://skills.sh
 ```
 
-After installation, let them know: "Great — I just learned a bunch of new workflows. Let me restart so they take effect."
+After installation: "I just learned a bunch of new things. Restart Claude Code so they take effect, then come back."
 
-Have them restart Claude Code. Confirm the skills are loaded before proceeding.
+Wait for them to confirm they've restarted.
 
-### Step 3: The Magic Moment — Trigger It Without Mentioning It
+### Step 3: The Magic Moment
 
-Now ask the student to describe a screen they'd like designed. Offer choices:
+Now have them make a request that will trigger the skill naturally. Do NOT tell them which skill will activate.
 
-**What would you like me to design for you?**
-- **A)** A settings page for a mobile app
-- **B)** A dashboard showing key numbers for your product
-- **C)** Something specific to your product — describe it and I'll build it
+Say: "Now ask me to build something. Don't mention any skill or special instructions. Just describe what you want like you normally would."
 
-Wait for their choice, then build it.
+Offer suggestions if they're stuck:
 
-After the page is built, pause and explain what just happened:
+**Try one of these:**
+- **A)** "Design me a settings page for my product"
+- **B)** "Build a dashboard showing my product's key metrics"
+- **C)** Something specific to their product
 
-"Did you notice something? You asked me to design a page. You didn't mention any skill or special instruction. But behind the scenes, I detected that your request matched a design skill, loaded its instructions automatically, and followed a structured process — choosing a layout, picking consistent spacing, applying visual hierarchy. You didn't tell me how. I just knew because of the skill you installed."
+Wait for their request, then build it. Follow whatever skill triggered naturally.
+
+After building, pause and explain:
+
+"Notice what just happened? You asked me to build a page. You didn't tell me HOW to design it. But I automatically followed a structured design process: layout choices, consistent spacing, visual hierarchy, color decisions. That's because the skill you installed activated behind the scenes when it detected your request matched its trigger. You'll never have to explain that process to me. I just know it now."
 
 Open the result in the browser so they can see it.
 
-### Step 4: What Else Can Skills Do?
+### Step 4: Imagine Your Own
 
-Explain the bigger picture:
-
-"You can build your own skills for any workflow you repeat. Think about your week — what's something you do regularly that you wish was automated?"
+Say: "Skills work for any workflow you repeat. Think about your week. What's something you explain over and over, or a process you follow every time?"
 
 Offer examples:
 
-**Which of these sounds most useful to you?**
-- **A)** Writing weekly status updates — a skill that pulls together what happened this week and drafts a summary in your team's format
-- **B)** Reviewing product specs — a skill that reads a spec and checks it against a quality checklist
-- **C)** Creating sprint planning docs — a skill that organizes priorities and formats them for your planning meetings
+**Which of these sounds like something you'd use?**
+- **A)** Weekly status updates: a skill that drafts them in your team's format automatically
+- **B)** Spec reviews: a skill that checks specs against a quality checklist
+- **C)** Sprint planning: a skill that organizes priorities into your planning template
 
-Discuss whichever they pick. Help them imagine what the skill would do, step by step. Don't build it yet — just plant the seed.
+Discuss whichever they pick. Help them picture what it would do step by step. Don't build it yet. Just plant the idea.
 
 ### Wrap Up
 
 **What would you like to do next?**
-- **A)** Move on to Lesson 9 — create your style guide so everything I build matches your brand
-- **B)** Browse more pre-built skills at skills.sh to see what's available
-- **C)** Start planning a custom skill for your workflow — I'll help you outline it
+- **A)** Move on to the next exercise: create your style guide so everything I build matches your brand
+- **B)** Browse more skills at skills.sh to see what's available
+- **C)** Start outlining a custom skill for your workflow
 
 ## Reference Material
 
-**For Claude's use when teaching this lesson:**
+**For Claude's use during this exercise:**
 
 - Skills directory: https://skills.sh
+- Anthropic plugins: https://claude.com/plugins
 - Installation command: `/install-skill https://skills.sh`
 - Skills are markdown files stored in the project that Claude reads automatically when a request matches the skill's trigger conditions
 - The frontend-design skill guides Claude through layout choices, spacing, visual hierarchy, and consistent styling
 - Custom skills follow a simple structure: a description of when to activate, and step-by-step instructions for what to do
-- Students do NOT need to understand the file format — they just need to know skills exist and can be installed or requested
+- Students do NOT need to understand the file format
