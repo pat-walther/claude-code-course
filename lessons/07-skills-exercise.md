@@ -68,7 +68,7 @@ If they're stuck, offer suggestions:
 
 **STOP. Wait for their request.**
 
-Build what they asked for. Follow whatever skill triggered naturally. Open the result in the browser.
+Build what they asked for. Follow whatever skill triggered naturally. Make the result visible immediately — open a webpage in the browser, display a generated image inline, or show the output file. The student should SEE the result without needing to go find it.
 
 Then pause and explain:
 
