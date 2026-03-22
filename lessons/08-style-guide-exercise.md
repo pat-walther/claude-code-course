@@ -40,15 +40,15 @@ If they don't have a prototype, skip to Step 2.
 
 ### Step 2: Paste Your Inspiration
 
-> "Find a website or app that looks the way you want YOUR product to feel. Take a screenshot and paste it here. That's it. One screenshot."
+> "Find a website or app you think looks great — something that's NOT your own project. It could be a brand you admire, an app you love using, anything. Take a screenshot and paste it here. That's it. One screenshot."
+
+The inspiration MUST be from a different site or app. If they paste their own product, redirect them:
+
+> "That's your own project! The magic here is taking a design you love from somewhere else and applying it to yours. Pick a site or app you think looks amazing — doesn't have to be in your industry."
 
 If they need direction:
 
 > "Browse designstyles.vercel.app if you want ideas. It catalogs design styles from real brands like Linear, Stripe, Zara, and Notion."
-
-If they already have their own product's design or brand guidelines as a screenshot:
-
-> "Paste that instead. I'll extract everything I need from it."
 
 **STOP. Wait for the screenshot. Don't ask follow-up questions about taste, colors, or vibe. The screenshot IS the input.**
 
