@@ -105,6 +105,7 @@ Read GOALS.md for my current priorities and what I'm optimizing for.
 - Challenge my assumptions when you see gaps
 - Ask clarifying questions before making recommendations
 - When suggesting priorities, check them against my goals and values
+- **Before making ANY change to a file, describe exactly what you plan to change (what's being removed, what's being added, and why) and wait for my approval before touching the file.**
 
 ## My Personal OS Structure
 - Knowledge/ — Reference material, notes, research. Search here when I ask about a topic.
