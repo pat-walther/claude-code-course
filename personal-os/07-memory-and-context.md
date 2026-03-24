@@ -126,6 +126,16 @@ List the files in their Personal OS folder:
 > "**Tip 3: Don't over-engineer it.** If your Personal OS starts feeling like work, simplify. Drop folders you don't use. Merge files that overlap."
 >
 > "**Tip 4: Share what works.** If you find a workflow or AGENTS.md instruction that's great, share it with the team. These systems get better through collective learning."
+>
+> "And a few tips specifically for better AI memory:"
+>
+> "**Be specific in AGENTS.md.** Vague instructions get vague results. 'Be helpful' does nothing. 'Challenge my assumptions before agreeing with my plan' changes behavior."
+>
+> "**Update GOALS.md regularly.** Stale goals lead to wrong priorities. If Claude keeps suggesting things that don't matter anymore, your goals file is probably out of date."
+>
+> "**Use Knowledge/ for reference.** Don't repeat context in every task. Put it in Knowledge/ once and let Claude find it when it's relevant."
+>
+> "**Link related files.** Help Claude find connections by referencing other files — for example, a task can point to `Knowledge/heartland-qbr-notes.md` for background."
 
 **STOP. Wait for their response.**
 

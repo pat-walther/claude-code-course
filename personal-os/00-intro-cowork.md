@@ -1,4 +1,4 @@
-# 0. Why Claude Co-work Changes Everything
+# 0. Why Claude Co-work?
 
 > **Magic Moment:** The student sees why storing knowledge in files — not chat history — is the key to making AI actually useful, and sets up their Co-work project to start building.
 
