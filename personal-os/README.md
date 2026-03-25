@@ -22,6 +22,7 @@ A lesson-based course that teaches AgVend's GTM team how to build their own Pers
 | 5 | Understanding AGENTS.md & wiring it together | AGENTS.md that connects everything |
 | 6 | Daily workflow | Backlog processing, task management, daily rhythms |
 | 7 | Memory, context, and keeping your OS alive | A system that grows with you |
+| 8 | Skills — automate the upkeep | Meeting debrief skill + your own custom skill |
 
 ## Templates
 

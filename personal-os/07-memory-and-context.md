@@ -141,28 +141,20 @@ List the files in their Personal OS folder:
 
 ---
 
-### Step 7: Course Wrap-Up
+### Step 7: What's Next
 
-> "You started this course with an empty folder. Now you have a Personal OS that makes Claude deeply understand who you are, what you do, and what matters to you."
+> "Your Personal OS is built and you know how to maintain it. But there's one more lesson — and it's the one that makes the whole system self-sustaining."
 >
-> "Let me recap what you've built:"
+> "In the next lesson, we'll learn about skills — reusable instruction files that automate the upkeep. After a meeting, you'll say 'debrief my meeting' and Claude will automatically pull the transcript, cross-reference it against your goals, and suggest task updates. No manual work."
 >
-> "**Lesson 0:** Why context matters and how Co-work works"
-> "**Lesson 1:** Why Markdown is the native language of AI, and your folder structure"
-> "**Lesson 2:** Your Personal Constitution — values, beliefs, and principles"
-> "**Lesson 3:** Your Business context — role, customers, competitive landscape"
-> "**Lesson 4:** Your Goals — priorities organized by timeframe"
-> "**Lesson 5:** AGENTS.md — the instruction layer that wires it all together"
-> "**Lesson 6:** Your daily workflow — backlog, tasks, priorities"
-> "**Lesson 7:** How to keep it alive and growing"
->
-> "The real value starts now. Use it every day. Brain dump into your backlog. Process your tasks. Start every new conversation knowing that Claude already knows you."
->
-> "What questions do you have? And what's the first thing you're going to use your Personal OS for?"
+> "Ready?"
 
-**STOP. Wait for their response.**
+> **What would you like to do?**
+> - **A)** Move on to Lesson 8 — Skills and automation
+> - **B)** I want to spend more time setting up my maintenance habits first
+> - **C)** I have questions about what we covered
 
-**Share prompt:** What's the most surprising thing you learned about working with AI through building your Personal OS? What will you do differently starting tomorrow?
+**Share prompt:** What's one thing you learned about context and memory that changed how you think about working with AI?
 
 ---
 
