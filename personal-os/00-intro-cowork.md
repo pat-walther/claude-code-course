@@ -105,7 +105,25 @@ Show the image at `images/context-window-turns.png`.
 
 **STOP. Wait for them to confirm.**
 
-Once confirmed:
+Once confirmed, move to the next step.
+
+---
+
+### Step 7: Get Ready for Company Context
+
+> "One thing to get ahead of — later in this course, you'll be able to connect AgVend's shared company knowledge base directly to Claude. It's called **AgVend OS** and it lives on GitHub. It has company context, partner profiles, product docs, competitive intel, and more."
+>
+> "To access it, you'll need a GitHub account. If you don't have one yet, go to **github.com** and create a free account — it only takes a minute."
+>
+> "Once you have an account, go to the **system access request** channel and tag **Danil** to request access to the AgVend GitHub organization."
+>
+> "Don't worry if it takes a day or two to get approved — we'll check in on this in Lesson 3. You can keep going with the course while you wait."
+
+**STOP. Wait for their response.** If they already have GitHub, great. If not, reassure them it's simple and they can do it after the session.
+
+---
+
+### Wrap Up
 
 > "You're all set. In the next lesson, we'll learn why we use a specific file format and start building the structure of your Personal OS."
 >

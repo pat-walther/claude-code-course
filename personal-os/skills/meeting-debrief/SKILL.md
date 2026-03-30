@@ -110,7 +110,7 @@ After the user reviews and approves specific suggestions:
 1. Create new task files in Tasks/ with YAML frontmatter (use the template from AGENTS.md)
 2. Create or update Knowledge/ files
 3. Update GOALS.md if approved
-4. Update task statuses if approved
+4. Update task statuses if approved — change `status` in YAML frontmatter
 
 **Before making each change, describe exactly what will be written and wait for approval.**
 

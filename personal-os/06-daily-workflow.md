@@ -47,22 +47,30 @@ When they do, read BACKLOG.md and GOALS.md. For each item in the backlog:
 
 ```markdown
 ---
-type: task
-priority: [P0-P3 based on goals alignment]
-status: pending
-created: [today's date]
-tags: [relevant tags]
+title: [Actionable task name]
+category: [strategy|outreach|research|writing|technical|admin|personal|learning]
+priority: [P0|P1|P2|P3]
+status: n
+created_date: [YYYY-MM-DD]
+estimated_time: [minutes estimate]
 ---
 
 # [Task title]
 
-[Brief description of what needs to be done]
+**Goal:** [Which goal from GOALS.md this supports]
 
-## Context
-[Any relevant context from the backlog item]
+## What this is
 
-## Connected Goal
-[Which goal from GOALS.md this supports]
+[1-2 paragraph description of what needs to happen and why]
+
+## What "done" looks like
+
+- [Concrete acceptance criterion]
+- [Concrete acceptance criterion]
+
+## Open questions
+
+- [If any, otherwise omit this section]
 ```
 
 2. Assign priority by checking against GOALS.md — things that align with their top goals get higher priority.
@@ -86,9 +94,10 @@ List the tasks with their priorities. Explain briefly why you assigned each prio
 **STOP. Wait for them to ask.**
 
 Read GOALS.md and all task files in Tasks/. Recommend their top 1-3 priorities for today based on:
-- P0 items first
+- P0 items first, then P1s
+- Tasks with `status: s` (in progress) over `status: n` (not started)
 - Alignment with quarterly goals
-- Any deadlines
+- Any deadlines (check `due_date` in frontmatter if present)
 - What makes strategic sense given their Business.md context
 
 > "Based on your goals and current tasks, here's what I'd focus on today:"
@@ -107,7 +116,7 @@ Read GOALS.md and all task files in Tasks/. Recommend their top 1-3 priorities f
 
 **STOP. Wait for them to pick a task.**
 
-Update the task file: change `status: pending` to `status: done` and add a `completed: [today's date]` field to the frontmatter.
+Update the task file: change `status: n` (or `status: s`) to `status: d` in the YAML frontmatter.
 
 > "Done. The task is marked complete. Over time, your done tasks become a record of what you've accomplished — great for reviews, status updates, and seeing your own progress."
 
@@ -146,6 +155,14 @@ Update the task file: change `status: pending` to `status: done` and add a `comp
 
 ---
 
+### Going Further: Visual Task Board
+
+> "One more thing — if you use **Obsidian**, you can add a visual Kanban board to your Tasks folder. Install the Obsidian Kanban plugin, then create a file called `Tasks/Kanban.md` with `kanban-plugin: board` in the YAML frontmatter and section headings for your lanes (`## Not Started`, `## In Progress`, `## Blocked`, `## Done`). Each card is a wiki-link to a task file: `- [ ] [[task-filename|Task title]] #P1 #category`."
+>
+> "This gives you a drag-and-drop board view alongside your task files. The files hold the detail; the board gives you the visual overview. It's completely optional — the system works fine without it."
+
+---
+
 ## Reference Material
 
 **Backlog processing rules (for Claude's reference):**
@@ -157,8 +174,16 @@ Update the task file: change `status: pending` to `status: done` and add a `comp
 - Clear processed items from BACKLOG.md — keep the file clean
 - Check for duplicates in existing Tasks/ before creating new ones
 
+**YAML frontmatter fields:**
+- `title` — the task name (matches the `# heading` in the body)
+- `category` — one of: strategy, outreach, research, writing, technical, admin, personal, learning
+- `priority` — P0 through P3
+- `status` — single letter: `n` (not started), `s` (started/in-progress), `b` (blocked), `d` (done)
+- `created_date` — ISO date (YYYY-MM-DD)
+- `estimated_time` — rough estimate in minutes
+
 **Priority assignment logic:**
-- P0: Directly supports a quarterly goal AND has a deadline this week
+- P0: Directly supports a quarterly goal AND has a deadline this week. Maximum 3.
 - P1: Directly supports a quarterly goal OR has a near-term deadline
 - P2: Supports a yearly goal, has a future deadline
 - P3: Good idea but no goal alignment or deadline

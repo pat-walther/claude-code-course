@@ -29,7 +29,7 @@ Personal-OS/
 - When suggesting priorities, check them against my goals and values
 - Before editing any file, show me exactly what will change (old text vs new text) and wait for my approval before making the edit
 - Never delete or rewrite my notes outside the defined backlog flow
-- Use the AgVend context in Knowledge/agvend-context.md for company-level information
+- For company-level context, check the AgVend OS repository on GitHub (agvend/agvend_os) via the GitHub connector if available. This is read-only — never push or commit to it. Fall back to Knowledge/agvend-context.md for a lighter overview if the connector is not set up.
 
 ## Backlog Flow
 When I say "process my backlog", "clear my backlog", or similar:
@@ -41,18 +41,38 @@ When I say "process my backlog", "clear my backlog", or similar:
 
 ## Task Template
 
+Every task in Tasks/ is a markdown file with YAML frontmatter:
+
 ```yaml
 ---
 title: [Actionable task name]
-category: [outreach|research|writing|admin|personal|other]
+category: [strategy|outreach|research|writing|technical|admin|personal|learning]
 priority: [P0|P1|P2|P3]
 status: n  # n=not_started, s=started, b=blocked, d=done
 created_date: [YYYY-MM-DD]
-due_date: [YYYY-MM-DD]  # optional
-tags: []
-resource_refs:
-  - Knowledge/example.md  # optional
+estimated_time: [minutes]
 ---
+```
+
+Body format:
+
+```markdown
+# [Task title]
+
+**Goal:** [Which goal from GOALS.md this supports]
+
+## What this is
+
+[1-2 paragraph description of what needs to happen and why]
+
+## What "done" looks like
+
+- [Concrete acceptance criterion]
+- [Concrete acceptance criterion]
+
+## Open questions
+
+- [If any, otherwise omit this section]
 ```
 
 ## Priority System
@@ -62,7 +82,7 @@ resource_refs:
 - **P3** — Someday/maybe. No commitment.
 
 ## Goals Alignment
-- When creating tasks, tie each one to a relevant goal from GOALS.md in the Context section
+- When creating tasks, tie each one to a relevant goal from GOALS.md in the body's **Goal:** field
 - If no goal fits, ask whether to create a new goal or clarify why the work matters
 - Flag when active tasks don't support any current goals
 
@@ -76,3 +96,6 @@ After completing a task or responding to a request, suggest 3 options:
 - The top suggestion should be creative — something I wouldn't think to ask but would find valuable
 - The other 2 should be natural follow-ups
 - Skip when I'm clearly mid-flow or giving rapid-fire instructions
+
+## Optional: Visual Task Board
+If you use Obsidian, you can add a `Tasks/Kanban.md` file with the Obsidian Kanban plugin for a drag-and-drop board view of your tasks. Lanes map to status values: Not Started (n), In Progress (s), Blocked (b), Done (d). Cards link to task files with wiki-links: `- [ ] [[filename|Task title]] #priority #category`.

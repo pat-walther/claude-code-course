@@ -132,11 +132,34 @@ Write it in their voice. Be specific — use actual account names, competitor na
 
 ### Step 8: The AgVend Context
 
-> "One more thing — I'm going to add a shared AgVend company context file to your Knowledge/ folder. This is the same for everyone on the team and covers the company-level basics so you don't have to repeat them."
+> "Remember in Lesson 0 we mentioned AgVend OS — the shared company knowledge base on GitHub? Let's check on that."
+
+Ask the student: "Have you been granted access to the AgVend GitHub organization yet?"
+
+**If yes — connect GitHub:**
+
+> "Great. Let's connect GitHub so Claude can read the AgVend OS directly. Here's what to do:"
+>
+> "1. Click the **+** button at the bottom of the chat"
+> "2. Go to **Connectors** > **Manage Connectors**"
+> "3. Find **GitHub** and click **Add**"
+> "4. Authorize with your GitHub account"
+>
+> "Now Claude can read directly from the AgVend OS repository — partner profiles, product docs, competitive intel, org structure, and more. You don't need to download anything. Claude pulls the latest version every time."
+>
+> "**Important:** AgVend OS is a **read-only** resource for you. Never push, commit, or try to edit files in that repository. It's maintained centrally — you pull context from it, you don't write to it."
+
+**STOP. Wait for them to confirm the connector is set up.**
+
+**If no (or still waiting):**
+
+> "No problem — I'm adding a basic AgVend company overview to your Knowledge/ folder for now. When your GitHub access comes through, you can connect it and Claude will have the full company knowledge base."
 
 Copy the template from `templates/agvend-context.md` into the student's `Knowledge/` folder.
 
-> "Now you have two layers of business context: the shared AgVend overview in Knowledge/, and your personal Business.md at the root. Claude reads both."
+**Either way, explain the two-layer model:**
+
+> "You now have two layers of business context: the **company-level** AgVend context (either from GitHub or the overview file) and your **personal** Business.md. Your Business.md is about YOU — your role, your accounts, your challenges. The AgVend context is about the COMPANY. Claude reads both."
 
 ---
 

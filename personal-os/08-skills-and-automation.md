@@ -71,10 +71,10 @@ Read the file at `skills/meeting-debrief/SKILL.md` and walk the student through 
 >
 > "Here's what to do:"
 >
-> "1. In the Claude Desktop app, go to **Settings**"
-> "2. Find **Connectors** (or **Integrations**)"
-> "3. Search for **Fireflies**"
-> "4. Click **Connect** and authorize with your Fireflies account"
+> "1. In the Claude chat, click the **+** button at the bottom"
+> "2. Go to **Connectors** > **Manage Connectors**"
+> "3. Find **Fireflies** and click **Add**"
+> "4. Authorize with your Fireflies account"
 >
 > "Once connected, Claude can automatically list your recent meetings and pull transcripts — no copy-pasting needed."
 >
@@ -123,9 +123,9 @@ After processing:
 
 ---
 
-### Step 7: What Else Could You Automate?
+### Step 7: Build Your Own Skill
 
-> "The meeting debrief is just one skill. Think about the workflows you repeat every week. Each one could be a skill."
+> "The meeting debrief is just one example. Think about the workflows you repeat every week. Each one could be a skill."
 >
 > "Some ideas:"
 >
@@ -136,22 +136,33 @@ After processing:
 >
 > "Which of these sounds most useful to you? Or is there something else you do every week that follows a pattern?"
 
-**STOP. Wait for their response.**
+**STOP. Wait for them to pick a workflow they want to automate.**
 
-Help them design a simple skill:
+> "Great. Now here's the cool part — there's a skill that builds skills for you. Your Personal OS comes with a **Skill Creator** in the `skills/skill-creator/` folder."
+>
+> "All you have to do is say: **'/Skill Creator'** and then describe what you want to build. It'll walk you through the whole process — figuring out what the skill should do, writing the instructions, creating test prompts to make sure it works, and refining it based on your feedback."
+>
+> "Let's try it. Say '/Skill Creator' and tell it what workflow you want to automate."
 
-1. "What's the trigger phrase? What would you say to kick it off?"
-2. "What steps should Claude follow? Walk me through it like you're training a new person."
-3. "What files in your Personal OS should Claude read? What should it create or update?"
-4. "What rules or guardrails do you want?"
-
-Create the skill file in `skills/` based on their answers.
-
-> "There it is — your second skill. From now on, instead of doing this manually, you just say the trigger phrase."
+**STOP. Wait for them to use the Skill Creator.** Let the Skill Creator skill take over the conversation. It will guide them through drafting, testing, and refining their skill. When they've finished creating their skill, continue to the next step.
 
 ---
 
-### Step 8: Course Wrap-Up
+### Step 8: Improve What You Built
+
+> "You just built your own skill. But here's the thing — most skills work about 70% of the time on the first draft. The other 30% you get inconsistent or mediocre output. That's normal."
+>
+> "Your Personal OS comes with a **Skill Improver** in `skills/skill-improver/`. It takes any skill you've built, runs it dozens of times automatically, scores every output against pass/fail checks you define, and then tightens the prompt until that 30% disappears."
+>
+> "It works like this: you tell it which skill to improve, you define what 'good output' looks like as simple yes/no checks, and then it runs an autonomous loop — testing, scoring, making one change at a time, keeping what helps, discarding what doesn't."
+>
+> "Say **'/Skill Improver'** and point it at the skill you just built. It'll ask you a few questions about what 'good' looks like, then start optimizing."
+
+**STOP. Wait for them to try it.** Let the Skill Improver skill take over. When they're done (or want to move on), continue to the wrap-up.
+
+---
+
+### Step 9: Course Wrap-Up
 
 > "Let's step back and look at what you've built across all 9 lessons."
 >
@@ -163,17 +174,17 @@ Create the skill file in `skills/` based on their answers.
 > "**Lesson 5:** AGENTS.md — the instruction layer that wires it all together"
 > "**Lesson 6:** Your daily workflow — backlog, tasks, priorities"
 > "**Lesson 7:** Memory, context, and keeping your system alive"
-> "**Lesson 8:** Skills that automate the upkeep"
+> "**Lesson 8:** Skills — automate workflows, build your own, and stress-test them"
 >
-> "You started with an empty folder. Now you have a Personal OS that makes Claude deeply understand you AND a system that keeps itself updated through skills."
+> "You started with an empty folder. Now you have a Personal OS that makes Claude deeply understand you, a system that keeps itself updated through skills, and the ability to build and optimize new skills whenever you find a workflow worth automating."
 >
-> "The real value starts now. Use it every day. Say 'debrief my meeting' after every call. Say 'what should I work on?' every morning. Brain dump into your backlog and let Claude organize it."
+> "The real value starts now. Use it every day. Say 'debrief my meeting' after every call. Say 'what should I work on?' every morning. Brain dump into your backlog and let Claude organize it. When you find yourself repeating a workflow, build a skill for it."
 >
 > "What questions do you have? And what's the first skill you're going to run?"
 
 **STOP. Wait for their response.**
 
-**Share prompt:** What skill did you build? What weekly workflow does it automate for you?
+**Share prompt:** What skill did you build with the Skill Creator? What weekly workflow does it automate for you? How did it feel having AI build the automation for you?
 
 ---
 
@@ -239,13 +250,20 @@ description: [One sentence. When to use this skill.]
 ```
 
 **Fireflies connector setup (for Claude's reference):**
-- In Claude Desktop: Settings > Connectors > search "Fireflies" > Connect
+- In Claude chat: click **+** button > **Connectors** > **Manage Connectors** > find **Fireflies** > **Add**
 - Requires a Fireflies account with meetings recorded
 - Once connected, Claude can list recent meetings and fetch transcripts
 - If Fireflies is not available, the skill works with pasted meeting notes
 
-**How skills auto-trigger:**
+**Skills included in this course:**
+- `skills/meeting-debrief/` — processes meeting transcripts, suggests task/goal/knowledge updates
+- `skills/skill-creator/` — builds new skills through a guided workflow with testing and refinement
+- `skills/skill-improver/` — autonomously optimizes any skill by running it repeatedly, scoring outputs against binary pass/fail evals, and mutating the prompt to fix failures
+
+**How skills work:**
 - Skills are stored in the `skills/` folder of the Personal OS
-- Claude reads skill files when a trigger phrase is used
-- The student can also manually say "use the meeting debrief skill"
+- Each skill is a Markdown file (SKILL.md) with a name, description, trigger phrases, a workflow, and rules
+- Claude reads skill files when a trigger phrase is used (e.g., "debrief my meeting" or "/Skill Creator")
+- The student can also manually say "use the [skill name] skill"
 - Skills follow the same AGENTS.md rules as everything else
+- Skills are fully customizable — they're just text files. Edit them to change the workflow

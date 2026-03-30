@@ -76,7 +76,23 @@ Show these examples:
 
 ---
 
-### Step 4: Metadata with YAML
+### Step 4: Talk, Don't Type
+
+> "Quick tip before we go further — you'll get way more out of this course (and out of Claude in general) if you **use your voice** instead of typing."
+>
+> "When people type, they tend to be terse. When people talk, they naturally give more context, more detail, more of the 'why.' And context is exactly what makes Claude more useful."
+>
+> "The easiest option: there's a **microphone icon** at the bottom of the Claude chat. Click it, talk, and it transcribes for you. Try it right now if you haven't."
+>
+> "If you want voice input across all your software — not just Claude — request access to **Wispr Flow** in the system access channel by tagging Patrick. It runs in the background on your computer, transcribes your speech in real-time, and automatically cleans up filler words like 'um' and 'uh.' It also formats numbers, lists, and punctuation. Just click a button and talk."
+>
+> "Neither is required, but I'd strongly recommend trying voice input. Most people are surprised how much better the results get when they give Claude the full picture instead of a shorthand version."
+
+**STOP. Wait for their response.**
+
+---
+
+### Step 5: Metadata with YAML
 
 > "There's one more trick that makes Markdown incredibly powerful. You can add structured data to the top of any file using something called **YAML frontmatter**. Don't let the name scare you — YAML is just a simple format for labeling things. Think of it like filling out a form at the top of your document."
 >
@@ -84,15 +100,15 @@ Show these examples:
 
 ```
 ---
-type: task
-priority: P0
-status: not_started
+title: Follow up with Heartland Co-op on renewal
 category: outreach
-due_date: 2026-04-01
-tags: [renewal, enterprise]
+priority: P0
+status: n
+created_date: 2026-03-30
+estimated_time: 30
 ---
 
-# Follow Up with Heartland Co-op on Renewal
+# Follow up with Heartland Co-op on renewal
 
 They mentioned concerns about onboarding during our last QBR.
 Need to address their adoption numbers before the contract is up.
@@ -100,19 +116,19 @@ Need to address their adoption numbers before the contract is up.
 
 > "See the section between the two `---` lines? That's the YAML frontmatter — structured metadata about the file. Each line is a label and a value, separated by a colon."
 >
-> "- `type: task` tells Claude this is a work item, not a note"
-> "- `priority: P0` means it's urgent — do it today"
-> "- `status: not_started` tracks where you are"
+> "- `title:` names the task — matches the heading below"
 > "- `category: outreach` groups it with similar work"
-> "- `tags: [renewal, enterprise]` lets you search by topic"
+> "- `priority: P0` means it's urgent — do it today"
+> "- `status: n` tracks where you are — `n` for not started, `s` for started, `b` for blocked, `d` for done"
+> "- `created_date:` and `estimated_time:` help you track when things were added and how long they might take"
 >
 > "Below the frontmatter is your regular Markdown content — the actual details."
 >
 > "Why is this powerful? Because Claude can now query your files like a database. You can ask:"
 >
 > "- 'Find all files where priority is P0' — shows your most urgent work"
-> "- 'Show me tasks with status not_started' — your to-do list"
-> "- 'What's tagged with renewal?' — everything related to renewals"
+> "- 'Show me tasks where status is n' — your to-do list"
+> "- 'What outreach tasks do I have?' — everything in that category"
 >
 > "We'll use this in your tasks later. For now, just know it exists. Any questions about how this works?"
 
@@ -120,7 +136,7 @@ Need to address their adoption numbers before the contract is up.
 
 ---
 
-### Step 5: Semantics by Location
+### Step 6: Semantics by Location
 
 > "Here's something that will save you a ton of time: where a file lives tells Claude what it IS. You don't need to explain it in the file content — the folder path is the explanation."
 >
@@ -136,7 +152,7 @@ Need to address their adoption numbers before the contract is up.
 
 ---
 
-### Step 6: Scoping Context with Folders
+### Step 7: Scoping Context with Folders
 
 > "This also lets you control Claude's attention span. When you tell Claude to look somewhere specific, you're scoping its context:"
 >
@@ -149,7 +165,7 @@ Need to address their adoption numbers before the contract is up.
 
 ---
 
-### Step 7: Build Your Folder Structure
+### Step 8: Build Your Folder Structure
 
 > "Now let's build it. I'm going to create the folder structure for your Personal OS. Here's what we're setting up:"
 
@@ -210,15 +226,13 @@ If they choose B, help them add whatever they want. Then offer to continue to Le
 - `[link text](url)` for links
 - `![alt text](path)` for images
 
-**YAML frontmatter types we'll use in this course:**
-- `type:` — task, note, reference, goal
+**YAML frontmatter fields we'll use in this course:**
+- `title:` — the task or document name
+- `category:` — strategy, outreach, research, writing, technical, admin, personal, learning
 - `priority:` — P0 (do today, max 3), P1 (this week, max 7), P2 (scheduled), P3 (someday)
 - `status:` — n (not started), s (started), b (blocked), d (done)
-- `category:` — outreach, research, writing, admin, personal, other
-- `tags:` — freeform list for categorization, e.g. [renewal, enterprise]
 - `created_date:` — date the file was created (YYYY-MM-DD)
-- `due_date:` — deadline if applicable (YYYY-MM-DD)
-- `resource_refs:` — links to related Knowledge/ files
+- `estimated_time:` — rough time estimate in minutes
 
 **Folder structure rationale:**
 - Knowledge/ = passive reference (Claude reads when asked)
